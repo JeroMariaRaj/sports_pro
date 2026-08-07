@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>SportsPro X - Login</title>
+    <link rel="icon" href="assets/images/cricket_bat_premium_1786007732561.jpg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <script src="tailwind.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+                    },
+                    colors: {
+                        ocean: {
+                            50: '#EFEBE9',
+                            100: '#D7CCC8',
+                            200: '#BAE6FD',
+                            300: '#7DD3FC',
+                            400: '#8D6E63',
+                            500: '#0EA5E9',
+                            600: '#0284C7',
+                            700: '#5D4037',
+                            800: '#075985',
+                            900: '#3E2723',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            transition: background-color 0.3s ease;
+        }
+
+        .login-card {
+            backdrop-filter: blur(10px);
+            transition: transform 0.2s ease;
+        }
+
+        .login-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .input-focus:focus {
+            ring: 2px solid #5D4037;
+            border-color: #5D4037;
+            outline: none;
+        }
+
+        .input-wrapper {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        /* Improved dark mode visibility */
+        .dark .text-ocean-700 {
+            color: #EFEBE9 !important;
+        }
+
+        .dark .text-ocean-600 {
+            color: #D7CCC8 !important;
+        }
+
+        .dark .text-ocean-500 {
+            color: #BAE6FD !important;
+        }
+
+        .dark .border-ocean-200 {
+            border-color: #075985 !important;
+        }
+
+        .dark .bg-white {
+            background-color: #2D2A2A !important;
+        }
+
+        .dark .bg-ocean-50 {
+            background-color: #082f49 !important;
+        }
+
+        /* RTL specific adjustments */
+        [dir="rtl"] .space-x-reverse {
+            flex-direction: row-reverse;
+        }
+
+        [dir="rtl"] .text-left {
+            text-align: right;
+        }
+
+        [dir="rtl"] .mr-2 {
+            margin-left: 0.5rem;
+            margin-right: 0;
+        }
+        
+        [dir="rtl"] .password-toggle {
+            right: auto;
+            left: 1rem;
+        }
+    </style>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body
+    class="bg-gradient-to-br from-ocean-50 to-ocean-100 dark:from-[#082f49] dark:to-[#0f0c0a] transition-colors duration-300 font-sans antialiased min-h-screen flex items-center justify-center p-4">
+
+    <div class="w-full max-w-md">
+
+        <!-- Theme and RTL Toggle Buttons (Top Right) -->
+        <div class="flex justify-end gap-3 mb-6 md:mb-0 md:fixed md:top-6 md:right-6 md:rtl:left-6 md:rtl:right-auto md:z-50">
+            <button id="themeToggleBtn"
+                class="p-2.5 rounded-xl bg-white dark:bg-ocean-800 shadow-md border border-ocean-200 dark:border-ocean-700 text-ocean-600 dark:text-ocean-300 hover:bg-ocean-50 dark:hover:bg-ocean-700 transition-all duration-200">
+                <i id="themeIcon" class="bi bi-moon-fill text-lg"></i>
+            </button>
+            <button id="rtlToggleBtn"
+                class="p-2.5 rounded-xl bg-white dark:bg-ocean-800 shadow-md border border-ocean-200 dark:border-ocean-700 text-ocean-600 dark:text-ocean-300 hover:bg-ocean-50 dark:hover:bg-ocean-700 transition-all duration-200">
+                <i class="bi bi-arrow-left-right text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Login Card -->
+        <div
+            class="login-card bg-white dark:bg-ocean-800 rounded-3xl shadow-2xl border border-ocean-200 dark:border-ocean-700 overflow-hidden transition-all duration-300">
+            
+            <!-- Header -->
+            <div class="p-8 pb-6 text-center border-b border-ocean-100 dark:border-ocean-700">
+                <h1 class="text-2xl font-bold text-[#3E2723] dark:text-white">
+                    <a href="index.html" class="flex items-center justify-center gap-2 transition">
+                        <i class="bi bi-shield-lock-fill text-[#8D6E63] dark:text-white"></i>
+                        <span class="tracking-tight">SPORTS</span>
+                        <span class="font-normal">PRO X</span>
+                    </a>
+                </h1>
+                <p class="text-sm text-ocean-500 dark:text-ocean-400 mt-2">Login to your account to continue</p>
+            </div>
+
+            <!-- Login Form -->
+            <div class="p-8">
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <!-- Email Field -->
+                    <div class="mb-5">
+                        <label for="email" class="block text-sm font-semibold text-ocean-700 dark:text-ocean-200 mb-2">
+                            <i class="bi bi-envelope-fill mr-2 text-ocean-500 dark:text-ocean-400"></i> Email Address
+                        </label>
+                        <div class="relative input-wrapper">
+                            <input type="email" id="email" name="email" required
+                                class="input-focus w-full px-4 py-3 rounded-xl border border-ocean-200 dark:border-ocean-600 bg-ocean-50 dark:bg-ocean-900/50 text-ocean-700 dark:text-ocean-200 placeholder-wood-400 dark:placeholder-wood-500 focus:ring-2 focus:ring-ocean-500 focus:border-transparent transition-all duration-200 text-sm"
+                                placeholder="user@sportsprox.com" value="user@sportsprox.com">
+                        </div>
+                    </div>
+
+                    <!-- Password Field with Eye Icon -->
+                    <div class="mb-4">
+                        <label for="password" class="block text-sm font-semibold text-ocean-700 dark:text-ocean-200 mb-2">
+                            <i class="bi bi-lock-fill mr-2 text-ocean-500 dark:text-ocean-400"></i> Password
+                        </label>
+                        <div class="relative input-wrapper">
+                            <input type="password" id="password" name="password" required
+                                class="input-focus w-full px-4 py-3 rounded-xl border border-ocean-200 dark:border-ocean-600 bg-ocean-50 dark:bg-ocean-900/50 text-ocean-700 dark:text-ocean-200 placeholder-wood-400 dark:placeholder-wood-500 focus:ring-2 focus:ring-ocean-500 focus:border-transparent transition-all duration-200 pr-12 text-sm"
+                                placeholder="Enter your password" value="User@123">
+                            <button type="button" id="togglePassword"
+                                class="absolute inset-y-0 right-4 flex items-center text-ocean-500 dark:text-ocean-400 hover:text-ocean-700 dark:hover:text-ocean-200 transition">
+                                <i id="passwordEyeIcon" class="bi bi-eye-slash-fill text-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Remember Me and Forgot Password in same row -->
+                    <div class="flex items-center justify-between mb-6">
+                        <label class="flex items-center cursor-pointer">
+                            <input type="checkbox" id="rememberMe" class="w-4 h-4 rounded border-ocean-300 dark:border-ocean-600 text-ocean-600 focus:ring-ocean-500 focus:ring-offset-0">
+                            <span class="ml-2 text-sm text-ocean-600 dark:text-ocean-400">Remember me</span>
+                        </label>
+                        <a href="forgot-password.html" class="text-sm text-ocean-500 dark:text-ocean-400 hover:text-ocean-700 dark:hover:text-ocean-200 transition font-medium">
+                            Forgot password?
+                        </a>
+                    </div>
+
+                    <!-- Login Button -->
+                    <button type="submit"
+                        class="w-full bg-gradient-to-r from-ocean-700 to-ocean-600 hover:from-ocean-800 hover:to-ocean-700 text-white font-semibold py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-[1.02]">
+                        <i class="bi bi-box-arrow-in-right mr-2"></i> Login
+                    </button>
+                </form>
+
+                <!-- Divider -->
+                <div class="relative my-6">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-ocean-200 dark:border-ocean-700"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-3 bg-white dark:bg-ocean-800 text-ocean-500 dark:text-ocean-400">Or continue with</span>
+                    </div>
+                </div>
+
+                <!-- Social Login Buttons -->
+                <div class="grid grid-cols-2 gap-3">
+                    <button type="button"
+                        class="flex items-center justify-center gap-2 px-4 py-3 border border-ocean-200 dark:border-ocean-600 rounded-xl text-ocean-600 dark:text-ocean-300 hover:bg-ocean-50 dark:hover:bg-ocean-700 transition-all duration-200">
+                        <i class="bi bi-google text-lg"></i>
+                        <span class="text-sm">Google</span>
+                    </button>
+                    <button type="button"
+                        class="flex items-center justify-center gap-2 px-4 py-3 border border-ocean-200 dark:border-ocean-600 rounded-xl text-ocean-600 dark:text-ocean-300 hover:bg-ocean-50 dark:hover:bg-ocean-700 transition-all duration-200">
+                        <i class="bi bi-apple text-lg"></i>
+                        <span class="text-sm">Apple</span>
+                    </button>
+                </div>
+
+                <!-- Sign Up Link -->
+                <p class="text-center text-sm text-ocean-500 dark:text-ocean-400 mt-6">
+                    Don't have an account? 
+                    <a href="register.html" class="font-semibold text-ocean-700 dark:text-ocean-300 hover:text-ocean-600 dark:hover:text-ocean-200 transition">
+                        Sign Up
+                    </a>
+                    <span class="mx-2 text-ocean-300 dark:text-ocean-600">|</span>
+                    <a href="admin-login.html" class="font-semibold text-red-700 dark:text-red-400 hover:text-red-600 transition">
+                        Admin
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Theme Toggle Functionality
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+                updateThemeIcon(true);
+            } else {
+                document.documentElement.classList.remove('dark');
+                updateThemeIcon(false);
+            }
+        }
+
+        function updateThemeIcon(isDark) {
+            const themeIcon = document.getElementById('themeIcon');
+            if (themeIcon) {
+                themeIcon.className = isDark ? 'bi bi-sun-fill text-lg' : 'bi bi-moon-fill text-lg';
+            }
+        }
+
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.contains('dark');
+            if (isDark) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                updateThemeIcon(false);
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                updateThemeIcon(true);
+            }
+        }
+
+        // RTL Toggle Functionality
+        function initRTL() {
+            const savedDir = localStorage.getItem('dir');
+            if (savedDir === 'rtl') {
+                document.documentElement.dir = 'rtl';
+            } else {
+                document.documentElement.dir = 'ltr';
+            }
+        }
+
+        function toggleRTL() {
+            const currentDir = document.documentElement.dir;
+            const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+            document.documentElement.dir = newDir;
+            localStorage.setItem('dir', newDir);
+        }
+
+        // Password Visibility Toggle
+        function initPasswordToggle() {
+            const toggleBtn = document.getElementById('togglePassword');
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = document.getElementById('passwordEyeIcon');
+            
+            if (toggleBtn && passwordInput && eyeIcon) {
+                toggleBtn.addEventListener('click', function() {
+                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordInput.setAttribute('type', type);
+                    eyeIcon.className = type === 'password' ? 'bi bi-eye-slash-fill text-lg' : 'bi bi-eye-fill text-lg';
+                });
+            }
+        }
+
+        // Handle Login
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const rememberMe = document.getElementById('rememberMe')?.checked || false;
+            
+            // Store remember me preference
+            if (rememberMe) {
+                localStorage.setItem('rememberedEmail', email);
+            } else {
+                localStorage.removeItem('rememberedEmail');
+            }
+            
+            if (window.auth && window.auth.login) {
+                const res = window.auth.login(email, password);
+                if (res.success) {
+                    window.location.href = 'profile.html';
+                } else {
+                    alert(res.message);
+                }
+            } else {
+                window.location.href = 'profile.html';
+            }
+        }
+
+        // Load remembered email if exists
+        function loadRememberedEmail() {
+            const rememberedEmail = localStorage.getItem('rememberedEmail');
+            if (rememberedEmail && document.getElementById('email')) {
+                document.getElementById('email').value = rememberedEmail;
+                const rememberCheckbox = document.getElementById('rememberMe');
+                if (rememberCheckbox) rememberCheckbox.checked = true;
+            }
+        }
+
+        // Attach event listeners
+        document.getElementById('themeToggleBtn')?.addEventListener('click', toggleTheme);
+        document.getElementById('rtlToggleBtn')?.addEventListener('click', toggleRTL);
+        
+        // Initialize on page load
+        initTheme();
+        initRTL();
+        initPasswordToggle();
+        loadRememberedEmail();
+
+        // Add animation to inputs on focus
+        const inputs = document.querySelectorAll('input:not([type="checkbox"])');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement?.classList.add('scale-[1.01]');
+            });
+            input.addEventListener('blur', function() {
+                this.parentElement?.classList.remove('scale-[1.01]');
+            });
+        });
+    </script>
+</body>
+
+</html>

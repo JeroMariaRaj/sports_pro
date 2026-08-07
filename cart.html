@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - SportsPro X</title>
+  <link rel="icon" href="assets/images/cricket_bat_premium_1786007732561.jpg">
+  <script src="tailwind.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <style>
+    /* THEME TOGGLE */
+    :root {
+      --home-bg: #ffffff;
+      --text-color: #111111;
+    }
+
+    [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
+    }
+
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .bg-white,
+    [data-theme="dark"] .bg-\[\#FDFBF9\],
+    [data-theme="dark"] .bg-\[\#F9F7F5\],
+    [data-theme="dark"] .bg-\[\#EFEBE9\] {
+      background-color: #000000 !important;
+      border-color: #333333 !important;
+    }
+
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span {
+      color: #ffffff !important;
+    }
+  </style>
+</head>
+
+<body class="font-sans overflow-x-hidden">
+  <div id="navbar"></div>
+
+  <section class="py-24 bg-white mt-16 min-h-[70vh]">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-[#3E2723] mb-4">Your Cart</h1>
+        <p class="text-[#5D4037]">Review your selected premium gear.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12" id="cart-container">
+        <!-- Rendered by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCart();
+      window.addEventListener('cartUpdated', renderCart);
+    });
+
+    function renderCart() {
+      const container = document.getElementById('cart-container');
+      if(!container || !window.store || !window.db) return;
+
+      const cartItems = window.store.getCart();
+      
+      if (cartItems.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full text-center py-16 bg-[#FDFBF9] rounded-[2rem] border border-[#EFEBE9]">
+            <i class="bi bi-cart-x text-6xl text-[#8D6E63] mb-4 block"></i>
+            <h2 class="text-2xl font-bold text-[#3E2723] mb-4">Your cart is empty</h2>
+            <p class="text-[#5D4037] mb-8">Looks like you haven't added any gear yet.</p>
+            <a href="shop.html" class="inline-block bg-[#3E2723] text-white font-bold py-3 px-8 rounded-xl hover:bg-[#8D6E63] transition-colors shadow-lg">
+              Explore Products
+            </a>
+          </div>
+        `;
+        return;
+      }
+
+      let subtotal = 0;
+      let itemsHtml = '<div class="lg:col-span-2 space-y-6">';
+
+      cartItems.forEach(item => {
+        const product = window.db.products.find(p => p.id === item.productId);
+        if(!product) return;
+
+        const price = product.discountPrice || product.price;
+        const total = price * item.quantity;
+        subtotal += total;
+
+        itemsHtml += `
+          <div class="flex flex-col sm:flex-row gap-6 items-center bg-[#FDFBF9] border border-[#EFEBE9] p-4 rounded-2xl relative">
+            <button onclick="window.store.removeFromCart('${product.id}')" class="absolute top-4 right-4 text-[#8D6E63] hover:text-red-500 transition-colors">
+              <i class="bi bi-x-lg text-lg"></i>
+            </button>
+            <a href="product-details.html?id=${product.id}" class="w-32 h-32 bg-white rounded-xl border border-[#EFEBE9] p-2 flex-shrink-0">
+              <img src="${product.image}" class="w-full h-full object-contain hover:scale-105 transition-transform" alt="${product.name}">
+            </a>
+            <div class="flex-1 w-full flex flex-col justify-between py-2">
+              <div>
+                <p class="text-[10px] font-bold text-[#8D6E63] uppercase tracking-widest">${product.category}</p>
+                <h4 class="text-lg font-semibold text-[#3E2723] mt-1 pr-8">
+                  <a href="product-details.html?id=${product.id}" class="hover:text-[#8D6E63] transition-colors">${product.name}</a>
+                </h4>
+                <p class="text-[#5D4037] font-bold mt-2">$${price}</p>
+              </div>
+              <div class="flex items-center justify-between mt-4">
+                <div class="flex items-center border border-[#EFEBE9] rounded-lg bg-white overflow-hidden">
+                  <button onclick="window.store.updateCartQuantity('${product.id}', ${item.quantity - 1})" class="px-3 py-1.5 text-[#3E2723] hover:bg-[#EFEBE9] font-bold"><i class="bi bi-dash"></i></button>
+                  <span class="w-10 text-center font-bold text-[#3E2723] text-sm">${item.quantity}</span>
+                  <button onclick="window.store.updateCartQuantity('${product.id}', ${item.quantity + 1})" class="px-3 py-1.5 text-[#3E2723] hover:bg-[#EFEBE9] font-bold"><i class="bi bi-plus"></i></button>
+                </div>
+                <div class="text-[#3E2723] font-bold text-lg">
+                  $${total}
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+      
+      itemsHtml += '</div>';
+
+      const tax = subtotal * 0.05;
+      const grandTotal = subtotal + tax;
+
+      itemsHtml += `
+        <div class="lg:col-span-1">
+          <div class="bg-[#FDFBF9] border border-[#EFEBE9] rounded-2xl p-6 sticky top-24">
+            <h3 class="text-xl font-bold text-[#3E2723] mb-6 uppercase tracking-wider text-sm border-b border-[#EFEBE9] pb-4">Order Summary</h3>
+            
+            <div class="space-y-4 text-sm mb-6">
+              <div class="flex justify-between text-[#5D4037]">
+                <span>Subtotal</span>
+                <span class="font-semibold">$${subtotal.toFixed(2)}</span>
+              </div>
+              <div class="flex justify-between text-[#5D4037]">
+                <span>Shipping</span>
+                <span class="font-semibold text-emerald-600">Free</span>
+              </div>
+              <div class="flex justify-between text-[#5D4037] border-b border-[#EFEBE9] pb-4">
+                <span>Estimated Tax</span>
+                <span class="font-semibold">$${tax.toFixed(2)}</span>
+              </div>
+              <div class="flex justify-between text-[#3E2723] text-lg font-bold">
+                <span>Total</span>
+                <span>$${grandTotal.toFixed(2)}</span>
+              </div>
+            </div>
+
+            <a href="checkout.html" class="block w-full text-center bg-[#3E2723] hover:bg-[#8D6E63] text-white py-4 rounded-xl font-bold uppercase tracking-wider transition-colors shadow-lg">
+              Proceed to Checkout
+            </a>
+            
+            <div class="mt-6 flex items-center justify-center gap-4 text-[#8D6E63]">
+              <i class="bi bi-shield-lock text-xl"></i>
+              <span class="text-xs font-semibold uppercase tracking-widest">Secure Checkout</span>
+            </div>
+          </div>
+        </div>
+      `;
+
+      container.innerHTML = itemsHtml;
+    }
+  </script>
+</body>
+</html>

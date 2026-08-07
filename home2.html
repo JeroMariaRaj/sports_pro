@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home 2 - SportsPro X</title>
+    <link rel="icon" href="assets/images/cricket_bat_premium_1786007732561.jpg">
+    <script src="tailwind.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* RTL */
+        .rtl {
+            direction: rtl;
+        }
+
+        [dir="rtl"] .title {
+            margin-right: 20px !important;
+        }
+
+        /* THEME TOGGLE */
+        :root {
+            --home-bg: #ffffff;
+            --text-color: #111111;
+        }
+
+        [data-theme="dark"] {
+            --home-bg: #000000;
+            --text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--home-bg) !important;
+            color: var(--text-color);
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        [data-theme="dark"] .card,
+        [data-theme="dark"] .bg-white,
+        [data-theme="dark"] .bg-white\/90,
+        [data-theme="dark"] .bg-white\/80,
+        [data-theme="dark"] .bg-white\/10,
+        [data-theme="dark"] .bg-\[\#FDFBF9\],
+        [data-theme="dark"] .bg-\[\#EFEBE9\],
+        [data-theme="dark"] .bg-\[\#F9F7F5\] {
+            background-color: #000000 !important;
+            border-color: #333333 !important;
+        }
+
+        [data-theme="dark"] .btn,
+        [data-theme="dark"] .btn1:hover {
+            color: #000000 !important;
+        }
+
+        [data-theme="dark"] body,
+        [data-theme="dark"] p,
+        [data-theme="dark"] h1,
+        [data-theme="dark"] h2,
+        [data-theme="dark"] h3,
+        [data-theme="dark"] h4,
+        [data-theme="dark"] h5,
+        [data-theme="dark"] h6,
+        [data-theme="dark"] span,
+        [data-theme="dark"] li,
+        [data-theme="dark"] a,
+        [data-theme="dark"] i,
+        [data-theme="dark"] label,
+        [data-theme="dark"] table,
+        [data-theme="dark"] th,
+        [data-theme="dark"] td,
+        [data-theme="dark"] div,
+        [data-theme="dark"] small,
+        [data-theme="dark"] strong {
+            color: #ffffff !important;
+        }
+
+        [data-theme="dark"] thead {
+            background-color: #064E3B !important;
+        }
+
+        [data-theme="dark"] .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7) !important;
+        }
+
+        [data-theme="dark"] .tag-btn {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border-color: #ffffff !important;
+        }
+
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <div id="navbar"></div>
+
+    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#FDFBF9]">
+
+        <div class="absolute top-0 left-0 w-full h-1/2 md:w-1/2 md:h-full border-b md:border-b-0 md:border-r border-white/20">
+            <img src="assets/images/football_boot_premium_1786007742592.jpg" class="w-full h-full object-cover grayscale" alt="Standard Team Footwear">
+        </div>
+
+        <div class="absolute bottom-0 right-0 md:top-0 w-full h-1/2 md:w-1/2 md:h-full">
+            <img src="assets/images/football_boot_premium_1786007742592.jpg" class="w-full h-full object-cover" alt="Custom Team Footwear">
+        </div>
+
+        <div class="relative z-30 max-w-4xl mx-auto px-4 sm:px-6 mt-10">
+            <div class="bg-white/90 md:bg-white/80 backdrop-blur-xl p-6 sm:p-10 md:p-16 rounded-[2rem] md:rounded-[3rem] shadow-[0_30px_100px_rgba(62,39,35,0.3)] border border-white/50 text-center space-y-6 md:space-y-8 transform transition-transform hover:scale-[1.01] duration-700">
+
+                <div class="space-y-3 md:space-y-4">
+                    <h2 class="text-[#8D6E63] font-semibold tracking-[0.2em] md:tracking-[0.4em] text-[10px] md:text-xs uppercase">
+                        Virtual Customization For Clubs
+                    </h2>
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl font-semibold text-[#3E2723] leading-tight">
+                        Gear Teams <span class="text-[#8D6E63]">Faster</span> <br class="hidden sm:block">
+                        With Custom Renders.
+                    </h1>
+                    <p class="text-[#5D4037] text-sm md:text-lg max-w-xl mx-auto leading-relaxed">
+                        The ultimate customization toolkit for sports leagues and athletic clubs. View raw designs in real-time and checkout sublimated team kits instantly.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                    <a href="services.html" class="w-full sm:w-auto px-8 md:px-10 py-3 bg-[#3E2723] text-white rounded-xl md:rounded-2xl font-bold text-sm shadow-lg hover:bg-[#5D4037] transition-all transform hover:-translate-y-1">
+                        Start Customizing
+                    </a>
+                    <a href="shop.html" class="w-full sm:w-auto px-8 md:px-10 py-3 border border-[#3E2723] text-[#3E2723] rounded-xl md:rounded-2xl font-bold text-sm hover:bg-[#3E2723] hover:text-white transition-all">
+                        View our Products
+                    </a>
+                </div>
+
+                <div class="hidden sm:flex items-center justify-center gap-4 md:gap-6 pt-4 flex-wrap">
+                    <div class="flex items-center gap-2 text-[#8D6E63]">
+                        <i class="bi bi-lightning-charge-fill text-lg"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-widest">Instant Quotes</span>
+                    </div>
+                    <div class="hidden md:block w-1 h-1 bg-[#D7CCC8] rounded-full"></div>
+                    <div class="flex items-center gap-2 text-[#8D6E63]">
+                        <i class="bi bi-award-fill text-lg"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-widest">Premium Sublimation</span>
+                    </div>
+                    <div class="hidden md:block w-1 h-1 bg-[#D7CCC8] rounded-full"></div>
+                    <div class="flex items-center gap-2 text-[#8D6E63]">
+                        <i class="bi bi-graph-up-arrow text-lg"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-widest">High Performance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+   <section class="py-20 md:py-32 bg-[#3E2723] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:30px_30px]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            <h2 class="text-white font-semibold tracking-[0.2em] text-[10px] md:text-xs uppercase mb-3 md:mb-4">Proof of Concept</h2>
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight">Pixel-Perfect Customization.</h3>
+            <p class="text-[#D7CCC8] mt-4 md:mt-6 text-sm md:text-lg leading-relaxed">
+                Drag the slider to see how SportsPro X transforms raw gear into vibrant, sponsor-ready sports jerseys that players love.
+            </p>
+        </div>
+
+        <!-- Style switcher tabs -->
+        <div class="flex justify-center gap-4 mb-8 flex-wrap">
+            <button class="style-tab-btn px-6 py-2.5 rounded-full border bg-[#8D6E63] border-[#8D6E63] text-white font-medium text-xs md:text-sm transition duration-300 shadow-lg"
+                    data-before="assets/images/football_boot_premium_1786007742592.jpg" data-after="assets/images/football_boot_premium_1786007742592.jpg" data-style="Football Boot" data-time="&lt; 10 Sec" data-res="4K UHD" data-scale="100%">
+                Football Boots (Elite Custom)
+            </button>
+            <button class="style-tab-btn px-6 py-2.5 rounded-full border border-white/20 text-white/70 font-medium text-xs md:text-sm hover:bg-white/10 transition duration-300"
+                    data-before="assets/images/cricket_bat_premium_1786007732561.jpg" data-after="assets/images/cricket_bat_premium_1786007732561.jpg" data-style="Cricket Bat" data-time="&lt; 15 Sec" data-res="4K UHD" data-scale="100%">
+                Cricket Bats (Laser Engraved)
+            </button>
+        </div>
+
+        <div class="relative w-full max-w-5xl mx-auto h-[400px] sm:h-[500px] md:h-[600px] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-4 border-white/10 group select-none">
+            
+            <img id="comparison-before-img" src="assets/images/football_boot_premium_1786007742592.jpg" alt="Raw Product Before" class="absolute inset-0 w-full h-full object-cover pointer-events-none grayscale">
+            
+            <div class="absolute top-6 left-6 z-10 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full pointer-events-none">
+                <span class="text-[10px] md:text-xs font-bold text-white uppercase tracking-widest">Raw Equipment</span>
+            </div>
+            <div class="absolute top-6 right-6 z-30 bg-[#8D6E63]/90 backdrop-blur-md px-4 py-2 rounded-full pointer-events-none">
+                <span class="text-[10px] md:text-xs font-bold text-white uppercase tracking-widest">Custom Print</span>
+            </div>
+
+            <div id="comparison-overlay" class="absolute inset-0 w-1/2 h-full overflow-hidden border-r-4 border-white shadow-[5px_0_15px_rgba(0,0,0,0.3)] z-20">
+                <img id="comparison-after-img" src="assets/images/football_boot_premium_1786007742592.jpg" alt="Custom Product After" class="absolute top-0 left-0 w-[100vw] max-w-[64rem] h-full object-cover pointer-events-none" style="width: 100vw; max-width: 1024px;"> </div>
+
+            <input type="range" min="0" max="100" value="50" id="comparison-slider" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-40">
+
+            <div id="slider-handle" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 bg-white rounded-full shadow-2xl flex items-center justify-center z-30 pointer-events-none transition-transform group-hover:scale-110">
+                <i class="bi bi-chevron-bar-expand text-[#3E2723] text-xl md:text-2xl transform rotate-90"></i>
+            </div>
+
+        </div>
+
+        <div class="max-w-4xl mx-auto mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 text-center border-t border-white/10 pt-8">
+            <div>
+                <p id="stat-style" class="text-white font-bold text-lg md:text-xl">Football Boot</p>
+                <p class="text-[#8D6E63] text-[10px] md:text-xs uppercase tracking-widest mt-1">Design Style</p>
+            </div>
+            <div>
+                <p id="stat-time" class="text-white font-bold text-lg md:text-xl">&lt; 10 Sec</p>
+                <p class="text-[#8D6E63] text-[10px] md:text-xs uppercase tracking-widest mt-1">Render Time</p>
+            </div>
+            <div>
+                <p id="stat-res" class="text-white font-bold text-lg md:text-xl">4K UHD</p>
+                <p class="text-[#8D6E63] text-[10px] md:text-xs uppercase tracking-widest mt-1">Resolution</p>
+            </div>
+            <div>
+                <p id="stat-scale" class="text-white font-bold text-lg md:text-xl">100%</p>
+                <p class="text-[#8D6E63] text-[10px] md:text-xs uppercase tracking-widest mt-1">Auto-Scaled</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="py-16 md:py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-10 md:gap-16 items-start">
+
+            <div class="lg:w-1/3 lg:sticky lg:top-32 space-y-4 md:space-y-6">
+                <h2 class="text-[#8D6E63] font-semibold tracking-[0.2em] text-[10px] md:text-xs uppercase">The Workflow</h2>
+                <h3 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#3E2723] leading-tight">Equip your squads effortlessly.</h3>
+                <p class="text-[#5D4037] leading-relaxed text-sm md:text-lg">
+                    SportsPro X integrates directly into your sports team operations. Less time sizing, more time winning.
+                </p>
+                <a href="contact.html" class="inline-flex items-center gap-2 text-[#3E2723] font-bold border-b-2 border-[#3E2723] pb-1 hover:text-[#8D6E63] hover:border-[#8D6E63] transition-all md:mt-4 text-sm md:text-base">
+                    Contact Us <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="lg:w-2/3 space-y-6 md:space-y-8 w-full">
+
+                <div class="group bg-[#FDFBF9] border border-[#EFEBE9] p-6 sm:p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-sm hover:shadow-xl hover:border-[#8D6E63] transition-all duration-500 flex flex-col sm:flex-row gap-4 sm:gap-8 items-start sm:items-center">
+                    <div class="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 bg-[#3E2723] text-white rounded-full flex items-center justify-center text-xl md:text-3xl font-black group-hover:scale-110 transition-transform duration-500">
+                        1
+                    </div>
+                    <div>
+                        <h4 class="text-xl md:text-2xl font-semibold text-[#3E2723] mb-2 md:mb-3">Upload Roster</h4>
+                        <p class="text-[#5D4037] leading-relaxed text-sm md:text-base">
+                            Drag and drop folders of player names, shirt numbers, and target sizes. Our database assigns specifications automatically.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="group bg-[#FDFBF9] border border-[#EFEBE9] p-6 sm:p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-sm hover:shadow-xl hover:border-[#8D6E63] transition-all duration-500 flex flex-col sm:flex-row gap-4 sm:gap-8 items-start sm:items-center">
+                    <div class="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 bg-[#3E2723] text-white rounded-full flex items-center justify-center text-xl md:text-3xl font-black group-hover:scale-110 transition-transform duration-500">
+                        2
+                    </div>
+                    <div>
+                        <h4 class="text-xl md:text-2xl font-semibold text-[#3E2723] mb-2 md:mb-3">Select Print Styling</h4>
+                        <p class="text-[#5D4037] leading-relaxed text-sm md:text-base">
+                            Apply bulk templates. Choose "Urban Modern" collar fits, or "Retro Stripe" panels with one click.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="group bg-[#FDFBF9] border border-[#EFEBE9] p-6 sm:p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-sm hover:shadow-xl hover:border-[#8D6E63] transition-all duration-500 flex flex-col sm:flex-row gap-4 sm:gap-8 items-start sm:items-center">
+                    <div class="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 bg-[#3E2723] text-white rounded-full flex items-center justify-center text-xl md:text-3xl font-black group-hover:scale-110 transition-transform duration-500">
+                        3
+                    </div>
+                    <div>
+                        <h4 class="text-xl md:text-2xl font-semibold text-[#3E2723] mb-2 md:mb-3">Export & Deliver</h4>
+                        <p class="text-[#5D4037] leading-relaxed text-sm md:text-base">
+                            Receive high-resolution, print-ready mockups directly to your inbox, ready to send to our manufacturing line.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-[#FDFBF9]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-10 md:mb-16">
+                <h3 class="text-3xl sm:text-4xl font-semibold text-[#3E2723]">The Return on Custom Kits</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+
+                <div class="group relative h-72 sm:h-80 md:h-96 bg-white rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white shadow-sm hover:shadow-2xl hover:border-[#3E2723] transition-all duration-500">
+                    <div class="absolute inset-0 p-8 flex flex-col justify-center items-center text-center transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-[#FDFBF9] rounded-full flex items-center justify-center mb-4 md:mb-6 border border-[#EFEBE9]">
+                            <i class="bi bi-clock-history text-2xl md:text-3xl text-[#3E2723]"></i>
+                        </div>
+                        <h4 class="text-xl md:text-2xl font-semibold text-[#3E2723]">Time Saved</h4>
+                        <div class="absolute bottom-6 text-[#8D6E63] text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] flex items-center gap-2 opacity-70 animate-pulse">
+                            Tap or Hover <i class="bi bi-chevron-up"></i>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-[#3E2723] p-8 flex flex-col justify-center items-center text-center translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
+                        <h4 class="text-5xl md:text-6xl font-semibold text-white mb-2 md:mb-4">10 Days</h4>
+                        <p class="text-[#D7CCC8] text-xs md:text-sm leading-relaxed max-w-[200px]">Average time saved bypassing raw setup iterations and layout tests.</p>
+                    </div>
+                </div>
+
+                <div class="group relative h-72 sm:h-80 md:h-96 bg-white rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white shadow-sm hover:shadow-2xl hover:border-[#3E2723] transition-all duration-500">
+                    <div class="absolute inset-0 p-8 flex flex-col justify-center items-center text-center transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-[#FDFBF9] rounded-full flex items-center justify-center mb-4 md:mb-6 border border-[#EFEBE9]">
+                            <i class="bi bi-currency-dollar text-2xl md:text-3xl text-[#3E2723]"></i>
+                        </div>
+                        <h4 class="text-xl md:text-2xl font-semibold text-[#3E2723]">Cost Reduction</h4>
+                        <div class="absolute bottom-6 text-[#8D6E63] text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] flex items-center gap-2 opacity-70 animate-pulse">
+                            Tap or Hover <i class="bi bi-chevron-up"></i>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-[#3E2723] p-8 flex flex-col justify-center items-center text-center translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
+                        <h4 class="text-5xl md:text-6xl font-semibold text-white mb-2 md:mb-4">40%</h4>
+                        <p class="text-[#D7CCC8] text-xs md:text-sm leading-relaxed max-w-[200px]">Cheaper than manual embroidery and setup fees across the season.</p>
+                    </div>
+                </div>
+
+                <div class="group relative h-72 sm:h-80 md:h-96 bg-white rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white shadow-sm hover:shadow-2xl hover:border-[#3E2723] transition-all duration-500">
+                    <div class="absolute inset-0 p-8 flex flex-col justify-center items-center text-center transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-[#FDFBF9] rounded-full flex items-center justify-center mb-4 md:mb-6 border border-[#EFEBE9]">
+                            <i class="bi bi-graph-up text-2xl md:text-3xl text-[#3E2723]"></i>
+                        </div>
+                        <h4 class="text-xl md:text-2xl font-semibold text-[#3E2723]">Performance Boost</h4>
+                        <div class="absolute bottom-6 text-[#8D6E63] text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] flex items-center gap-2 opacity-70 animate-pulse">
+                            Tap or Hover <i class="bi bi-chevron-up"></i>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-[#3E2723] p-8 flex flex-col justify-center items-center text-center translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
+                        <h4 class="text-5xl md:text-6xl font-semibold text-white mb-2 md:mb-4">+18%</h4>
+                        <p class="text-[#D7CCC8] text-xs md:text-sm leading-relaxed max-w-[200px]">Higher breathability score on custom engineered micro-fabrics.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-20 md:py-32 bg-[#3E2723] overflow-hidden text-center">
+        <img src="assets/images/basketball_premium_1786007791000.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay">
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center">
+            <div class="bg-white/10 backdrop-blur-2xl border border-white/20 p-8 md:p-20 rounded-[2rem] md:rounded-[3rem] shadow-2xl">
+                <i class="bi bi-trophy text-4xl md:text-5xl text-white mb-4 md:mb-6 inline-block"></i>
+                <h2 class="text-3xl sm:text-4xl md:text-6xl font-semibold text-white mb-4 md:mb-6 tracking-tight">Don't print standard.<br>Wear
+                    <span class="text-[#D7CCC8] italic">Extraordinary</span>.</h2>
+                <p class="text-[#D7CCC8] text-sm md:text-lg max-w-2xl mx-auto mb-8 md:mb-12 leading-relaxed">
+                    Join elite academies and sports networks utilizing SportsPro X to maximize squad styling and performance comfort.
+                </p>
+
+                <a href="register.html" class="inline-block w-full sm:w-auto bg-[#3E2723] text-white px-8 py-3 rounded-xl md:rounded-full font-bold hover:bg-[#201412] border border-[#3E2723] transition-all whitespace-nowrap text-sm md:text-base">
+                    Create Free Account
+                </a>
+                <p class="text-[10px] md:text-xs text-white/50 mt-4 md:mt-6">No credit card required to configure your first 3D mockup.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 md:py-32 bg-[#FDFBF9] relative">
+        <div class="absolute top-0 left-0 w-full h-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-12 md:mb-20">
+                <h2 class="text-[#8D6E63] font-semibold tracking-[0.2em] text-[10px] md:text-xs uppercase mb-3 md:mb-4">Flexible Plans</h2>
+                <h3 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#3E2723]">Pricing that scales with your club.</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-8 max-w-md md:max-w-7xl mx-auto items-stretch">
+
+                <div class="h-full flex flex-col bg-white border border-[#EFEBE9] p-8 md:p-12 rounded-[2rem] md:rounded-[2.5rem] shadow-sm hover:shadow-xl transition-shadow duration-500 relative z-10">
+                    <div>
+                        <h4 class="text-xl md:text-2xl font-semibold text-[#3E2723]">Independent Club</h4>
+                        <p class="text-[#8D6E63] font-bold text-4xl md:text-5xl mt-3 md:mt-4">$15<span class="text-sm md:text-lg font-normal text-[#5D4037]">/jersey</span></p>
+                        <p class="text-xs md:text-sm text-[#5D4037] mt-3 md:mt-4 leading-relaxed">
+                            Perfect for local league clubs looking to order custom uniforms on-demand without minimum setups.
+                        </p>
+                    </div>
+
+                    <ul class="mt-6 md:mt-8 mb-8 md:mb-10 space-y-4 md:space-y-5 flex-grow text-sm md:text-base">
+                        <li class="flex items-start gap-3 text-[#5D4037]">
+                            <i class="bi bi-check2-circle text-[#8D6E63] text-lg md:text-xl mt-0.5"></i>
+                            <span>7-day shipping turnaround</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-[#5D4037]">
+                            <i class="bi bi-check2-circle text-[#8D6E63] text-lg md:text-xl mt-0.5"></i>
+                            <span>2 design revisions included</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-[#5D4037]">
+                            <i class="bi bi-check2-circle text-[#8D6E63] text-lg md:text-xl mt-0.5"></i>
+                            <span>Standard print library access</span>
+                        </li>
+                    </ul>
+
+                    <a href="register.html" class="btn1 mt-auto block text-center w-full py-3 md:py-3 border-2 border-[#EFEBE9] rounded-xl md:rounded-full font-bold text-[#3E2723] hover:border-[#3E2723] hover:bg-[#FDFBF9] transition-all text-sm md:text-base">
+                        Start Pay-As-You-Go
+                    </a>
+                </div>
+
+                <div class="h-full flex flex-col bg-[#3E2723] p-8 md:p-12 rounded-[2rem] md:rounded-[2.5rem] shadow-[0_20px_50px_rgba(62,39,35,0.2)] relative z-20 border border-[#5D4037]">
+                    <div class="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2 bg-[#8D6E63] text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest px-4 md:px-6 py-1.5 md:py-2 rounded-full shadow-lg whitespace-nowrap">
+                        Most Popular
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl md:text-2xl font-semibold text-white">League Pro</h4>
+                        <p class="text-white font-black text-4xl md:text-6xl mt-3 md:mt-4">$299<span class="text-sm md:text-xl font-normal text-[#D7CCC8]">/mo</span></p>
+                        <p class="text-xs md:text-sm text-[#D7CCC8] mt-3 md:mt-4 leading-relaxed">
+                            For high-volume academies and leagues looking to uniform up to 300 players with custom rosters.
+                        </p>
+                    </div>
+
+                    <ul class="mt-6 md:mt-8 mb-8 md:mb-10 space-y-4 md:space-y-5 flex-grow text-sm md:text-base">
+                        <li class="flex items-start gap-3 text-white">
+                            <i class="bi bi-star-fill text-[#D7CCC8] mt-1 text-xs md:text-sm"></i>
+                            <span>Up to 300 custom jerseys / month</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-white">
+                            <i class="bi bi-star-fill text-[#D7CCC8] mt-1 text-xs md:text-sm"></i>
+                            <span>Priority 24-hour manufacturing setups</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-white">
+                            <i class="bi bi-star-fill text-[#D7CCC8] mt-1 text-xs md:text-sm"></i>
+                            <span>Premium fabric & layout structures</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-white">
+                            <i class="bi bi-star-fill text-[#D7CCC8] mt-1 text-xs md:text-sm"></i>
+                            <span>Custom collar & player numbering fits</span>
+                        </li>
+                    </ul>
+
+                    <a href="contact.html" class="mt-auto block text-center w-full py-3 md:py-3 bg-white text-[#3E2723] rounded-xl md:rounded-full font-black shadow-lg hover:bg-[#EFEBE9] hover:scale-[1.02] transition-all text-sm md:text-base">
+                        Upgrade to Pro
+                    </a>
+                </div>
+
+                <div class="h-full flex flex-col bg-white border border-[#EFEBE9] p-8 md:p-12 rounded-[2rem] md:rounded-[2.5rem] shadow-sm hover:shadow-xl transition-shadow duration-500 relative z-10">
+                    <div>
+                        <h4 class="text-xl md:text-2xl font-semibold text-[#3E2723]">Franchise Suite</h4>
+                        <p class="text-[#8D6E63] font-bold text-4xl md:text-5xl mt-3 md:mt-4">Custom</p>
+                        <p class="text-xs md:text-sm text-[#5D4037] mt-3 md:mt-4 leading-relaxed">
+                            For professional leagues, networks, and brands requiring custom ordering dashboards and manufacturing lines.
+                        </p>
+                    </div>
+
+                    <ul class="mt-6 md:mt-8 mb-8 md:mb-10 space-y-4 md:space-y-5 flex-grow text-sm md:text-base">
+                        <li class="flex items-start gap-3 text-[#5D4037]">
+                            <i class="bi bi-check2-circle text-[#8D6E63] text-lg md:text-xl mt-0.5"></i>
+                            <span>Unlimited jersey production</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-[#5D4037]">
+                            <i class="bi bi-check2-circle text-[#8D6E63] text-lg md:text-xl mt-0.5"></i>
+                            <span>Dedicated account manufacturing manager</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-[#5D4037]">
+                            <i class="bi bi-check2-circle text-[#8D6E63] text-lg md:text-xl mt-0.5"></i>
+                            <span>Custom design API integrations</span>
+                        </li>
+                    </ul>
+
+                    <a href="contact.html" class="btn1 mt-auto block text-center w-full py-3 md:py-3 border-2 border-[#EFEBE9] rounded-xl md:rounded-full font-bold text-[#3E2723] hover:border-[#3E2723] hover:bg-[#FDFBF9] transition-all text-sm md:text-base">
+                        Contact Enterprise
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+                    },
+                },
+            },
+        }
+    document.addEventListener('DOMContentLoaded', function() {
+        const slider = document.getElementById('comparison-slider');
+        const overlay = document.getElementById('comparison-overlay');
+        const handle = document.getElementById('slider-handle');
+
+        if(slider && overlay && handle) {
+            slider.addEventListener('input', function(e) {
+                const sliderValue = e.target.value;
+                overlay.style.width = `${sliderValue}%`;
+                handle.style.left = `${sliderValue}%`;
+            });
+        }
+
+        // Tab switcher logic
+        const tabs = document.querySelectorAll('.style-tab-btn');
+        const beforeImg = document.getElementById('comparison-before-img');
+        const afterImg = document.getElementById('comparison-after-img');
+        
+        const styleStat = document.getElementById('stat-style');
+        const timeStat = document.getElementById('stat-time');
+        const resStat = document.getElementById('stat-res');
+        const scaleStat = document.getElementById('stat-scale');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active tab button classes
+                tabs.forEach(t => {
+                    t.classList.remove('bg-[#8D6E63]', 'border-[#8D6E63]', 'text-white', 'shadow-lg');
+                    t.classList.add('border-white/20', 'text-white/70');
+                });
+                this.classList.add('bg-[#8D6E63]', 'border-[#8D6E63]', 'text-white', 'shadow-lg');
+                this.classList.remove('border-white/20', 'text-white/70');
+
+                // Switch images
+                beforeImg.src = this.getAttribute('data-before');
+                afterImg.src = this.getAttribute('data-after');
+
+                // Update text stats
+                styleStat.textContent = this.getAttribute('data-style');
+                timeStat.textContent = this.getAttribute('data-time');
+                resStat.textContent = this.getAttribute('data-res');
+                scaleStat.textContent = this.getAttribute('data-scale');
+
+                // Reset slider position to 50% on switch
+                slider.value = 50;
+                overlay.style.width = '50%';
+                handle.style.left = '50%';
+            });
+        });
+    });
+    </script>
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+</body>
+
+</html>
+

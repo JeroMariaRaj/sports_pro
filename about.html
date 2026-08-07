@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - SportsPro X</title>
+  <link rel="icon" href="assets/images/cricket_bat_premium_1786007732561.jpg">
+  <script src="tailwind.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <style>
+    /* RTL */
+    .rtl {
+      direction: rtl;
+    }
+
+    [dir="rtl"] .title {
+      margin-right: 20px !important;
+    }
+
+    /* THEME TOGGLE */
+    :root {
+      --home-bg: #ffffff;
+      --text-color: #111111;
+    }
+
+    [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
+    }
+
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .bg-white,
+    [data-theme="dark"] .bg-white\/90,
+    [data-theme="dark"] .bg-white\/80,
+    [data-theme="dark"] .bg-white\/10,
+    [data-theme="dark"] .bg-\[\#FDFBF9\],
+    [data-theme="dark"] .bg-\[\#EFEBE9\]:not(.w-0\.5),
+    [data-theme="dark"] .bg-\[\#F9F7F5\] {
+      background-color: #000000 !important;
+      border-color: #333333 !important;
+    }
+
+    [data-theme="dark"] .btn,
+    [data-theme="dark"] .btn1:hover {
+      color: #000000 !important;
+    }
+
+    [data-theme="dark"] body,
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] table,
+    [data-theme="dark"] th,
+    [data-theme="dark"] td,
+    [data-theme="dark"] div,
+    [data-theme="dark"] small,
+    [data-theme="dark"] strong {
+      color: #ffffff !important;
+    }
+
+    [data-theme="dark"] thead {
+      background-color: #064E3B !important;
+    }
+
+    [data-theme="dark"] .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+    }
+
+    [data-theme="dark"] .tag-btn {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      border-color: #ffffff !important;
+    }
+  
+  </style>
+</head>
+
+<body class="font-sans">
+  <!-- navbar -->
+  <div id="navbar"></div>
+
+  <!-- HERO BANNER -->
+<section class="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+    
+    <img src="assets/images/basketball_premium_1786007791000.jpg" 
+         alt="Sports Arena Background" 
+         class="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
+
+    <div class="absolute inset-0 bg-[#3E2723]/60 z-10"></div>
+
+    <div class="relative z-20 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
+        
+        <span class="text-[#D7CCC8] font-bold tracking-[0.3em] text-xs md:text-sm uppercase mb-4 block">
+            Welcome to SportsPro
+        </span>
+        
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-semibold text-white leading-tight mb-6">
+            Equip Your Squad Instantly.
+        </h1>
+        
+        <p class="text-[#EFEBE9] text-base md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+            The leading customized sports apparel and hardware supplier for pro clubs. High-performance gear, zero production delays.
+        </p>
+        
+        <a href="contact.html" class="btn1 bg-[#5D4037] text-white px-10 py-3 rounded-xl font-bold shadow-xl hover:bg-white hover:text-[#3E2723] transition-all duration-300 transform hover:-translate-y-1">
+            Get Started Free
+        </a>
+        
+    </div>
+</section>
+
+<!-- SECTION1: TIMELINE -->
+ <section class="py-24 bg-[#FDFBF9]">
+    <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-20">
+            <h2 class="text-[#8D6E63] font-semibold tracking-widest text-sm uppercase mb-4">Our Journey</h2>
+            <h3 class="text-4xl md:text-5xl font-semibold text-[#3E2723]">The Evolution of SportsPro</h3>
+        </div>
+
+        <div class="relative space-y-12">
+            <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#EFEBE9] -translate-x-1/2 hidden md:block"></div>
+
+            <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                <div class="md:w-[45%] bg-white p-8 rounded-[2.5rem] border border-[#EFEBE9] shadow-sm hover:shadow-xl transition-all duration-500">
+                    <span class="text-[#8D6E63] font-black text-2xl">2024</span>
+                    <h4 class="text-xl font-semibold text-[#3E2723] mt-2 mb-4">Neural Inception</h4>
+                    <p class="text-[#5D4037] leading-relaxed">The agency was founded in Chennai by a team of sports technologists and textile engineers with a singular goal: to revolutionize customized team kits.</p>
+                </div>
+                <div class="w-4 h-4 bg-[#3E2723] rounded-full border-4 border-white shadow-md relative z-10 hidden md:block"></div>
+                <div class="md:w-[45%] hidden md:block"></div>
+            </div>
+
+            <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                <div class="md:w-[45%] hidden md:block"></div>
+                <div class="w-4 h-4 bg-[#3E2723] rounded-full border-4 border-white shadow-md relative z-10 hidden md:block"></div>
+                <div class="md:w-[45%] bg-white p-8 rounded-[2.5rem] border border-[#EFEBE9] shadow-sm hover:shadow-xl transition-all duration-500">
+                    <span class="text-[#8D6E63] font-black text-2xl">2025</span>
+                    <h4 class="text-xl font-semibold text-[#3E2723] mt-2 mb-4">Hardware Expansion</h4>
+                    <p class="text-[#5D4037] leading-relaxed">Extended operations into professional sports gear, including bats, balls, track wearables, and facility fitments across major sports categories.</p>
+                </div>
+            </div>
+
+            <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                <div class="md:w-[45%] bg-white p-8 rounded-[2.5rem] border border-[#EFEBE9] shadow-sm hover:shadow-xl transition-all duration-500">
+                    <span class="text-[#8D6E63] font-black text-2xl">2026</span>
+                    <h4 class="text-xl font-semibold text-[#3E2723] mt-2 mb-4">Digital Customizer</h4>
+                    <p class="text-[#5D4037] leading-relaxed">Launched the online 3D customizer panel, allowing team managers to design, test scaling options, and place bulk orders with real-time tracking.</p>
+                </div>
+                <div class="w-4 h-4 bg-[#3E2723] rounded-full border-4 border-white shadow-md relative z-10 hidden md:block"></div>
+                <div class="md:w-[45%] hidden md:block"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECTION2: TEAM -->
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="text-center max-w-2xl mx-auto mb-20">
+            <h2 class="text-[#8D6E63] font-semibold tracking-widest text-xs uppercase mb-4">The Technologists</h2>
+            <h3 class="text-4xl md:text-5xl font-semibold text-[#3E2723]">Our Executive Team</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            <div class="group text-center">
+                <div class="aspect-[4/5] rounded-[3rem] overflow-hidden mb-6 relative shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=100&w=1200&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="Marcus Vance">
+                    <div class="absolute inset-0 bg-[#3E2723]/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-6">
+                        <div class="flex gap-4 text-white text-xl">
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="text-2xl font-semibold text-[#3E2723]">Marcus Vance</h4>
+                <p class="text-[#8D6E63] font-bold text-xs uppercase mt-1">Founder & CEO</p>
+            </div>
+
+            <div class="group text-center">
+                <div class="aspect-[4/5] rounded-[3rem] overflow-hidden mb-6 relative shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=100&w=1200&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="Clara Zhao">
+                    <div class="absolute inset-0 bg-[#3E2723]/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-6">
+                        <div class="flex gap-4 text-white text-xl">
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="text-2xl font-semibold text-[#3E2723]">Clara Zhao</h4>
+                <p class="text-[#8D6E63] font-bold text-xs uppercase mt-1">Head of Apparel Engineering</p>
+            </div>
+
+            <div class="group text-center">
+                <div class="aspect-[4/5] rounded-[3rem] overflow-hidden mb-6 relative shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=100&w=1200&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="John Smith">
+                    <div class="absolute inset-0 bg-[#3E2723]/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-6">
+                        <div class="flex gap-4 text-white text-xl">
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="text-2xl font-semibold text-[#3E2723]">John Smith</h4>
+                <p class="text-[#8D6E63] font-bold text-xs uppercase mt-1">Hardware R&D Expert</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECTION3: VISION -->
+<section class="py-24 bg-[#FDFBF9] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            <div class="lg:col-span-5 space-y-8">
+                <h2 class="text-[#8D6E63] font-semibold tracking-widest text-xs uppercase">Our Core Mission</h2>
+                <h3 class="text-3xl md:text-5xl font-semibold text-[#3E2723] leading-tight">Elevating every <br> performance layer.</h3>
+                <p class="text-[#5D4037] leading-relaxed">We believe sports kits and athletic hardware should feel like a natural extension of the body. We are committed to sourcing premium composite materials, eco-friendly polyester fibers, and precise laser calibration systems.</p>
+                
+                <div class="border-t border-[#EFEBE9] pt-8 grid grid-cols-2 gap-6">
+                    <div>
+                        <span class="text-[#3E2723] font-black text-3xl">98%</span>
+                        <p class="text-xs text-[#8D6E63] uppercase font-bold tracking-wider mt-1">Client Retention</p>
+                    </div>
+                    <div>
+                        <span class="text-[#3E2723] font-black text-3xl">10k+</span>
+                        <p class="text-xs text-[#8D6E63] uppercase font-bold tracking-wider mt-1">Squads Equipped</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 relative">
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="space-y-6">
+                        <div class="rounded-[2rem] overflow-hidden shadow-xl aspect-square border-4 border-white">
+                            <img src="assets/images/football_boot_premium_1786007742592.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-[#EFEBE9] p-8 rounded-[2rem]">
+                            <h4 class="text-[#3E2723] font-semibold text-lg">Eco-Materials</h4>
+                            <p class="text-[#8D6E63] text-xs font-bold uppercase mt-1">100% Recycled Fibers</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6 transform translate-y-8">
+                        <div class="bg-[#3E2723] p-8 rounded-[2rem] text-white">
+                            <i class="bi bi-globe text-3xl text-[#D7CCC8] mb-4 block"></i>
+                            <h4 class="font-semibold text-lg">Global Delivery</h4>
+                            <p class="text-[#D7CCC8] text-xs font-bold uppercase mt-1">MLS & UEFA Approved</p>
+                        </div>
+                        <div class="rounded-[2rem] overflow-hidden shadow-xl aspect-[4/5] border-4 border-white">
+                            <img src="assets/images/badminton_racket_premium_1786012599855.jpg" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+</body>
+
+</html>
+

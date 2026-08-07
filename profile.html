@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>SportsPro X - My Profile</title>
+    <link rel="icon" href="assets/images/cricket_bat_premium_1786007732561.jpg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <script src="tailwind.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+                    },
+                    colors: {
+                        ocean: {
+                            50: '#EFEBE9',
+                            100: '#D7CCC8',
+                            200: '#BAE6FD',
+                            300: '#7DD3FC',
+                            400: '#8D6E63',
+                            500: '#0EA5E9',
+                            600: '#0284C7',
+                            700: '#5D4037',
+                            800: '#075985',
+                            900: '#3E2723',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            transition: background-color 0.2s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.02);
+            transition: transform 0.2s ease;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #D7CCC8;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #5D4037;
+            border-radius: 10px;
+        }
+
+        .dark ::-webkit-scrollbar-track {
+            background: #3E2723;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #8D6E63;
+        }
+
+        /* Improved dark mode text visibility */
+        .dark .text-ocean-800 { color: #EFEBE9 !important; }
+        .dark .text-ocean-700 { color: #EFEBE9 !important; }
+        .dark .text-ocean-600 { color: #D7CCC8 !important; }
+        .dark .text-ocean-500 { color: #BAE6FD !important; }
+        .dark .border-ocean-200 { border-color: #075985 !important; }
+        .dark .border-ocean-300 { border-color: #5D4037 !important; }
+        .dark .bg-ocean-50 { background-color: #082f49 !important; }
+        .dark .bg-white { background-color: #2D2A2A !important; }
+        .dark .bg-ocean-100 { background-color: #2D2A2A !important; }
+        .dark .hover\:bg-ocean-100:hover { background-color: #075985 !important; }
+        .dark .hover\:bg-ocean-50:hover { background-color: #3E2723 !important; }
+    </style>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body class="bg-ocean-50 dark:bg-[#082f49] transition-colors duration-300 font-sans antialiased">
+
+    <div class="flex h-screen overflow-hidden">
+
+        <!-- mobile overlay -->
+        <div id="overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden z-40 lg:hidden transition-all"></div>
+
+        <!-- SIDEBAR -->
+        <aside id="sidebar"
+            class="fixed lg:static inset-y-0 left-0 w-72 bg-white dark:bg-ocean-900 text-ocean-800 dark:text-ocean-50 flex flex-col transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out z-50 shadow-2xl lg:shadow-lg">
+            <div
+                class="p-5 text-2xl font-bold flex justify-between items-center border-b border-ocean-300 dark:border-ocean-700">
+                <h1 class="text-2xl font-bold text-[#3E2723] dark:text-white">
+                    <a href="index.html" class="flex items-center gap-2 ">
+                        <i class="bi bi-shield-lock-fill text-[#8D6E63] dark:text-white"></i>
+                        <span class="tracking-tight">SPORTS</span>
+                        <span class="font-normal">PRO</span>
+                    </a>
+                </h1>
+                <button id="closeSidebar"
+                    class="lg:hidden text-ocean-700 dark:text-ocean-300 hover:bg-ocean-200 dark:hover:bg-ocean-800 p-2 rounded-xl"><i
+                        class="bi bi-x-lg text-xl"></i></button>
+            </div>
+
+            <nav class="flex-1 p-4 space-y-2 text-sm overflow-y-auto">
+                <a href="javascript:void(0)" onclick="showSection('dashboard')"
+                    class="nav-link flex items-center gap-3 px-4 py-3 rounded-xl bg-ocean-200 dark:bg-ocean-700 font-semibold transition-all shadow-sm text-ocean-800 dark:text-ocean-50">
+                    <i class="bi bi-house-door-fill text-lg"></i> My Dashboard
+                </a>
+                <a href="javascript:void(0)" onclick="showSection('orders')"
+                    class="nav-link flex items-center gap-3 px-4 py-3 rounded-full hover:bg-ocean-200 dark:hover:bg-ocean-800 transition-all text-ocean-700 dark:text-ocean-200">
+                    <i class="bi bi-box-seam-fill text-lg"></i> My Orders
+                </a>
+
+                <a href="javascript:void(0)" onclick="showSection('profile')"
+                    class="nav-link flex items-center gap-3 px-4 py-3 rounded-full hover:bg-ocean-200 dark:hover:bg-ocean-800 transition-all text-ocean-700 dark:text-ocean-200">
+                    <i class="bi bi-person-fill text-lg"></i> My Profile
+                </a>
+
+                <a href="javascript:void(0)" onclick="showSection('settings')"
+                    class="nav-link flex items-center gap-3 px-4 py-3 rounded-full hover:bg-ocean-200 dark:hover:bg-ocean-800 transition-all text-ocean-700 dark:text-ocean-200">
+                    <i class="bi bi-gear-fill text-lg"></i> Settings
+                </a>
+
+                <div class="pt-8 mt-4 border-t border-ocean-300 dark:border-ocean-700">
+                    <a href="login.html" onclick="if(window.auth) window.auth.logout()"
+                        class="flex items-center gap-3 px-4 py-3 rounded-full hover:bg-ocean-200 dark:hover:bg-ocean-800 transition-all text-red-700 dark:text-red-400">
+                        <i class="bi bi-box-arrow-left text-lg"></i> Logout
+                    </a>
+                </div>
+            </nav>
+
+            <!-- theme/rtl for mobile -->
+            <div class="lg:hidden px-4 pb-6 space-y-2 border-t border-ocean-300 dark:border-ocean-700 pt-4">
+                <button id="themeBtnMobile"
+                    class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-ocean-200 dark:hover:bg-ocean-800 transition text-ocean-700 dark:text-ocean-200">
+                    <i id="themeIconMobile" class="bi bi-moon-fill text-lg"></i> <span>Dark / Light</span>
+                </button>
+                <button id="rtlBtnMobile"
+                    class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-ocean-200 dark:hover:bg-ocean-800 transition text-ocean-700 dark:text-ocean-200">
+                    <i class="bi bi-arrow-left-right text-lg"></i> <span>RTL Mode</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="flex-1 flex flex-col overflow-hidden w-full">
+            <!-- Top Bar with User Profile -->
+            <header
+                class="bg-white dark:bg-ocean-900 shadow-md px-4 sm:px-6 py-3 flex justify-between items-center z-20 border-b border-ocean-200 dark:border-ocean-700">
+                <div class="flex items-center gap-3">
+                    <button id="openSidebar"
+                        class="lg:hidden text-2xl text-ocean-700 dark:text-ocean-200 p-1 hover:bg-ocean-100 dark:hover:bg-ocean-800 rounded-xl">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <h1 id="page-title" class="text-lg sm:text-xl font-semibold text-ocean-700 dark:text-ocean-50 truncate">
+                        My Dashboard
+                    </h1>
+                </div>
+
+                <div class="flex items-center gap-2 sm:gap-4">
+                    <!-- desktop theme/rtl -->
+                    <div class="hidden md:flex gap-2">
+                        <button id="themeBtnDesktop"
+                            class="p-2 rounded-xl border border-ocean-300 dark:border-ocean-600 text-ocean-600 dark:text-ocean-300 hover:bg-ocean-100 dark:hover:bg-ocean-800 transition">
+                            <i id="themeIconDesktop" class="bi bi-moon-fill text-base"></i>
+                        </button>
+                        <button id="rtlBtnDesktop"
+                            class="p-2 rounded-xl border border-ocean-300 dark:border-ocean-600 text-ocean-600 dark:text-ocean-300 hover:bg-ocean-100 dark:hover:bg-ocean-800 transition">
+                            <i class="bi bi-arrow-left-right text-base"></i>
+                        </button>
+                    </div>
+
+                    <!-- USER PROFILE -->
+                    <div
+                        class="flex items-center gap-2 sm:gap-3 pl-2 sm:pl-3 border-l border-ocean-200 dark:border-ocean-700">
+                        <div class="text-right hidden sm:block">
+                            <p id="topBarName" class="text-xs sm:text-sm font-semibold text-ocean-700 dark:text-ocean-50 leading-tight">
+                                User</p>
+                            <p class="text-[10px] sm:text-xs text-ocean-500 dark:text-ocean-400">Athlete</p>
+                        </div>
+                        <div class="relative group">
+                            <img src="https://ui-avatars.com/api/?name=User&background=8D6E63&color=fff" id="topBarAvatar"
+                                class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-ocean-600 object-cover cursor-pointer shadow-sm">
+                            <div
+                                class="absolute right-0 mt-3 w-52 bg-white dark:bg-ocean-800 rounded-xl shadow-xl border border-ocean-200 dark:border-ocean-700 hidden group-hover:block transition-all z-30">
+                                <div class="p-3 border-b border-ocean-100 dark:border-ocean-700">
+                                    <p id="menuName" class="font-semibold text-ocean-800 dark:text-ocean-50">User</p>
+                                    <p id="menuEmail" class="text-xs text-ocean-500 dark:text-ocean-400">user@sportsprox.com</p>
+                                </div>
+                                <a href="javascript:void(0)" onclick="showSection('settings')"
+                                    class="block px-4 py-3 text-sm hover:bg-ocean-50 dark:hover:bg-ocean-700 text-ocean-700 dark:text-ocean-200">Settings</a>
+                                <a href="login.html" onclick="if(window.auth) window.auth.logout()"
+                                    class="block px-4 py-3 text-sm hover:bg-ocean-50 dark:hover:bg-ocean-700 text-red-600 dark:text-red-400 border-t border-ocean-100 dark:border-ocean-700">Sign
+                                    Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-y-auto p-3 sm:p-5 md:p-6 bg-ocean-50 dark:bg-[#082f49]">
+
+                <!-- SECTION: DASHBOARD -->
+                <div id="section-dashboard" class="content-section space-y-5 md:space-y-6">
+                    <div
+                        class="bg-gradient-to-r from-ocean-700 to-ocean-600 text-white p-5 sm:p-8 rounded-2xl shadow-xl relative overflow-hidden">
+                        <div class="relative z-10">
+                            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Welcome back, <span id="welcomeName">Athlete</span>!</h2>
+                            <p class="opacity-90 mt-2 max-w-2xl text-xs sm:text-sm leading-relaxed">
+                                Get ready to elevate your game. Track your orders, review your wishlist, and manage your account details all in one place. Keep pushing your limits!
+                            </p>
+                        </div>
+                        <i class="bi bi-trophy-fill absolute right-2 -bottom-6 text-8xl sm:text-9xl opacity-10"></i>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div
+                            class="bg-white dark:bg-ocean-800 p-4 sm:p-5 rounded-2xl shadow-md border border-ocean-200 dark:border-ocean-700">
+                            <p class="text-ocean-500 dark:text-ocean-400 text-[11px] font-bold uppercase tracking-wider">
+                                Total Orders</p>
+                            <h3 class="text-2xl font-semibold text-ocean-700 dark:text-ocean-50 mt-1">3</h3>
+                            <p class="text-[10px] text-ocean-500 dark:text-ocean-400 mt-1">2 delivered, 1 pending</p>
+                        </div>
+
+                        <div
+                            class="bg-white dark:bg-ocean-800 p-4 sm:p-5 rounded-2xl shadow-md border border-ocean-200 dark:border-ocean-700">
+                            <p class="text-ocean-500 dark:text-ocean-400 text-[11px] font-bold uppercase tracking-wider">
+                                Total Spent</p>
+                            <h3 class="text-2xl font-semibold text-green-600 dark:text-green-400 mt-1">$450</h3>
+                            <p class="text-[10px] text-ocean-500 dark:text-ocean-400 mt-1">Lifetime value</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-ocean-800 p-5 rounded-2xl shadow-sm border border-ocean-200 dark:border-ocean-700">
+                        <h3 class="font-semibold text-ocean-700 dark:text-ocean-50 flex items-center gap-2"><i
+                                class="bi bi-clock-history"></i> Recent Activity</h3>
+                        <div class="space-y-3 mt-3">
+                            <div class="flex justify-between items-center border-b pb-2 border-ocean-100 dark:border-ocean-700">
+                                <span class="text-sm text-ocean-600 dark:text-ocean-300">Order #ORD-9874 delivered</span>
+                                <span class="text-xs text-ocean-400 dark:text-ocean-500">2 days ago</span>
+                            </div>
+
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-ocean-600 dark:text-ocean-300">Account created</span>
+                                <span class="text-xs text-ocean-400 dark:text-ocean-500">1 month ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION: ORDERS -->
+                <div id="section-orders" class="content-section hidden space-y-5">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-ocean-700 dark:text-ocean-50">My Orders</h2>
+                        <p class="text-sm text-ocean-500 dark:text-ocean-400">View and track your recent sports gear purchases.</p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-ocean-800 rounded-2xl overflow-hidden shadow border border-ocean-200 dark:border-ocean-700">
+                        <table class="w-full text-sm">
+                            <thead class="bg-ocean-100 dark:bg-ocean-700/50">
+                                <tr>
+                                    <th class="px-5 py-3 text-left text-ocean-600 dark:text-ocean-300">Order ID</th>
+                                    <th class="px-5 py-3 text-left text-ocean-600 dark:text-ocean-300">Date</th>
+                                    <th class="px-5 py-3 text-left text-ocean-600 dark:text-ocean-300">Status</th>
+                                    <th class="px-5 py-3 text-left text-ocean-600 dark:text-ocean-300">Total</th>
+                                    <th class="px-5 py-3 text-left text-ocean-600 dark:text-ocean-300">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-ocean-100 dark:divide-ocean-700">
+                                <tr>
+                                    <td class="px-5 py-3 font-semibold text-ocean-700 dark:text-ocean-200">#ORD-9875</td>
+                                    <td class="px-5 py-3 text-ocean-600 dark:text-ocean-300">Today</td>
+                                    <td class="px-5 py-3"><span class="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full">Processing</span></td>
+                                    <td class="px-5 py-3 text-ocean-600 dark:text-ocean-300">$120.00</td>
+                                    <td class="px-5 py-3"><button class="text-ocean-500 hover:text-ocean-700 transition">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-5 py-3 font-semibold text-ocean-700 dark:text-ocean-200">#ORD-9874</td>
+                                    <td class="px-5 py-3 text-ocean-600 dark:text-ocean-300">Aug 05, 2026</td>
+                                    <td class="px-5 py-3"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Delivered</span></td>
+                                    <td class="px-5 py-3 text-ocean-600 dark:text-ocean-300">$85.00</td>
+                                    <td class="px-5 py-3"><button class="text-ocean-500 hover:text-ocean-700 transition">View</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- SECTION: PROFILE -->
+                <div id="section-profile" class="content-section hidden space-y-5">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-ocean-700 dark:text-ocean-50">My Profile</h2>
+                        <p class="text-sm text-ocean-500 dark:text-ocean-400">View and update your personal information.</p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-ocean-800 rounded-2xl p-6 shadow-sm border border-ocean-200 dark:border-ocean-700 max-w-3xl flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex flex-col items-center gap-4 w-full md:w-1/3 border-b md:border-b-0 md:border-r border-ocean-200 dark:border-ocean-700 pb-6 md:pb-0 md:pr-6">
+                            <img src="https://ui-avatars.com/api/?name=User&background=8D6E63&color=fff" id="profilePageAvatar" class="w-32 h-32 rounded-full border-4 border-ocean-100 dark:border-ocean-700 object-cover shadow-md" alt="Profile photo">
+                            <input type="file" id="profilePhotoInput" accept="image/png,image/jpeg,image/webp" class="hidden">
+                            <button type="button" id="changePhotoButton" class="bg-ocean-100 hover:bg-ocean-200 dark:bg-ocean-700 dark:hover:bg-ocean-600 text-ocean-700 dark:text-ocean-200 px-4 py-2 rounded-lg text-sm font-semibold transition w-full border border-ocean-200 dark:border-ocean-600">Change Photo</button>
+                        </div>
+                        <div class="flex-1 w-full space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs font-bold text-ocean-500 dark:text-ocean-400 uppercase tracking-wider mb-1">First Name</label>
+                                    <input type="text" id="profileFirstName" class="w-full px-4 py-2.5 rounded-xl border border-ocean-200 dark:border-ocean-600 bg-ocean-50 dark:bg-ocean-900 text-ocean-700 dark:text-ocean-200 focus:ring-2 focus:ring-ocean-500 outline-none" placeholder="First Name">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-ocean-500 dark:text-ocean-400 uppercase tracking-wider mb-1">Last Name</label>
+                                    <input type="text" id="profileLastName" class="w-full px-4 py-2.5 rounded-xl border border-ocean-200 dark:border-ocean-600 bg-ocean-50 dark:bg-ocean-900 text-ocean-700 dark:text-ocean-200 focus:ring-2 focus:ring-ocean-500 outline-none" placeholder="Last Name">
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label class="block text-xs font-bold text-ocean-500 dark:text-ocean-400 uppercase tracking-wider mb-1">Email Address</label>
+                                    <input type="email" id="profileEmailField" class="w-full px-4 py-2.5 rounded-xl border border-ocean-200 dark:border-ocean-600 bg-ocean-50 dark:bg-ocean-900 text-ocean-700 dark:text-ocean-200 focus:ring-2 focus:ring-ocean-500 outline-none" placeholder="you@example.com">
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label class="block text-xs font-bold text-ocean-500 dark:text-ocean-400 uppercase tracking-wider mb-1">Phone Number</label>
+                                    <input type="tel" id="profilePhoneField" class="w-full px-4 py-2.5 rounded-xl border border-ocean-200 dark:border-ocean-600 bg-ocean-50 dark:bg-ocean-900 text-ocean-700 dark:text-ocean-200 focus:ring-2 focus:ring-ocean-500 outline-none" placeholder="+1 (555) 000-0000">
+                                </div>
+                            </div>
+                            <div class="pt-2">
+                                <button type="button" id="updateProfileButton" class="bg-ocean-600 hover:bg-ocean-700 text-white px-8 py-2.5 rounded-xl font-semibold transition shadow-md w-full sm:w-auto">Update Profile</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- SECTION: SETTINGS -->
+                <div id="section-settings" class="content-section hidden space-y-5">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-ocean-700 dark:text-ocean-50">Account Settings</h2>
+                        <p class="text-sm text-ocean-500 dark:text-ocean-400">Manage your profile and preferences.</p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-ocean-800 rounded-2xl p-5 shadow-sm border border-ocean-200 dark:border-ocean-700 max-w-2xl">
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-ocean-700 dark:text-ocean-200 mb-1">Full Name</label>
+                                <input type="text" id="settingName" class="w-full px-4 py-2 rounded-xl border border-ocean-200 dark:border-ocean-600 bg-ocean-50 dark:bg-ocean-900 text-ocean-700 dark:text-ocean-200 focus:ring-2 focus:ring-ocean-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-ocean-700 dark:text-ocean-200 mb-1">Email Address</label>
+                                <input type="email" id="settingEmail" class="w-full px-4 py-2 rounded-xl border border-ocean-200 dark:border-ocean-600 bg-ocean-50 dark:bg-ocean-900 text-ocean-700 dark:text-ocean-200 focus:ring-2 focus:ring-ocean-500 outline-none">
+                            </div>
+                            <button type="button" id="saveSettingsButton" class="bg-ocean-600 hover:bg-ocean-700 text-white px-6 py-2 rounded-xl transition">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            const target = document.getElementById('section-' + sectionId);
+            if (target) target.classList.remove('hidden');
+
+            const titles = {
+                'dashboard': 'My Dashboard',
+                'orders': 'My Orders',
+                'profile': 'My Profile',
+                'settings': 'Account Settings'
+            };
+            const titleEl = document.getElementById('page-title');
+            if (titleEl) titleEl.innerText = titles[sectionId] || 'My Dashboard';
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('bg-ocean-200', 'dark:bg-ocean-700', 'font-semibold');
+                link.classList.add('hover:bg-ocean-200', 'dark:hover:bg-ocean-800');
+            });
+            if (window.event && window.event.currentTarget) {
+                window.event.currentTarget.classList.add('bg-ocean-200', 'dark:bg-ocean-700', 'font-semibold');
+            }
+            if (window.innerWidth < 1024) closeSidebar();
+        }
+
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        function openSidebar() { sidebar.classList.remove("-translate-x-full"); overlay.classList.remove("hidden"); document.body.style.overflow = 'hidden'; }
+        function closeSidebar() { sidebar.classList.add("-translate-x-full"); overlay.classList.add("hidden"); document.body.style.overflow = ''; }
+
+        document.getElementById("openSidebar")?.addEventListener('click', openSidebar);
+        document.getElementById("closeSidebar")?.addEventListener('click', closeSidebar);
+        overlay?.addEventListener('click', closeSidebar);
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle("dark");
+            const isDark = document.documentElement.classList.contains("dark");
+            const iconClass = isDark ? "bi bi-sun-fill" : "bi bi-moon-fill";
+            const desktopIcon = document.getElementById("themeIconDesktop");
+            const mobileIcon = document.getElementById("themeIconMobile");
+            if (desktopIcon) desktopIcon.className = iconClass;
+            if (mobileIcon) mobileIcon.className = iconClass;
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+        document.getElementById("themeBtnDesktop")?.addEventListener('click', toggleTheme);
+        document.getElementById("themeBtnMobile")?.addEventListener('click', toggleTheme);
+
+        function toggleRTL() {
+            document.documentElement.dir = document.documentElement.dir === "rtl" ? "ltr" : "rtl";
+            localStorage.setItem('dir', document.documentElement.dir);
+        }
+        document.getElementById("rtlBtnDesktop")?.addEventListener('click', toggleRTL);
+        document.getElementById("rtlBtnMobile")?.addEventListener('click', toggleRTL);
+
+        showSection('dashboard');
+        window.addEventListener('resize', function () { if (window.innerWidth >= 1024) closeSidebar(); });
+
+        // Initialization
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') document.documentElement.classList.add('dark');
+            const savedDir = localStorage.getItem('dir');
+            if (savedDir) document.documentElement.dir = savedDir;
+
+            if(window.auth) {
+                window.auth.requireAuth(['user', 'admin']);
+                const user = window.auth.getUser();
+                if(user) {
+                    document.getElementById('topBarName').innerText = user.name;
+                    document.getElementById('welcomeName').innerText = user.name.split(' ')[0];
+                    document.getElementById('menuName').innerText = user.name;
+                    document.getElementById('menuEmail').innerText = user.email;
+                    document.getElementById('settingName').value = user.name;
+                    document.getElementById('settingEmail').value = user.email;
+                    
+                    document.getElementById('profileFirstName').value = user.name.split(' ')[0];
+                    document.getElementById('profileLastName').value = user.name.split(' ').slice(1).join(' ');
+                    document.getElementById('profileEmailField').value = user.email;
+                    document.getElementById('profilePhoneField').value = user.phone || '';
+                    
+                    const avatarUrl = user.avatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=8D6E63&color=fff`;
+                    document.getElementById('topBarAvatar').src = avatarUrl;
+                    document.getElementById('profilePageAvatar').src = avatarUrl;
+                }
+            }
+
+            const photoInput = document.getElementById('profilePhotoInput');
+            let selectedAvatar = window.auth?.getUser()?.avatar || '';
+            document.getElementById('changePhotoButton')?.addEventListener('click', () => photoInput?.click());
+            photoInput?.addEventListener('change', event => {
+                const file = event.target.files?.[0];
+                if (!file) return;
+                if (file.size > 2 * 1024 * 1024) {
+                    window.showToast?.('Please choose an image smaller than 2 MB.', 'error');
+                    event.target.value = '';
+                    return;
+                }
+                const reader = new FileReader();
+                reader.onload = () => {
+                    selectedAvatar = reader.result;
+                    document.getElementById('profilePageAvatar').src = selectedAvatar;
+                    document.getElementById('topBarAvatar').src = selectedAvatar;
+                };
+                reader.readAsDataURL(file);
+            });
+
+            document.getElementById('updateProfileButton')?.addEventListener('click', () => {
+                const firstName = document.getElementById('profileFirstName').value.trim();
+                const lastName = document.getElementById('profileLastName').value.trim();
+                const email = document.getElementById('profileEmailField').value.trim();
+                const phone = document.getElementById('profilePhoneField').value.trim();
+                if (!firstName || !email) {
+                    window.showToast?.('Please enter your first name and email address.', 'error');
+                    return;
+                }
+                const user = window.auth.updateUser({ name: [firstName, lastName].filter(Boolean).join(' '), email, phone, ...(selectedAvatar && { avatar: selectedAvatar }) });
+                if (!user) return;
+                document.getElementById('topBarName').innerText = user.name;
+                document.getElementById('welcomeName').innerText = firstName;
+                document.getElementById('menuName').innerText = user.name;
+                document.getElementById('menuEmail').innerText = user.email;
+                document.getElementById('settingName').value = user.name;
+                document.getElementById('settingEmail').value = user.email;
+                window.showToast?.('Profile updated successfully.');
+            });
+
+            document.getElementById('saveSettingsButton')?.addEventListener('click', () => {
+                const fullName = document.getElementById('settingName').value.trim();
+                const email = document.getElementById('settingEmail').value.trim();
+                const [firstName, ...lastNameParts] = fullName.split(/\s+/);
+                if (!firstName || !email) {
+                    window.showToast?.('Please enter your name and email address.', 'error');
+                    return;
+                }
+                document.getElementById('profileFirstName').value = firstName;
+                document.getElementById('profileLastName').value = lastNameParts.join(' ');
+                document.getElementById('profileEmailField').value = email;
+                document.getElementById('updateProfileButton').click();
+            });
+        });
+    </script>
+</body>
+
+</html>

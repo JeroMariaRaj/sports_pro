@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - SportsPro X</title>
+  <link rel="icon" href="assets/images/cricket_bat_premium_1786007732561.jpg">
+  <script src="tailwind.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <style>
+    /* THEME TOGGLE */
+    :root {
+      --home-bg: #ffffff;
+      --text-color: #111111;
+    }
+
+    [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
+    }
+
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .bg-white,
+    [data-theme="dark"] .bg-\[\#FDFBF9\],
+    [data-theme="dark"] .bg-\[\#F9F7F5\],
+    [data-theme="dark"] .bg-\[\#EFEBE9\] {
+      background-color: #000000 !important;
+      border-color: #333333 !important;
+    }
+
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span {
+      color: #ffffff !important;
+  </style>
+  <style type="text/tailwindcss">
+    .form-input {
+      @apply w-full bg-white border border-[#EFEBE9] rounded-xl px-4 py-3 text-[#3E2723] focus:outline-none focus:border-[#8D6E63] focus:ring-1 focus:ring-[#8D6E63] transition-colors text-sm;
+    }
+    .form-label {
+      @apply block text-xs font-bold text-[#8D6E63] uppercase tracking-wider mb-2;
+    }
+  </style>
+</head>
+
+<body class="font-sans overflow-x-hidden">
+  <div id="navbar"></div>
+
+  <section class="py-24 bg-white mt-16 min-h-[70vh]">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-[#3E2723] mb-4">Checkout</h1>
+        <p class="text-[#5D4037]">Complete your order securely.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Forms -->
+        <div class="lg:col-span-7 space-y-8">
+          
+          <!-- Contact Info -->
+          <div class="bg-[#FDFBF9] border border-[#EFEBE9] p-6 md:p-8 rounded-[2rem]">
+            <h3 class="text-xl font-bold text-[#3E2723] mb-6">Contact Information</h3>
+            <div class="grid grid-cols-1 gap-6">
+              <div>
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-input" placeholder="you@example.com" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shipping Info -->
+          <div class="bg-[#FDFBF9] border border-[#EFEBE9] p-6 md:p-8 rounded-[2rem]">
+            <h3 class="text-xl font-bold text-[#3E2723] mb-6">Shipping Address</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-input" placeholder="John" required>
+              </div>
+              <div>
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-input" placeholder="Doe" required>
+              </div>
+              <div class="md:col-span-2">
+                <label class="form-label">Address</label>
+                <input type="text" class="form-input" placeholder="123 Sports Ave" required>
+              </div>
+              <div>
+                <label class="form-label">City</label>
+                <input type="text" class="form-input" placeholder="New York" required>
+              </div>
+              <div>
+                <label class="form-label">State / Province</label>
+                <input type="text" class="form-input" placeholder="NY" required>
+              </div>
+              <div>
+                <label class="form-label">Postal Code</label>
+                <input type="text" class="form-input" placeholder="10001" required>
+              </div>
+              <div>
+                <label class="form-label">Country</label>
+                <select class="form-input" required>
+                  <option>United States</option>
+                  <option>United Kingdom</option>
+                  <option>Canada</option>
+                  <option>Australia</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment -->
+          <div class="bg-[#FDFBF9] border border-[#EFEBE9] p-6 md:p-8 rounded-[2rem]">
+            <h3 class="text-xl font-bold text-[#3E2723] mb-6">Payment Method</h3>
+            <div class="space-y-4 mb-6">
+              <label class="flex items-center gap-3 p-4 border border-[#8D6E63] rounded-xl bg-white cursor-pointer">
+                <input type="radio" name="payment" class="w-4 h-4 text-[#3E2723] focus:ring-[#8D6E63] border-[#EFEBE9]" checked>
+                <span class="font-semibold text-[#3E2723]">Credit Card</span>
+                <i class="bi bi-credit-card ml-auto text-xl text-[#8D6E63]"></i>
+              </label>
+              <label class="flex items-center gap-3 p-4 border border-[#EFEBE9] rounded-xl bg-white cursor-pointer hover:border-[#8D6E63] transition-colors">
+                <input type="radio" name="payment" class="w-4 h-4 text-[#3E2723] focus:ring-[#8D6E63] border-[#EFEBE9]">
+                <span class="font-semibold text-[#3E2723]">PayPal</span>
+                <i class="bi bi-paypal ml-auto text-xl text-[#8D6E63]"></i>
+              </label>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="md:col-span-2">
+                <label class="form-label">Card Number</label>
+                <input type="text" class="form-input" placeholder="0000 0000 0000 0000" required>
+              </div>
+              <div>
+                <label class="form-label">Expiration Date (MM/YY)</label>
+                <input type="text" class="form-input" placeholder="MM/YY" required>
+              </div>
+              <div>
+                <label class="form-label">CVC</label>
+                <input type="text" class="form-input" placeholder="123" required>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Order Summary -->
+        <div class="lg:col-span-5">
+          <div class="bg-[#FDFBF9] border border-[#EFEBE9] p-6 md:p-8 rounded-[2rem] sticky top-24">
+            <h3 class="text-xl font-bold text-[#3E2723] mb-6">Order Summary</h3>
+            
+            <div id="checkout-items" class="space-y-4 mb-6 max-h-64 overflow-y-auto pr-2">
+              <!-- Rendered by JS -->
+            </div>
+            
+            <div class="border-t border-[#EFEBE9] pt-6 space-y-4 text-sm mb-6">
+              <div class="flex justify-between text-[#5D4037]">
+                <span>Subtotal</span>
+                <span class="font-semibold" id="checkout-subtotal">$0.00</span>
+              </div>
+              <div class="flex justify-between text-[#5D4037]">
+                <span>Shipping</span>
+                <span class="font-semibold text-emerald-600">Free</span>
+              </div>
+              <div class="flex justify-between text-[#5D4037] border-b border-[#EFEBE9] pb-4">
+                <span>Estimated Tax</span>
+                <span class="font-semibold" id="checkout-tax">$0.00</span>
+              </div>
+              <div class="flex justify-between text-[#3E2723] text-xl font-bold">
+                <span>Total</span>
+                <span id="checkout-total">$0.00</span>
+              </div>
+            </div>
+
+            <button onclick="placeOrder()" class="w-full bg-[#3E2723] hover:bg-[#8D6E63] text-white py-4 rounded-xl font-bold uppercase tracking-wider transition-colors shadow-lg">
+              Place Order
+            </button>
+            <p class="text-center text-xs text-[#8D6E63] mt-4 font-semibold">By placing your order, you agree to our Terms and Privacy Policy.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCheckoutSummary();
+    });
+
+    function renderCheckoutSummary() {
+      const container = document.getElementById('checkout-items');
+      if(!container || !window.store || !window.db) return;
+
+      const cartItems = window.store.getCart();
+      if(cartItems.length === 0) {
+        window.location.href = 'cart.html';
+        return;
+      }
+
+      let subtotal = 0;
+      let html = '';
+
+      cartItems.forEach(item => {
+        const product = window.db.products.find(p => p.id === item.productId);
+        if(!product) return;
+
+        const price = product.discountPrice || product.price;
+        subtotal += price * item.quantity;
+
+        html += `
+          <div class="flex items-center gap-4">
+            <div class="relative w-16 h-16 bg-white border border-[#EFEBE9] rounded-lg p-1 flex-shrink-0">
+              <span class="absolute -top-2 -right-2 bg-[#8D6E63] text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">${item.quantity}</span>
+              <img src="${product.image}" class="w-full h-full object-contain" alt="${product.name}">
+            </div>
+            <div class="flex-1 overflow-hidden">
+              <h5 class="text-sm font-semibold text-[#3E2723] truncate">${product.name}</h5>
+              <p class="text-xs text-[#8D6E63] font-bold">$${price}</p>
+            </div>
+            <div class="font-bold text-[#3E2723] text-sm">
+              $${(price * item.quantity)}
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+
+      const tax = subtotal * 0.05;
+      const total = subtotal + tax;
+
+      document.getElementById('checkout-subtotal').textContent = '$' + subtotal.toFixed(2);
+      document.getElementById('checkout-tax').textContent = '$' + tax.toFixed(2);
+      document.getElementById('checkout-total').textContent = '$' + total.toFixed(2);
+    }
+
+    function placeOrder() {
+      if(window.showToast) window.showToast('Order placed successfully!', 'success');
+      setTimeout(() => {
+        window.store.clearCart();
+        window.location.href = 'index.html';
+      }, 1500);
+    }
+  </script>
+</body>
+</html>

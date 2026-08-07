@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Catalog - SportsPro X</title>
+  <link rel="icon" href="assets/images/cricket_bat_premium_1786007732561.jpg">
+  <script src="tailwind.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <style>
+    /* THEME TOGGLE */
+    :root {
+      --home-bg: #ffffff;
+      --text-color: #111111;
+    }
+
+    [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
+    }
+
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .bg-white,
+    [data-theme="dark"] .bg-\[\#FDFBF9\],
+    [data-theme="dark"] .bg-\[\#F9F7F5\],
+    [data-theme="dark"] .bg-\[\#EFEBE9\] {
+      background-color: #000000 !important;
+      border-color: #333333 !important;
+    }
+
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span {
+      color: #ffffff !important;
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+<body class="font-sans overflow-x-hidden">
+  <div id="navbar"></div>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-[50vh] flex items-center bg-[#FDFBF9] overflow-hidden py-12 md:py-20 mt-16">
+    <div class="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none">
+      <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#3E2723_1px,transparent_1px)] [background-size:40px_40px]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div class="lg:col-span-5 space-y-6 md:space-y-8 text-center lg:text-left">
+
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#3E2723] leading-[1.1]">
+            Shop the <br> <span class="text-[#8D6E63] italic font-serif">Aesthetic</span> <br> You Love.
+          </h1>
+
+          <p class="text-[#5D4037] text-base md:text-xl leading-relaxed max-w-md mx-auto lg:mx-0">
+            Every product is hand-selected to meet our high performance standards. Sourced from pro manufactures globally.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="#collections-catalog" class="w-full sm:w-auto px-10 py-3 bg-[#3E2723] text-white rounded-xl font-bold text-center hover:bg-[#8D6E63] transition-all shadow-lg">
+              Browse Catalog
+            </a>
+            <div class="flex items-center gap-4 px-2 py-4">
+              <span class="text-2xl font-black text-[#3E2723]">20+</span>
+              <p class="text-[10px] font-bold text-[#8D6E63] uppercase tracking-widest leading-tight text-left">Verified <br> Products</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 relative px-4 sm:px-0">
+          <div class="grid grid-cols-2 gap-4 md:gap-6">
+            <div class="space-y-4 md:space-y-6 transform translate-y-4 md:translate-y-8">
+              <div class="rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl aspect-[4/5] border-4 border-white">
+                <img src="assets/images/football_boot_premium_1786007742592.jpg" class="w-full h-full object-cover" alt="Sofa">
+              </div>
+              <div class="bg-[#EFEBE9] p-6 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem]">
+                <h4 class="text-[#3E2723] font-semibold text-lg md:text-xl">Premium Boots</h4>
+                <p class="text-[#8D6E63] text-[10px] font-bold uppercase tracking-widest mt-1">20+ Items</p>
+              </div>
+            </div>
+            <div class="space-y-4 md:space-y-6">
+              <div class="bg-[#3E2723] p-6 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] text-white">
+                <i class="bi bi-tag-fill text-2xl text-[#8D6E63] mb-3 block"></i>
+                <h4 class="font-semibold text-base md:text-lg leading-tight">Exclusive Sourcing.</h4>
+              </div>
+              <div class="rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl aspect-square border-4 border-white">
+                <img src="assets/images/cricket_bat_premium_1786007732561.jpg" class="w-full h-full object-cover" alt="Lighting">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DYNAMIC CATALOG & FILTERS -->
+  <section class="py-24 bg-white" id="collections-catalog">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        
+        <!-- Sidebar Filters -->
+        <div class="space-y-6">
+          
+          <!-- Search Bar -->
+          <div class="bg-[#FDFBF9] border border-[#EFEBE9] p-6 rounded-3xl">
+            <h5 class="text-[#3E2723] font-bold text-sm uppercase tracking-wider mb-4">Search</h5>
+            <div class="relative">
+              <input type="text" id="searchInput" placeholder="Search gear..." 
+                     class="w-full border border-[#EFEBE9] bg-white rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-[#8D6E63] focus:outline-none transition-all">
+              <i class="bi bi-search absolute right-3.5 top-3 text-[#8D6E63]"></i>
+            </div>
+          </div>
+
+          <!-- Categories -->
+          <div class="bg-[#FDFBF9] border border-[#EFEBE9] p-6 rounded-3xl">
+            <h5 class="text-[#3E2723] font-bold text-sm uppercase tracking-wider mb-4">Categories</h5>
+            <div id="filter-categories" class="space-y-3">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+
+          <!-- Brands -->
+          <div class="bg-[#FDFBF9] border border-[#EFEBE9] p-6 rounded-3xl">
+            <h5 class="text-[#3E2723] font-bold text-sm uppercase tracking-wider mb-4">Brands</h5>
+            <div id="filter-brands" class="space-y-3">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+
+          <!-- Price Range -->
+          <div class="bg-[#FDFBF9] border border-[#EFEBE9] p-6 rounded-3xl">
+            <h5 class="text-[#3E2723] font-bold text-sm uppercase tracking-wider mb-4">Price Range</h5>
+            <input type="range" class="w-full accent-[#3E2723]" min="0" max="500" step="10" id="priceRange" value="500"
+                   oninput="document.getElementById('priceVal').innerText = '$' + this.value; renderShop();">
+            <div class="flex justify-between mt-2 text-xs text-[#5D4037] font-semibold">
+              <span>$0</span>
+              <span id="priceVal" class="text-[#8D6E63] font-bold">$500</span>
+              <span>$500+</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Catalog Grid Column -->
+        <div class="lg:col-span-3 space-y-8">
+          
+          <!-- Toolbar -->
+          <div class="flex flex-col sm:flex-row justify-between items-center bg-[#FDFBF9] border border-[#EFEBE9] p-4 rounded-2xl gap-4">
+            <div class="text-xs text-[#FFFFFF] font-bold uppercase tracking-wider">
+              <span id="product-count" class="text-[#3E2723] text-sm">0</span> products found
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-xs font-bold text-[#8D6E63] uppercase tracking-wider">Sort by:</span>
+              <select id="sortSelect" onchange="renderShop()" 
+                      class="border border-[#EFEBE9] bg-white rounded-xl px-4 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-[#8D6E63] font-medium text-[#FFFFFF]">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Products Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" id="shop-container">
+            <!-- Injected dynamically in same format as Home 1 -->
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if(!window.db) return;
+      
+      // Populate Category Filters
+      const catContainer = document.getElementById('filter-categories');
+      window.db.categories.forEach(cat => {
+        catContainer.innerHTML += `
+          <label class="flex items-center gap-3 text-xs text-[#5D4037] font-bold uppercase tracking-wider cursor-pointer">
+            <input type="checkbox" value="${cat}" id="cat-${cat}" 
+                   class="filter-cat w-4.5 h-4.5 border-[#EFEBE9] rounded text-[#3E2723] focus:ring-[#8D6E63] cursor-pointer">
+            <span>${cat}</span>
+          </label>
+        `;
+      });
+
+      // Populate Brand Filters
+      const brandContainer = document.getElementById('filter-brands');
+      window.db.brands.forEach(brand => {
+        brandContainer.innerHTML += `
+          <label class="flex items-center gap-3 text-xs text-[#5D4037] font-bold uppercase tracking-wider cursor-pointer">
+            <input type="checkbox" value="${brand}" id="brand-${brand}" 
+                   class="filter-brand w-4.5 h-4.5 border-[#EFEBE9] rounded text-[#3E2723] focus:ring-[#8D6E63] cursor-pointer">
+            <span>${brand}</span>
+          </label>
+        `;
+      });
+
+      // Handle URL params
+      const urlParams = new URLSearchParams(window.location.search);
+      const targetCat = urlParams.get('cat');
+      if (targetCat) {
+        const cb = document.getElementById('cat-' + targetCat);
+        if (cb) cb.checked = true;
+      }
+
+      // Initial Render
+      renderShop();
+      
+      // Add listeners to elements
+      document.querySelectorAll('.filter-cat, .filter-brand').forEach(el => {
+        el.addEventListener('change', renderShop);
+      });
+      document.getElementById('searchInput').addEventListener('input', renderShop);
+    });
+
+    function renderShop() {
+      const container = document.getElementById('shop-container');
+      const countEl = document.getElementById('product-count');
+      
+      if(!container || !window.db) return;
+
+      // Get selected filters
+      const checkedCats = Array.from(document.querySelectorAll('.filter-cat:checked')).map(el => el.value);
+      const checkedBrands = Array.from(document.querySelectorAll('.filter-brand:checked')).map(el => el.value);
+      const maxPrice = parseInt(document.getElementById('priceRange').value) || 500;
+      const searchVal = document.getElementById('searchInput').value.toLowerCase().trim();
+      const sort = document.getElementById('sortSelect').value;
+
+      // Filter
+      let filtered = window.db.products.filter(p => {
+        const matchCat = checkedCats.length === 0 || checkedCats.includes(p.category);
+        const matchBrand = checkedBrands.length === 0 || checkedBrands.includes(p.brand);
+        const currentPrice = p.discountPrice || p.price;
+        const matchPrice = currentPrice <= maxPrice;
+        const matchSearch = p.name.toLowerCase().includes(searchVal) || p.category.toLowerCase().includes(searchVal);
+        return matchCat && matchBrand && matchPrice && matchSearch;
+      });
+
+      // Sort
+      if (sort === 'price-low') {
+        filtered.sort((a,b) => (a.discountPrice||a.price) - (b.discountPrice||b.price));
+      } else if (sort === 'price-high') {
+        filtered.sort((a,b) => (b.discountPrice||b.price) - (a.discountPrice||a.price));
+      } else if (sort === 'rating') {
+        filtered.sort((a,b) => b.rating - a.rating);
+      }
+
+      countEl.textContent = filtered.length;
+      container.innerHTML = '';
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full text-center py-12">
+            <i class="bi bi-inbox text-4xl text-[#8D6E63] mb-2 block"></i>
+            <p class="text-sm font-semibold text-[#3E2723]">No products match your criteria.</p>
+          </div>
+        `;
+        return;
+      }
+
+      // Display products using reference card style
+      filtered.forEach(prod => {
+        const priceHtml = prod.discountPrice 
+            ? `<span class="text-muted-spx text-decoration-line-through me-2 text-xs">$${prod.price}</span><span class="text-[#8D6E63] font-bold text-sm">$${prod.discountPrice}</span>`
+            : `<span class="text-[#3E2723] font-bold text-sm">$${prod.price}</span>`;
+        
+        container.innerHTML += `
+          <div class="group flex flex-col h-full bg-white border border-[#EFEBE9] rounded-3xl p-4 transition-all duration-500 hover:border-[#8D6E63] hover:shadow-lg relative overflow-hidden">
+            <div class="aspect-square bg-white rounded-2xl mb-4 border border-[#EFEBE9] flex items-center justify-center relative overflow-hidden">
+              ${prod.discountPrice ? `<span class="absolute top-2 left-2 badge bg-red-600 text-white text-[10px] px-2.5 py-1 rounded-full font-bold z-10 shadow-sm">SALE</span>` : ''}
+              ${prod.isNew ? `<span class="absolute top-2 left-2 ${prod.discountPrice ? 'mt-7' : ''} badge bg-emerald-600 text-white text-[10px] px-2.5 py-1 rounded-full font-bold z-10 shadow-sm">NEW</span>` : ''}
+              <a href="product-details.html?id=${prod.id}" class="w-full h-full flex items-center justify-center">
+                <img src="${prod.image}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${prod.name}">
+              </a>
+              <button onclick="window.store.addToCart('${prod.id}'); if(window.showToast) window.showToast('Added to cart');" class="absolute bottom-4 right-4 w-10 h-10 bg-[#3E2723] text-white rounded-xl opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex items-center justify-center hover:bg-[#8D6E63] shadow-md z-20">
+                <i class="bi bi-plus-lg text-lg"></i>
+              </button>
+            </div>
+            <div class="px-2 mt-auto">
+              <span class="text-[10px] text-[#8D6E63] uppercase tracking-widest font-bold block">${prod.category}</span>
+              <h4 class="font-semibold text-[#3E2723] text-sm mb-1 mt-0.5 truncate">
+                <a href="product-details.html?id=${prod.id}" class="hover:text-[#8D6E63] transition-colors">${prod.name}</a>
+              </h4>
+              <div class="flex items-center justify-between mt-2 pt-1 border-t border-[#EFEBE9]">
+                <div class="flex items-center gap-1 text-amber-500 text-xs">
+                  <i class="bi bi-star-fill"></i>
+                  <span class="text-[#5D4037] font-semibold">${prod.rating}</span>
+                </div>
+                <div>${priceHtml}</div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    }
+  </script>
+</body>
+
+</html>
+

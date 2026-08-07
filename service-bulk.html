@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportsPro X | Bulk Orders by Category</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="spx-header-container"></div>
+
+    <div class="container py-5">
+        <nav aria-label="breadcrumb" class="mb-5">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="services.html" class="text-muted-spx text-decoration-none">Services</a></li>
+                <li class="breadcrumb-item active text-primary-spx" aria-current="page">Wholesale Bulk Orders</li>
+            </ol>
+        </nav>
+
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <img src="assets/images/fitness_dumbbell_premium_1786007768795.jpg" class="img-fluid rounded-4 mb-5 shadow-lg w-100" style="max-height: 500px; object-fit: cover;">
+                
+                <h1 class="display-5 fw-bold mb-4">Bulk Order Supply by Category</h1>
+                <p class="lead text-muted-spx mb-5">Whether you are outfitting a football academy, stocking a community cricket club, or equipping a commercial gym, we offer specialized bulk order pricing across all our major sporting categories.</p>
+                
+                <h3 class="fw-bold mb-4">Bulk Categories Available</h3>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6">
+                        <div class="d-flex gap-3">
+                            <div class="text-accent-spx fs-3"><i class="fa-solid fa-futbol"></i></div>
+                            <div>
+                                <h5 class="fw-bold">Bulk Football Gear</h5>
+                                <p class="text-muted-spx small">Match balls, training bibs, agility ladders, marker cones, and pop-up goals.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex gap-3">
+                            <div class="text-accent-spx fs-3"><i class="fa-solid fa-baseball-bat-ball"></i></div>
+                            <div>
+                                <h5 class="fw-bold">Bulk Cricket Gear</h5>
+                                <p class="text-muted-spx small">Practice leather balls, tennis cricket balls, batting pads, helmets, and stumps.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <div class="d-flex gap-3">
+                            <div class="text-accent-spx fs-3"><i class="fa-solid fa-dumbbell"></i></div>
+                            <div>
+                                <h5 class="fw-bold">Bulk Fitness Equipment</h5>
+                                <p class="text-muted-spx small">Dumbbell sets, kettlebells, yoga mats, resistance bands, and commercial gym flooring.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <div class="d-flex gap-3">
+                            <div class="text-accent-spx fs-3"><i class="fa-solid fa-table-tennis-paddle-ball"></i></div>
+                            <div>
+                                <h5 class="fw-bold">Bulk Racket Sports</h5>
+                                <p class="text-muted-spx small">Tubes of shuttlecocks, tennis ball cartons, grip tape rolls, and entry-level rackets.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQs -->
+                <h3 class="fw-bold mb-4 mt-5">Frequently Asked Questions</h3>
+                <div class="accordion" id="serviceFaq">
+                    <div class="accordion-item bg-alt-spx border-0 mb-3 rounded overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-alt-spx text-primary-spx fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                Can we mix categories for the bulk discount?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#serviceFaq">
+                            <div class="accordion-body text-muted-spx">
+                                Yes! As long as your total order value meets the minimum wholesale threshold of $1,000, you can mix items across Football, Cricket, Fitness, and any other category.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-alt-spx border-0 mb-3 rounded overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-alt-spx text-primary-spx fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                How do discounts scale across categories?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#serviceFaq">
+                            <div class="accordion-body text-muted-spx">
+                                Discounts vary by category. Apparel and balls usually see up to 40% off retail, while heavy fitness equipment (like treadmills) maxes out at 20% off.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="spx-card p-4 sticky-top border-0 bg-alt-spx" style="top: 120px;">
+                    <h4 class="fw-bold mb-4">Request Bulk Quote</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label text-muted-spx small">Organization / Club Name</label>
+                            <input type="text" class="form-control-spx w-100" placeholder="e.g. Manchester Sports Academy">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-muted-spx small">Select Primary Category</label>
+                            <select class="form-control-spx w-100">
+                                <option>Football & Soccer</option>
+                                <option>Cricket Gear</option>
+                                <option>Fitness & Gym</option>
+                                <option>Racket Sports</option>
+                                <option>Multi-Category (Mixed)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-muted-spx small">Estimated Order Value</label>
+                            <select class="form-control-spx w-100">
+                                <option>$1,000 - $5,000</option>
+                                <option>$5,000 - $20,000</option>
+                                <option>$20,000+</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label text-muted-spx small">Email Address</label>
+                            <input type="email" class="form-control-spx w-100" placeholder="coach@academy.com">
+                        </div>
+                        <button type="button" class="btn btn-primary-spx w-100 btn-spx">Submit Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="spx-footer-container"></div>
+
+    <!-- Bootstrap & Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

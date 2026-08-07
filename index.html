@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportsPro X - Premium Sports Store</title>
+  <link rel="icon" href="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&q=80&w=2000">
+  <script src="tailwind.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <style>
+    /* RTL */
+    .rtl {
+      direction: rtl;
+    }
+
+    [dir="rtl"] .title {
+      margin-right: 20px !important;
+    }
+
+    :root {
+      --home-bg: #ffffff;
+      --text-color: #111111;
+    }
+
+    [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
+    }
+
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .bg-white,
+    [data-theme="dark"] .bg-\[\#FDFBF9\],
+    [data-theme="dark"] .bg-\[\#EFEBE9\],
+    [data-theme="dark"] .bg-\[\#F9F7F5\] {
+      background-color: #000000 !important;
+      border-color: #333333 !important;
+    }
+
+    [data-theme="dark"] .btn,
+    [data-theme="dark"] .btn1:hover {
+      color: #000000 !important;
+    }
+
+    [data-theme="dark"] body,
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] table,
+    [data-theme="dark"] th,
+    [data-theme="dark"] td,
+    [data-theme="dark"] div,
+    [data-theme="dark"] small,
+    [data-theme="dark"] strong {
+      color: #ffffff !important;
+    }
+
+    [data-theme="dark"] thead {
+      background-color: #064E3B !important;
+    }
+
+    [data-theme="dark"] .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+    }
+
+    [data-theme="dark"] .tag-btn {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      border-color: #ffffff !important;
+    }
+
+    /* Keep typed form values legible in both themes. */
+    .bulk-quote-input {
+      color: #111111 !important;
+    }
+
+    [data-theme="dark"] .bulk-quote-input {
+      color: #ffffff !important;
+    }
+  
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .animate-bounce-slow {
+    animation: bounce-slow 4s ease-in-out infinite;
+  }
+  </style>
+</head>
+
+<body class="font-sans">
+  <!-- navbar -->
+  <div id="navbar"></div>
+
+  <!-- HERO BANNER -->
+<section class="relative min-h-screen flex items-center pt-20 bg-[#FDFBF9] overflow-hidden">
+  
+  <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-[#EFEBE9] rounded-full blur-3xl opacity-60"></div>
+
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+    
+    <div class="space-y-8">
+      <div class="space-y-4">
+        <h2 class="text-[#8D6E63] font-semibold tracking-[0.3em] text-sm uppercase">
+          Premium Sports Equipment
+        </h2>
+        <h1 class="text-5xl md:text-7xl font-semibold text-[#3E2723] leading-tight">
+          Unleash Your <br> 
+          <span class="text-[#8D6E63]">True Potential</span> <br>
+          Today.
+        </h1>
+        <p class="text-[#5D4037] text-lg max-w-lg leading-relaxed">
+          Gear up with professional-grade sports equipment designed for champions. Discover the latest arrivals in footwear, apparel, and hardware.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="shop.html" class="px-8 py-3 bg-[#3E2723] text-white rounded-xl font-bold text-center shadow-lg hover:bg-[#5D4037] transition-all transform hover:-translate-y-1">
+          Shop the Collection
+        </a>
+        <a href="shop.html" class="px-8 py-3 border-2 border-[#3E2723] text-[#3E2723] rounded-xl font-bold text-center hover:bg-[#3E2723] hover:text-white transition-all">
+          Explore Categories
+        </a>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(62,39,35,0.2)] border-8 border-white">
+        <img src="assets/images/cricket_bat_premium_1786007732561.jpg" alt="Premium Cricket Equipment" class="w-full h-[500px] object-cover">
+      </div>
+
+      <div class="card absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4 max-w-xs animate-bounce-slow">
+        <div class="card bg-[#EFEBE9] p-3 rounded-lg">
+          <i class="bi bi-fire text-[#3E2723] text-2xl"></i>
+        </div>
+        <div>
+          <p class="text-xs text-[#8D6E63] font-bold uppercase">Trending Now</p>
+          <p class="text-sm font-semibold text-[#3E2723]">Kookaburra Pro Bat</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FEATURED BRANDS SECTION -->
+<style>
+  @keyframes scroll-brands {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-scroll-brands {
+    animation: scroll-brands 20s linear infinite;
+    will-change: transform;
+  }
+  .brand-marquee-track {
+    width: max-content;
+  }
+  .brand-marquee-set {
+    flex: 0 0 auto;
+  }
+  .brand-marquee-name {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  @media (max-width: 767.98px) {
+    .animate-scroll-brands { animation-duration: 28s; }
+    .brand-marquee-fade { width: 2.5rem; }
+  }
+</style>
+<section class="py-12 bg-[#3E2723] overflow-hidden relative">
+  <div class="brand-marquee-fade absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-[#3E2723] to-transparent z-10 pointer-events-none"></div>
+  <div class="brand-marquee-fade absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-[#3E2723] to-transparent z-10 pointer-events-none"></div>
+  <div class="brand-marquee-track flex min-w-full animate-scroll-brands opacity-80 hover:opacity-100 transition-opacity">
+    <!-- First Set -->
+    <div class="brand-marquee-set flex items-center gap-10 sm:gap-16 lg:gap-24 pr-10 sm:pr-16 lg:pr-24">
+      <h3 class="brand-marquee-name text-xl sm:text-2xl lg:text-3xl font-black text-white/50 uppercase tracking-[0.12em] sm:tracking-widest italic">Kookaburra</h3>
+      <h3 class="brand-marquee-name text-xl sm:text-2xl lg:text-3xl font-black text-white/50 uppercase tracking-[0.12em] sm:tracking-widest italic">Gray-Nicolls</h3>
+      <h3 class="brand-marquee-name text-xl sm:text-2xl lg:text-3xl font-black text-white/50 uppercase tracking-[0.12em] sm:tracking-widest italic">Nike</h3>
+      <h3 class="brand-marquee-name text-xl sm:text-2xl lg:text-3xl font-black text-white/50 uppercase tracking-[0.12em] sm:tracking-widest italic">Adidas</h3>
+      <h3 class="brand-marquee-name text-xl sm:text-2xl lg:text-3xl font-black text-white/50 uppercase tracking-[0.12em] sm:tracking-widest italic">Puma</h3>
+      <h3 class="brand-marquee-name text-xl sm:text-2xl lg:text-3xl font-black text-white/50 uppercase tracking-[0.12em] sm:tracking-widest italic">SG</h3>
+    </div>
+    <!-- Duplicate for seamless scroll -->
+    <div class="brand-marquee-set flex items-center gap-10 sm:gap-16 lg:gap-24 pr-10 sm:pr-16 lg:pr-24" aria-hidden="true">
+      <h3 class="brand-marquee-name text-xl sm:text-2xl lg:text-3xl font-black text-white/50 uppercase tracking-[0.12em] sm:tracking-widest italic">Kookaburra</h3>
+      <h3 class="brand-marquee-name text-xl sm:text-2xl lg:text-3xl font-black text-white/50 uppercase tracking-[0.12em] sm:tracking-widest italic">Gray-Nicolls</h3>
+      <h3 class="brand-marquee-name text-xl sm:text-2xl lg:text-3xl font-black text-white/50 uppercase tracking-[0.12em] sm:tracking-widest italic">Nike</h3>
+      <h3 class="brand-marquee-name text-xl sm:text-2xl lg:text-3xl font-black text-white/50 uppercase tracking-[0.12em] sm:tracking-widest italic">Adidas</h3>
+      <h3 class="brand-marquee-name text-xl sm:text-2xl lg:text-3xl font-black text-white/50 uppercase tracking-[0.12em] sm:tracking-widest italic">Puma</h3>
+      <h3 class="brand-marquee-name text-xl sm:text-2xl lg:text-3xl font-black text-white/50 uppercase tracking-[0.12em] sm:tracking-widest italic">SG</h3>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION1 -->
+ <section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <div class="text-center max-w-2xl mx-auto mb-20">
+      <h2 class="text-[#8D6E63] font-semibold tracking-[0.2em] text-sm uppercase mb-4">The Experience</h2>
+      <h3 class="text-4xl font-semibold text-[#3E2723]">Custom Team Kits <br> <span class="italic font-light">Designer Wear</span></h3>
+      <p class="text-[#5D4037] mt-6 leading-relaxed">
+        Design your own club uniforms with high-quality sublimation printing. Get exactly what your team needs to stand out.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      
+      <div class="group p-8 rounded-3xl bg-[#FDFBF9] hover:bg-[#3E2723] transition-all duration-500 shadow-sm hover:shadow-2xl">
+        <div class="w-14 h-14 bg-[#EFEBE9] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#5D4037] transition-colors">
+          <i class="bi bi-cloud-upload text-2xl text-[#3E2723] group-hover:text-white"></i>
+        </div>
+        <h4 class="text-xl font-semibold text-[#3E2723] group-hover:text-white mb-4">1. Upload Design</h4>
+        <p class="text-[#5D4037] group-hover:text-[#D7CCC8] text-sm leading-relaxed">
+          Upload your team logo, primary colors, and size details. Our designer software matches details automatically.
+        </p>
+      </div>
+
+      <div class="group p-8 rounded-3xl bg-[#FDFBF9] hover:bg-[#3E2723] transition-all duration-500 shadow-sm hover:shadow-2xl">
+        <div class="w-14 h-14 bg-[#EFEBE9] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#5D4037] transition-colors">
+          <i class="bi bi-palette text-2xl text-[#3E2723] group-hover:text-white"></i>
+        </div>
+        <h4 class="text-xl font-semibold text-[#3E2723] group-hover:text-white mb-4">2. Choose a Style</h4>
+        <p class="text-[#5D4037] group-hover:text-[#D7CCC8] text-sm leading-relaxed">
+          Select from our curated layouts (Modern V-Neck, Raglan Sleeve, Retro Collar) and select high-performance fabrics.
+        </p>
+      </div>
+
+      <div class="group p-8 rounded-3xl bg-[#FDFBF9] hover:bg-[#3E2723] transition-all duration-500 shadow-sm hover:shadow-2xl">
+        <div class="w-14 h-14 bg-[#EFEBE9] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#5D4037] transition-colors">
+          <i class="bi bi-check-all text-2xl text-[#3E2723] group-hover:text-white"></i>
+        </div>
+        <h4 class="text-xl font-semibold text-[#3E2723] group-hover:text-white mb-4">3. Place Custom Order</h4>
+        <p class="text-[#5D4037] group-hover:text-[#D7CCC8] text-sm leading-relaxed">
+          Approve high-resolution mockups, get bulk-pricing rates, and place your order directly.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="mt-20 p-1 bg-[#EFEBE9] rounded-full max-w-lg mx-auto flex items-center justify-between pl-6">
+      <span class="text-[#3E2723] font-medium text-sm">Ready to customize team kits?</span>
+      <a href="services.html" class="bg-[#3E2723] text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-[#5D4037] transition-all">
+        Start Customizing
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- TARGET AUDIENCE SECTION -->
+<section class="py-24 bg-[#FDFBF9]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-20">
+      <h2 class="text-[#8D6E63] font-semibold tracking-[0.2em] text-sm uppercase mb-4">Who We Serve</h2>
+      <h3 class="text-4xl font-semibold text-[#3E2723]">Who is SportsPro X for?</h3>
+      <p class="text-[#5D4037] mt-6 leading-relaxed">
+        Our premium solutions are engineered to serve the exact needs of clubs, individual athletes, and sports facilities alike.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Clubs & Academies -->
+      <div class="bg-white p-8 rounded-3xl border border-[#EFEBE9] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 bg-[#FDFBF9] rounded-2xl flex items-center justify-center mb-6 text-[#8D6E63]">
+            <i class="bi bi-people-fill text-xl"></i>
+          </div>
+          <h4 class="text-xl font-semibold text-[#3E2723] mb-3">Clubs & Academies</h4>
+          <p class="text-[#5D4037] text-sm leading-relaxed mb-6">
+            Equip your squad with elite gear, custom sublimated kits, and customized branding. Save on bulk costs and stand out on the field.
+          </p>
+        </div>
+        <div class="border-t border-[#EFEBE9] pt-4 mt-auto">
+          <span class="text-xs text-[#8D6E63] uppercase tracking-wider font-bold">Benefit: Elite team branding & discount</span>
+        </div>
+      </div>
+
+      <!-- Individual Athletes -->
+      <div class="bg-white p-8 rounded-3xl border border-[#EFEBE9] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 bg-[#FDFBF9] rounded-2xl flex items-center justify-center mb-6 text-[#8D6E63]">
+            <i class="bi bi-person-fill text-xl"></i>
+          </div>
+          <h4 class="text-xl font-semibold text-[#3E2723] mb-3">Individual Athletes</h4>
+          <p class="text-[#5D4037] text-sm leading-relaxed mb-6">
+            Access premium bats, footwear, trackers, and accessories. Experience absolute precision and elevate your performance score.
+          </p>
+        </div>
+        <div class="border-t border-[#EFEBE9] pt-4 mt-auto">
+          <span class="text-xs text-[#8D6E63] uppercase tracking-wider font-bold">Benefit: Professional grade hardware</span>
+        </div>
+      </div>
+
+      <!-- Sports Facilities -->
+      <div class="bg-white p-8 rounded-3xl border border-[#EFEBE9] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 bg-[#FDFBF9] rounded-2xl flex items-center justify-center mb-6 text-[#8D6E63]">
+            <i class="bi bi-building-fill text-xl"></i>
+          </div>
+          <h4 class="text-xl font-semibold text-[#3E2723] mb-3">Facilities & Gyms</h4>
+          <p class="text-[#5D4037] text-sm leading-relaxed mb-6">
+            Equip your spaces with heavy-duty commercial treadmills, dumbells, and court accessories. Guaranteed durability and high usage life.
+          </p>
+        </div>
+        <div class="border-t border-[#EFEBE9] pt-4 mt-auto">
+          <span class="text-xs text-[#8D6E63] uppercase tracking-wider font-bold">Benefit: Commercial durability & warranty</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-16 text-center">
+      <a href="services.html" class="inline-block bg-[#3E2723] text-white px-8 py-3.5 rounded-xl font-bold hover:bg-[#5D4037] transition-all shadow-lg">
+        Get Started Today
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION2 -->
+<section class="py-16 md:py-24 bg-[#FDFBF9]">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-6">
+      <div class="max-w-xl">
+        <h2 class="text-3xl md:text-4xl font-semibold text-[#3E2723]">Explore Our <br class="hidden sm:block"> Sports Collections</h2>
+      </div>
+      <a href="shop.html" class="text-[#3E2723] font-bold border-b-2 border-[#3E2723] pb-1 hover:text-[#8D6E63] hover:border-[#8D6E63] transition-all whitespace-nowrap">
+        View All Collections →
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      
+      <div class="relative overflow-hidden rounded-2xl aspect-[4/5] sm:aspect-[3/4] group">
+        <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#3E2723]/90 via-[#3E2723]/20 to-transparent flex flex-col justify-end p-6">
+          <p class="text-white font-bold text-lg">Cricket Hardware</p>
+          <p class="text-[#D7CCC8] text-xs">Shop Bats & Pads</p>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-2xl aspect-[4/5] sm:aspect-[3/4] group lg:translate-y-8">
+        <img src="https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#3E2723]/90 via-[#3E2723]/20 to-transparent flex flex-col justify-end p-6">
+          <p class="text-white font-bold text-lg">Football & Apparel</p>
+          <p class="text-[#D7CCC8] text-xs">Shop Boots & Jerseys</p>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-2xl aspect-[4/5] sm:aspect-[3/4] group">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#3E2723]/90 via-[#3E2723]/20 to-transparent flex flex-col justify-end p-6">
+          <p class="text-white font-bold text-lg">Gym Equipment</p>
+          <p class="text-[#D7CCC8] text-xs">Shop Dumbbells & Mats</p>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-2xl aspect-[4/5] sm:aspect-[3/4] group lg:translate-y-8">
+        <img src="https://images.unsplash.com/photo-1510017803434-a899398421b3?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#3E2723]/90 via-[#3E2723]/20 to-transparent flex flex-col justify-end p-6">
+          <p class="text-white font-bold text-lg">Sports Trackers</p>
+          <p class="text-[#D7CCC8] text-xs">Shop Garmin & Accessories</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- SECTION3 -->
+ <section class="py-24 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      
+      <div class="relative">
+        <div class="absolute -top-10 -left-10 w-64 h-64 bg-[#EFEBE9] rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+        <div class="relative bg-[#3E2723] p-2 rounded-[2rem] shadow-2xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=2000" alt="Custom Team Kit Preview" class="rounded-[1.8rem] w-full object-cover">
+          <div class="card absolute top-10 right-6 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-[#EFEBE9] animate-pulse">
+            <p class="text-[10px] font-bold text-[#8D6E63] uppercase">AI Designing...</p>
+            <div class="flex gap-1 mt-1">
+              <div class="h-1.5 w-12 bg-[#3E2723] rounded-full"></div>
+              <div class="h-1.5 w-4 bg-[#D7CCC8] rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-10">
+        <div>
+          <h2 class="text-[#8D6E63] font-semibold tracking-[0.2em] text-sm uppercase mb-4">The Technical Edge</h2>
+          <h3 class="text-4xl font-semibold text-[#3E2723]">Train smarter, <br> perform faster.</h3>
+        </div>
+
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#3E2723] flex items-center justify-center mt-1">
+              <i class="bi bi-check2 text-white text-xs"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-[#3E2723]">Smart Scaling Algorithms</h4>
+              <p class="text-sm text-[#5D4037]">Our gear configurations automatically optimize sizes based on height, weight, and arm length inputs.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#3E2723] flex items-center justify-center mt-1">
+              <i class="bi bi-check2 text-white text-xs"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-[#3E2723]">Instant Customization Quotes</h4>
+              <p class="text-sm text-[#5D4037]">Select logos, embroidery options, and sublimation elements and export high-fidelity PDF quotes in one click.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#3E2723] flex items-center justify-center mt-1">
+              <i class="bi bi-check2 text-white text-xs"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-[#3E2723]">Material Swap Tool</h4>
+              <p class="text-sm text-[#5D4037]">Toggle between Premium Composite, Carbon Fiber, and Solid Willow on bat configurations instantly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION4: DYNAMIC PRODUCTS GRID (REPLICATING FITTED SHOPPERS LOOK) -->
+ <section class="py-24 bg-[#FDFBF9]">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+      <div>
+        <h2 class="text-[#8D6E63] font-semibold tracking-[0.2em] text-sm uppercase mb-4">Trending Gear</h2>
+        <h3 class="text-4xl font-semibold text-[#3E2723]">Curated for Every <br> Athlete.</h3>
+      </div>
+      <p class="max-w-xs text-[#5D4037] text-sm leading-relaxed">
+        Browse our top-voted professional hardware, tested by seasoned league players.
+      </p>
+    </div>
+
+    <!-- Dynamic Container for Products -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="trending-container">
+      <!-- Injected via javascript in same style as reference website -->
+    </div>
+  </div>
+</section>
+
+<!-- SECTION5 -->
+ <section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h3 class="text-3xl font-semibold text-[#3E2723]">Trusted by Visionary Athletes</h3>
+    </div>
+ 
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <div class="group bg-[#FDFBF9] p-8 rounded-3xl shadow-sm border border-[#EFEBE9] flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-[#8D6E63]">
+        <div class="mb-6">
+            <i class="bi bi-quote text-4xl text-[#EFEBE9] group-hover:text-[#D7CCC8] transition-colors"></i>
+            <p class="text-[#5D4037] italic mt-2">"SportsPro X team kits saved our academy thousands in print setups. We saw exactly how our sublimation uniforms would look before we made the final purchase."</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-[#D7CCC8] overflow-hidden border-2 border-transparent group-hover:border-[#8D6E63] transition-all flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=100&w=800&auto=format&fit=crop" alt="Sarah Jenkins" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <p class="font-bold text-[#3E2723] text-sm">Sarah Jenkins</p>
+            <p class="text-[#8D6E63] text-xs uppercase font-bold tracking-wider">State Athlete</p>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="group bg-[#FDFBF9] p-8 rounded-3xl shadow-sm border border-[#EFEBE9] flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-[#8D6E63]">
+        <div class="mb-6">
+            <i class="bi bi-quote text-4xl text-[#EFEBE9] group-hover:text-[#D7CCC8] transition-colors"></i>
+            <p class="text-[#5D4037] italic mt-2">"The custom equipment catalog is incredible. I customized my entire bat specifications in a weekend and then ordered it. The weight profile is spot on."</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-[#D7CCC8] overflow-hidden border-2 border-transparent group-hover:border-[#8D6E63] transition-all flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=100&w=800&auto=format&fit=crop" alt="Michael Ross" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <p class="font-bold text-[#3E2723] text-sm">Michael Ross</p>
+            <p class="text-[#8D6E63] text-xs uppercase font-bold tracking-wider">Club Head Coach</p>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="group bg-[#FDFBF9] p-8 rounded-3xl shadow-sm border border-[#EFEBE9] flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-[#8D6E63]">
+        <div class="mb-6">
+            <i class="bi bi-quote text-4xl text-[#EFEBE9] group-hover:text-[#D7CCC8] transition-colors"></i>
+            <p class="text-[#5D4037] italic mt-2">"Finally a portal that understands high performance! The tracking statistics and sizing fits perfectly. Our fitness gym is complete now."</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-[#D7CCC8] overflow-hidden border-2 border-transparent group-hover:border-[#8D6E63] transition-all flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=100&w=800&auto=format&fit=crop" alt="Elena Rodriguez" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <p class="font-bold text-[#3E2723] text-sm">Elena Rodriguez</p>
+            <p class="text-[#8D6E63] text-xs uppercase font-bold tracking-wider">Fitness Coach</p>
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+
+<!-- BULK ORDER ENQUIRY SECTION -->
+<section class="py-24 bg-[#EFEBE9] relative overflow-hidden" id="bulk-enquiry">
+  <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#3E2723]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="text-[#8D6E63] font-bold uppercase tracking-widest text-xs">Partner With Us</span>
+        <h2 class="text-4xl md:text-5xl font-black text-[#3E2723] mt-4 mb-6 leading-tight">Clubs & Schools <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#8D6E63] to-[#3E2723]">Wholesale Hub</span></h2>
+        <p class="text-[#5D4037] text-lg leading-relaxed mb-8">
+          Equip your entire team, school, or academy with premium sports gear at unbeatable bulk rates. Get instant access to our dedicated account managers, custom embroidery, and priority production queues.
+        </p>
+        <ul class="space-y-4 mb-10">
+          <li class="flex items-center gap-3 text-[#3E2723] font-semibold"><i class="bi bi-check-circle-fill text-[#8D6E63]"></i> Up to 40% off retail pricing</li>
+          <li class="flex items-center gap-3 text-[#3E2723] font-semibold"><i class="bi bi-check-circle-fill text-[#8D6E63]"></i> Free logo digitization</li>
+          <li class="flex items-center gap-3 text-[#3E2723] font-semibold"><i class="bi bi-check-circle-fill text-[#8D6E63]"></i> Dedicated support team</li>
+        </ul>
+      </div>
+      
+      <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-gray-100">
+        <h3 class="text-2xl font-bold text-[#3E2723] mb-6">Request a Bulk Quote</h3>
+        <form id="bulkOrderForm" onsubmit="handleBulkOrderSubmit(event)" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold text-[#5D4037] mb-2">Club / School Name</label>
+              <input type="text" id="bulkClubName" required class="bulk-quote-input w-full bg-[#FDFBF9] border border-[#EFEBE9] rounded-xl px-4 py-3 focus:outline-none focus:border-[#8D6E63] focus:ring-1 focus:ring-[#8D6E63] transition-all" placeholder="E.g. Tigers FC">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-[#5D4037] mb-2">Contact Name</label>
+              <input type="text" id="bulkContactName" required class="bulk-quote-input w-full bg-[#FDFBF9] border border-[#EFEBE9] rounded-xl px-4 py-3 focus:outline-none focus:border-[#8D6E63] focus:ring-1 focus:ring-[#8D6E63] transition-all" placeholder="Manager Name">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold text-[#5D4037] mb-2">Email Address</label>
+              <input type="email" id="bulkEmail" required class="bulk-quote-input w-full bg-[#FDFBF9] border border-[#EFEBE9] rounded-xl px-4 py-3 focus:outline-none focus:border-[#8D6E63] focus:ring-1 focus:ring-[#8D6E63] transition-all" placeholder="email@club.com">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-[#5D4037] mb-2">Primary Sport</label>
+              <select id="bulkSport" class="bulk-quote-input w-full bg-[#FDFBF9] border border-[#EFEBE9] rounded-xl px-4 py-3 focus:outline-none focus:border-[#8D6E63] focus:ring-1 focus:ring-[#8D6E63] transition-all">
+                <option>Cricket</option>
+                <option>Football</option>
+                <option>Athletics</option>
+                <option>General Multi-Sport</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-[#5D4037] mb-2">Expected Volume</label>
+            <div class="flex gap-4">
+              <label class="flex-1 cursor-pointer relative">
+                <input type="radio" name="volume" value="10-50 Units" class="peer sr-only" checked>
+                <div class="w-full text-center py-3 px-2 border border-[#EFEBE9] rounded-xl text-sm font-semibold text-[#5D4037] peer-checked:bg-[#3E2723] peer-checked:text-white transition-all">10-50 Units</div>
+              </label>
+              <label class="flex-1 cursor-pointer relative">
+                <input type="radio" name="volume" value="50-200 Units" class="peer sr-only">
+                <div class="w-full text-center py-3 px-2 border border-[#EFEBE9] rounded-xl text-sm font-semibold text-[#5D4037] peer-checked:bg-[#3E2723] peer-checked:text-white transition-all">50-200 Units</div>
+              </label>
+              <label class="flex-1 cursor-pointer relative">
+                <input type="radio" name="volume" value="200+ Units" class="peer sr-only">
+                <div class="w-full text-center py-3 px-2 border border-[#EFEBE9] rounded-xl text-sm font-semibold text-[#5D4037] peer-checked:bg-[#3E2723] peer-checked:text-white transition-all">200+ Units</div>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="w-full bg-[#3E2723] text-white font-bold py-4 rounded-xl hover:bg-[#8D6E63] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            Submit Bulk Enquiry
+          </button>
+        </form>
+        
+        <script>
+          function handleBulkOrderSubmit(e) {
+            e.preventDefault();
+            
+            const clubName = document.getElementById('bulkClubName').value;
+            const contactName = document.getElementById('bulkContactName').value;
+            const email = document.getElementById('bulkEmail').value;
+            const sport = document.getElementById('bulkSport').value;
+            const volume = document.querySelector('input[name="volume"]:checked').value;
+            
+            const newOrder = {
+              id: "BLK-" + Math.floor(Math.random() * 9000 + 1000),
+              date: new Date().toISOString().split('T')[0],
+              clubName: clubName,
+              contactName: contactName,
+              email: email,
+              sport: sport,
+              volume: volume,
+              status: "New"
+            };
+            
+            if (window.store && window.store.addBulkOrder) {
+              window.store.addBulkOrder(newOrder);
+            }
+            
+            showToast('Enquiry Submitted! Our team will contact you within 24 hours.', 'success');
+            document.getElementById('bulkOrderForm').reset();
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION6 -->
+ <section class="py-20">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="bg-[#3E2723] rounded-[3rem] p-12 text-center text-white relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle,white_1px,transparent_1px)] [background-size:20px_20px]"></div>
+      </div>
+
+      <h2 class="text-4xl font-semibold mb-6 relative z-10">Stop Waiting. Start Winning.</h2>
+      <p class="text-[#D7CCC8] mb-10 max-w-xl mx-auto relative z-10">Join 10,000+ athletes who perform with SportsPro X gear. Your peak performance is one choice away.</p>
+      
+      <div class="relative z-10">
+        <a href="shop.html" class="inline-block bg-[#FDFBF9] text-[#3E2723] px-10 py-3 rounded-xl font-bold hover:bg-[#EFEBE9] transition-all transform hover:scale-105 shadow-xl">
+          Shop for Free & Get Started
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+
+  <script>
+    // Populate Trending Products inside reference-styled cards
+    const prodContainer = document.getElementById('trending-container');
+    if(prodContainer && window.db) {
+        // Get 4 featured products
+        const trending = window.db.products.filter(p => p.isFeatured).slice(0, 4);
+        
+        trending.forEach((prod) => {
+            const priceHtml = prod.discountPrice 
+                ? `<span class="text-muted-spx text-decoration-line-through me-2 text-xs">$${prod.price}</span><span class="text-[#8D6E63] font-bold text-sm">$${prod.discountPrice}</span>`
+                : `<span class="text-[#3E2723] font-bold text-sm">$${prod.price}</span>`;
+            
+            prodContainer.innerHTML += `
+              <div class="group flex flex-col h-full">
+                <div class="aspect-square bg-white rounded-3xl mb-4 border border-[#EFEBE9] flex items-center justify-center relative overflow-hidden transition-all duration-500 hover:border-[#8D6E63] hover:shadow-lg">
+                  ${prod.discountPrice ? `<span class="absolute top-2 left-2 badge bg-red-600 text-white text-[10px] px-2.5 py-1 rounded-full font-bold z-10 shadow-sm">SALE</span>` : ''}
+                  ${prod.isNew ? `<span class="absolute top-2 left-2 ${prod.discountPrice ? 'mt-7' : ''} badge bg-emerald-600 text-white text-[10px] px-2.5 py-1 rounded-full font-bold z-10 shadow-sm">NEW</span>` : ''}
+                  <a href="product-details.html?id=${prod.id}" class="w-full h-full flex items-center justify-center">
+                    <img src="${prod.image}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${prod.name}">
+                  </a>
+                  <button onclick="window.store.addToCart('${prod.id}'); if(window.showToast) window.showToast('Added to cart');" class="absolute bottom-4 right-4 w-10 h-10 bg-[#3E2723] text-white rounded-xl opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex items-center justify-center hover:bg-[#8D6E63] shadow-md z-20">
+                    <i class="bi bi-plus-lg text-lg"></i>
+                  </button>
+                </div>
+                <div class="px-2 mt-auto">
+                  <h4 class="font-semibold text-[#3E2723] mb-1">
+                    <a href="product-details.html?id=${prod.id}" class="hover:text-[#8D6E63] transition-colors">${prod.name}</a>
+                  </h4>
+                  <p class="text-xs text-[#8D6E63] uppercase tracking-widest font-bold">${prod.category}</p>
+                  <div class="flex items-center justify-between mt-2 pt-1 border-t border-[#EFEBE9]">
+                    <div class="flex items-center gap-1 text-amber-500 text-xs">
+                      <i class="bi bi-star-fill"></i>
+                      <span class="text-[#5D4037] font-semibold">${prod.rating}</span>
+                    </div>
+                    <div>${priceHtml}</div>
+                  </div>
+                </div>
+              </div>
+            `;
+        });
+    }
+  </script>
+</body>
+
+</html>

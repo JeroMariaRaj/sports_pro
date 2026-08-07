@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - SportsPro X</title>
+  <link rel="icon" href="assets/images/cricket_bat_premium_1786007732561.jpg">
+  <script src="tailwind.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <style>
+    /* THEME TOGGLE */
+    :root {
+      --home-bg: #ffffff;
+      --text-color: #111111;
+    }
+
+    [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
+    }
+
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .bg-white,
+    [data-theme="dark"] .bg-\[\#FDFBF9\],
+    [data-theme="dark"] .bg-\[\#EFEBE9\],
+    [data-theme="dark"] .bg-\[\#F9F7F5\] {
+      background-color: #000000 !important;
+      border-color: #333333 !important;
+    }
+
+    [data-theme="dark"] .btn,
+    [data-theme="dark"] .btn1:hover {
+      color: #000000 !important;
+    }
+
+    [data-theme="dark"] body,
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] table,
+    [data-theme="dark"] th,
+    [data-theme="dark"] td,
+    [data-theme="dark"] div,
+    [data-theme="dark"] small,
+    [data-theme="dark"] strong {
+      color: #ffffff !important;
+    }
+
+    [data-theme="dark"] thead {
+      background-color: #064E3B !important;
+    }
+    
+    [data-theme="dark"] .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+    }
+  </style>
+</head>
+
+<body class="font-sans">
+  <div id="navbar"></div>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-32 pb-24 bg-[#FDFBF9] overflow-hidden">
+    <div class="absolute -top-10 -right-10 w-64 h-64 bg-[#EFEBE9] rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+    <div class="absolute top-40 -left-10 w-72 h-72 bg-[#D7CCC8] rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      <h2 class="text-[#8D6E63] font-semibold tracking-widest text-sm uppercase mb-4">The SportsPro Journal</h2>
+      <h1 class="text-4xl md:text-6xl font-semibold text-[#3E2723] mb-6">Expert Insights & <br class="hidden md:block"> Athletic News</h1>
+      <p class="text-[#5D4037] max-w-2xl mx-auto leading-relaxed text-lg">
+        Stay updated with the latest in performance gear technology, training methodologies, and exclusive club success stories.
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Featured Post -->
+      <div class="mb-16">
+        <div class="group flex flex-col lg:flex-row gap-10 items-center bg-[#FDFBF9] rounded-[3rem] p-6 md:p-8 border border-[#EFEBE9] shadow-sm hover:shadow-xl transition-all duration-500">
+          <div class="lg:w-1/2 aspect-video overflow-hidden rounded-[2rem] relative">
+            <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=100&w=1200&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Featured Blog Post">
+            <div class="absolute top-4 left-4 bg-white text-[#3E2723] px-3 py-1 rounded-full text-xs font-bold shadow-md">
+              Featured
+            </div>
+          </div>
+          <div class="lg:w-1/2 space-y-6 lg:pr-6">
+            <div class="flex items-center gap-4 text-xs font-bold text-[#8D6E63] uppercase tracking-wider">
+              <span>Performance Wear</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-[#EFEBE9]"></span>
+              <span>Aug 07, 2026</span>
+            </div>
+            <h2 class="text-3xl font-semibold text-[#3E2723] leading-tight">
+              <a href="blog-smart-fabrics.html" class="hover:text-[#8D6E63] transition-colors">The Future of Smart Fabrics in Professional Leagues</a>
+            </h2>
+            <p class="text-[#5D4037] leading-relaxed">
+              Explore how integrated biometric tracking threads and moisture-wicking nanomaterials are shifting the paradigm for elite football and cricket squads.
+            </p>
+            <a href="blog-smart-fabrics.html" class="inline-flex items-center gap-2 font-bold text-[#3E2723] hover:text-[#8D6E63] transition-colors group-hover:underline">
+              Read Full Story <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid Posts -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Post 1 -->
+        <div class="group flex flex-col bg-[#FDFBF9] rounded-[2rem] overflow-hidden border border-[#EFEBE9] shadow-sm hover:shadow-xl transition-all duration-500">
+          <div class="aspect-video overflow-hidden relative">
+            <a href="blog-hardware.html">
+              <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=100&w=1200&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Blog Image">
+            </a>
+          </div>
+          <div class="p-6 md:p-8 flex-1 flex flex-col">
+            <div class="flex items-center gap-3 text-xs font-bold text-[#8D6E63] uppercase tracking-wider mb-4">
+              <span>Hardware</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-[#EFEBE9]"></span>
+              <span>Aug 01, 2026</span>
+            </div>
+            <h3 class="text-xl font-semibold text-[#3E2723] mb-4">
+              <a href="blog-hardware.html" class="hover:text-[#8D6E63] transition-colors">Selecting the Right Hardware for Commercial Gyms</a>
+            </h3>
+            <p class="text-[#5D4037] text-sm leading-relaxed mb-6 flex-1">
+              Durability meets design. Learn how to choose dumbbells, plates, and racks that withstand heavy daily usage while maintaining aesthetic appeal.
+            </p>
+            <a href="blog-hardware.html" class="inline-flex items-center gap-2 font-bold text-[#3E2723] hover:text-[#8D6E63] transition-colors text-sm mt-auto">
+              Read Article <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="group flex flex-col bg-[#FDFBF9] rounded-[2rem] overflow-hidden border border-[#EFEBE9] shadow-sm hover:shadow-xl transition-all duration-500">
+          <div class="aspect-video overflow-hidden relative">
+            <a href="blog-endurance.html">
+              <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=100&w=1200&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Blog Image">
+            </a>
+          </div>
+          <div class="p-6 md:p-8 flex-1 flex flex-col">
+            <div class="flex items-center gap-3 text-xs font-bold text-[#8D6E63] uppercase tracking-wider mb-4">
+              <span>Training</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-[#EFEBE9]"></span>
+              <span>Jul 28, 2026</span>
+            </div>
+            <h3 class="text-xl font-semibold text-[#3E2723] mb-4">
+              <a href="blog-endurance.html" class="hover:text-[#8D6E63] transition-colors">Maximizing Your Endurance with Track Wearables</a>
+            </h3>
+            <p class="text-[#5D4037] text-sm leading-relaxed mb-6 flex-1">
+              Data is the modern athlete's best coach. We dive deep into heart-rate zones, VO2 max estimations, and recovery algorithms.
+            </p>
+            <a href="blog-endurance.html" class="inline-flex items-center gap-2 font-bold text-[#3E2723] hover:text-[#8D6E63] transition-colors text-sm mt-auto">
+              Read Article <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="group flex flex-col bg-[#FDFBF9] rounded-[2rem] overflow-hidden border border-[#EFEBE9] shadow-sm hover:shadow-xl transition-all duration-500">
+          <div class="aspect-video overflow-hidden relative">
+            <a href="blog-academy.html">
+              <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=100&w=1200&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Blog Image">
+            </a>
+          </div>
+          <div class="p-6 md:p-8 flex-1 flex flex-col">
+            <div class="flex items-center gap-3 text-xs font-bold text-[#8D6E63] uppercase tracking-wider mb-4">
+              <span>Club News</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-[#EFEBE9]"></span>
+              <span>Jul 15, 2026</span>
+            </div>
+            <h3 class="text-xl font-semibold text-[#3E2723] mb-4">
+              <a href="blog-academy.html" class="hover:text-[#8D6E63] transition-colors">How the Titans Academy Upgraded Their Entire Arsenal</a>
+            </h3>
+            <p class="text-[#5D4037] text-sm leading-relaxed mb-6 flex-1">
+              A case study on bulk equipping a regional cricket academy in under three weeks, from custom kits to premium grade willow bats.
+            </p>
+            <a href="blog-academy.html" class="inline-flex items-center gap-2 font-bold text-[#3E2723] hover:text-[#8D6E63] transition-colors text-sm mt-auto">
+              Read Article <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      
+      <!-- Pagination -->
+      <div class="mt-16 flex justify-center gap-2">
+        <button class="w-10 h-10 rounded-xl bg-[#3E2723] text-white font-bold flex items-center justify-center hover:bg-[#5D4037] transition-colors shadow-md">1</button>
+        <button class="w-10 h-10 rounded-xl bg-[#FDFBF9] text-[#3E2723] font-bold flex items-center justify-center border border-[#EFEBE9] hover:bg-[#EFEBE9] transition-colors">2</button>
+        <button class="w-10 h-10 rounded-xl bg-[#FDFBF9] text-[#3E2723] font-bold flex items-center justify-center border border-[#EFEBE9] hover:bg-[#EFEBE9] transition-colors"><i class="bi bi-chevron-right"></i></button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="py-20 bg-[#3E2723]">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-semibold text-white mb-4">Never Miss an Update</h3>
+      <p class="text-[#D7CCC8] mb-8">Subscribe to the SportsPro Journal for weekly insights and exclusive gear drops.</p>
+      <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto" onsubmit="event.preventDefault();">
+        <input type="email" placeholder="Your email address" class="flex-1 px-6 py-4 rounded-xl outline-none focus:ring-2 focus:ring-[#8D6E63] text-[#3E2723]" required>
+        <button type="submit" class="bg-[#8D6E63] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#EFEBE9] hover:text-[#3E2723] transition-colors shadow-lg">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+</body>
+</html>

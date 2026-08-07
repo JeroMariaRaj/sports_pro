@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - SportsPro X</title>
+    <link rel="icon" href="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&q=80&w=2000">
+    <script src="tailwind.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* RTL */
+        .rtl {
+            direction: rtl;
+        }
+
+        [dir="rtl"] .title {
+            margin-right: 20px !important;
+        }
+
+        /* THEME TOGGLE */
+        :root {
+            --home-bg: #ffffff;
+            --text-color: #111111;
+        }
+
+        [data-theme="dark"] {
+            --home-bg: #000000;
+            --text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--home-bg) !important;
+            color: var(--text-color);
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        [data-theme="dark"] section,
+        [data-theme="dark"] .card,
+        [data-theme="dark"] .bg-white,
+        [data-theme="dark"] .bg-\[\#FDFBF9\],
+        [data-theme="dark"] .bg-\[\#EFEBE9\],
+        [data-theme="dark"] .bg-\[\#F9F7F5\] {
+            background-color: #000000 !important;
+            border-color: #333333 !important;
+        }
+
+        [data-theme="dark"] .btn,
+        [data-theme="dark"] .btn1:hover {
+            color: #000000 !important;
+        }
+
+        [data-theme="dark"] body,
+        [data-theme="dark"] p,
+        [data-theme="dark"] h1,
+        [data-theme="dark"] h2,
+        [data-theme="dark"] h3,
+        [data-theme="dark"] h4,
+        [data-theme="dark"] h5,
+        [data-theme="dark"] h6,
+        [data-theme="dark"] span,
+        [data-theme="dark"] li,
+        [data-theme="dark"] a,
+        [data-theme="dark"] i,
+        [data-theme="dark"] label,
+        [data-theme="dark"] table,
+        [data-theme="dark"] th,
+        [data-theme="dark"] td,
+        [data-theme="dark"] div,
+        [data-theme="dark"] small,
+        [data-theme="dark"] strong {
+            color: #ffffff !important;
+        }
+
+        [data-theme="dark"] thead {
+            background-color: #064E3B !important;
+        }
+
+        [data-theme="dark"] .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7) !important;
+        }
+
+        [data-theme="dark"] .tag-btn {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border-color: #ffffff !important;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .vertical-text {
+            writing-mode: vertical-rl;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <!-- navbar -->
+    <div id="navbar"></div>
+
+    <!-- HERO BANNER -->
+    <section class="relative min-h-screen bg-[#FDFBF9] flex items-center overflow-hidden py-20 lg:py-0">
+
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 items-center">
+
+                <div class="lg:col-span-6 lg:pr-12 order-2 lg:order-1">
+                    <div class="space-y-8">
+
+                        <h1 class="text-4xl sm:text-5xl md:text-7xl font-semibold text-[#3E2723] leading-[1.1] mt-6">
+                            Customize Your <br>
+                            <span class="text-[#8D6E63] italic font-serif">Future Kits</span> <br>
+                            Today.
+                        </h1>
+
+                        <p
+                            class="text-[#5D4037] text-lg md:text-xl leading-relaxed max-w-lg border-l-4 border-[#8D6E63] pl-6">
+                            An elite configuration tool for team managers. Design uniforms, request custom printing, and tune your gear specifications in real-time.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-5 pt-4">
+                            <a href="contact.html"
+                                class="px-10 py-3 bg-[#3E2723] text-white rounded-xl font-bold text-center hover:bg-[#8D6E63] transition-all shadow-xl hover:shadow-[#8D6E63]/30">
+                                Start Customizing
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 order-1 lg:order-2 relative mt-12 lg:mt-0 flex justify-center">
+                    <div
+                        class="relative rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(62,39,35,0.25)] border-8 border-white w-full max-w-lg aspect-[4/4]">
+                        <img src="assets/images/fitness_dumbbell_premium_1786007768795.jpg"
+                            class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                            alt="Customization Staging">
+                    </div>
+
+                    <div
+                        class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4 max-w-xs animate-float border border-[#EFEBE9]">
+                        <div class="bg-[#EFEBE9] p-3 rounded-lg flex-shrink-0">
+                            <i class="bi bi-activity text-[#3E2723] text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-[#8D6E63] font-bold uppercase tracking-wider">Calibration</p>
+                            <p class="text-sm font-semibold text-[#3E2723]">Smart Weight Active</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES CARDS -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-[#8D6E63] font-semibold tracking-widest text-xs uppercase mb-4">Core Capabilities</h2>
+                <h3 class="text-3xl md:text-5xl font-semibold text-[#3E2723]">Engineered for League Excellence</h3>
+                <p class="text-[#5D4037] mt-6 text-sm md:text-base leading-relaxed">
+                    We combine high-end dye sublimation, composite profiling, and precise calibration algorithms to ensure your team has the performance edge.
+                </p>
+            </div>
+
+            <div class="space-y-16">
+
+                <!-- Service 1 -->
+                <div class="bg-[#FDFBF9] rounded-[3rem] p-8 md:p-16 border border-[#EFEBE9] hover:shadow-xl transition-all duration-500">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-5 space-y-6">
+                            <span class="text-[#8D6E63] font-bold uppercase tracking-widest text-[10px]">Apparel Printing</span>
+                            <h4 class="text-3xl font-semibold text-[#3E2723]">Custom Team Sublimation</h4>
+                            <p class="text-[#5D4037] leading-relaxed text-sm md:text-base">
+                                Design full-jersey prints, player names, and sponsor graphics. Our premium inks bond directly to micro-mesh performance fabrics for lightweight, zero-fade uniform outfitting.
+                            </p>
+                            <a href="contact.html" class="inline-flex items-center gap-2 text-[#3E2723] font-bold hover:text-[#8D6E63] transition-all">
+                                Request Custom Kit <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="lg:col-span-7 rounded-[2rem] overflow-hidden shadow-lg border border-[#EFEBE9] aspect-video">
+                            <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-[#FDFBF9] rounded-[3rem] p-8 md:p-16 border border-[#EFEBE9] hover:shadow-xl transition-all duration-500">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-5 space-y-6 lg:order-2">
+                            <span class="text-[#8D6E63] font-bold uppercase tracking-widest text-[10px]">Hardware Tuning</span>
+                            <h4 class="text-3xl font-semibold text-[#3E2723]">Bat Knocking & Balance Calibration</h4>
+                            <p class="text-[#5D4037] leading-relaxed text-sm md:text-base">
+                                Knock in your English Willow bats using precise mechanical pounding, modify racket string tensions to custom tensions, and configure balance-weighting setups to match player profiles.
+                            </p>
+                            <a href="contact.html" class="inline-flex items-center gap-2 text-[#3E2723] font-bold hover:text-[#8D6E63] transition-all">
+                                Schedule Gear Tuning <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="lg:col-span-7 lg:order-1 rounded-[2rem] overflow-hidden shadow-lg border border-[#EFEBE9] aspect-video flex items-center justify-center bg-[#F8F6F5]">
+                            <img src="https://images.unsplash.com/photo-1593341646782-e0b495cff86d?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-[#FDFBF9] rounded-[3rem] p-8 md:p-16 border border-[#EFEBE9] hover:shadow-xl transition-all duration-500">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-5 space-y-6">
+                            <span class="text-[#8D6E63] font-bold uppercase tracking-widest text-[10px]">Facility outfitting</span>
+                            <h4 class="text-3xl font-semibold text-[#3E2723]">Commercial Facility Procurement</h4>
+                            <p class="text-[#5D4037] leading-relaxed text-sm md:text-base">
+                                Outfitting corporate gyms, school complexes, and league clubs with premium treadmills, court systems, resistance modules, and maintenance warranties.
+                            </p>
+                            <a href="contact.html" class="inline-flex items-center gap-2 text-[#3E2723] font-bold hover:text-[#8D6E63] transition-all">
+                                Request Commercial Sourcing <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="lg:col-span-7 rounded-[2rem] overflow-hidden shadow-lg border border-[#EFEBE9] aspect-video">
+                            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+</body>
+
+</html>
+

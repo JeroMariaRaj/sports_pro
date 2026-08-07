@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportsPro X | Club Management SaaS</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        
+        .trusted-by {
+            filter: grayscale(100%) opacity(0.5);
+            transition: all 0.3s ease;
+        }
+        .trusted-by:hover {
+            filter: grayscale(0%) opacity(1);
+        }
+        .pricing-card {
+            transition: transform 0.3s ease;
+            border: 1px solid var(--spx-border);
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        .pricing-popular {
+            border: 2px solid var(--spx-primary) !important;
+            transform: scale(1.05);
+        }
+        .pricing-popular:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="spx-header-container"></div>
+
+    <!-- SaaS Hero Section -->
+    <section class="hero-wrapper" style="background: url('assets/images/gym_treadmill_premium_1786012835841.jpg') center/cover no-repeat; min-height: 90vh; display: flex; align-items: center;">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative z-2 py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0" data-aos="fade-right">
+                    <span class="badge bg-accent-spx text-white px-3 py-2 rounded-pill mb-4 text-uppercase tracking-wide animate-float"><i class="fa-solid fa-rocket me-2"></i>v2.0 Launched Globally</span>
+                    <h1 class="display-3 fw-bold lh-sm mb-4 text-white">Manage your sports academy with <span class="text-secondary-spx">zero friction</span></h1>
+                    <p class="lead text-white-50 mb-5">Automate roster management, collect subscription payments instantly, and schedule matches without the endless email threads.</p>
+                    
+                    <form class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mb-4">
+                        <input type="email" class="form-control-spx form-control-lg px-4 bg-white bg-opacity-10 text-white border-secondary border-opacity-25" placeholder="Enter your work email" style="max-width: 350px;">
+                        <button type="button" class="btn btn-primary-spx btn-lg px-4">Start 14-Day Free Trial</button>
+                    </form>
+                    <p class="small text-white-50"><i class="fa-solid fa-check text-success me-1"></i> No credit card required. Cancel anytime.</p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="position-relative">
+                        <img src="assets/images/football_boot_premium_1786007742592.jpg" class="img-fluid rounded-4 shadow-lg w-100" style="object-fit: cover; max-height: 500px;" alt="Sports Management">
+                        
+                        <!-- Floating Glass Card overlay -->
+                        <div class="position-absolute bottom-0 start-0 translate-middle-y ms-n4 p-4 rounded-4 shadow-lg d-none d-md-block" style="background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); width: 250px;">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h6 class="text-white-50 mb-0 fw-bold">Active Members</h6>
+                                <i class="fa-solid fa-arrow-trend-up text-success"></i>
+                            </div>
+                            <h3 class="fw-bold text-white mb-0">1,248</h3>
+                            <div class="mt-3 pt-3 border-top border-secondary border-opacity-25">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="bg-success bg-opacity-25 p-2 rounded-circle"><i class="fa-solid fa-check text-success small"></i></div>
+                                    <span class="text-white-50 small">Payments Up to Date</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Logos -->
+    <section class="py-5 border-bottom border-secondary border-opacity-10">
+        <div class="container text-center">
+            <p class="small text-muted-spx fw-bold text-uppercase tracking-wide mb-4">Trusted by 500+ Academies Worldwide</p>
+            <div class="d-flex flex-wrap justify-content-center gap-4 gap-md-5 opacity-75">
+                <h4 class="fw-bold trusted-by m-0 text-muted-spx"><i class="fa-solid fa-shield-halved me-2"></i>FC United</h4>
+                <h4 class="fw-bold trusted-by m-0 text-muted-spx"><i class="fa-solid fa-dumbbell me-2"></i>Titan Gyms</h4>
+                <h4 class="fw-bold trusted-by m-0 text-muted-spx"><i class="fa-solid fa-baseball-bat-ball me-2"></i>Apex Cricket</h4>
+                <h4 class="fw-bold trusted-by m-0 text-muted-spx"><i class="fa-solid fa-person-swimming me-2"></i>AquaClub</h4>
+                <h4 class="fw-bold trusted-by m-0 text-muted-spx"><i class="fa-solid fa-medal me-2"></i>Elite Pros</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="py-5 my-5">
+        <div class="container">
+            <div class="text-center mb-5 pb-3">
+                <h2 class="fw-bold mb-3">Everything you need to scale your club</h2>
+                <p class="text-muted-spx mx-auto" style="max-width: 600px;">Replace your spreadsheets and disconnected tools with one unified platform built specifically for sports organizations.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="spx-card h-100 p-4 border-0 bg-alt-spx">
+                        <div class="bg-primary bg-opacity-10 text-primary rounded p-3 d-inline-flex mb-4">
+                            <i class="fa-solid fa-users fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold">Roster & Attendance</h5>
+                        <p class="text-muted-spx small">Track player availability, monitor attendance over time, and manage waitlists automatically.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="spx-card h-100 p-4 border-0 bg-alt-spx">
+                        <div class="bg-dark bg-opacity-10 text-dark rounded p-3 d-inline-flex mb-4">
+                            <i class="fa-solid fa-credit-card fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold">Automated Billing</h5>
+                        <p class="text-muted-spx small">Set up recurring subscriptions, handle late payments gracefully, and generate tax-ready financial reports.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="spx-card h-100 p-4 border-0 bg-alt-spx">
+                        <div class="bg-success bg-opacity-10 text-success rounded p-3 d-inline-flex mb-4">
+                            <i class="fa-solid fa-calendar-days fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold">Smart Scheduling</h5>
+                        <p class="text-muted-spx small">Conflict-free match and practice scheduling. Instantly notify members of rainouts or venue changes via push.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="spx-card h-100 p-4 border-0 bg-alt-spx">
+                        <div class="bg-warning bg-opacity-10 text-warning rounded p-3 d-inline-flex mb-4">
+                            <i class="fa-solid fa-chart-pie fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold">Performance Analytics</h5>
+                        <p class="text-muted-spx small">Log player stats, track development metrics, and share beautiful progression reports with parents.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="spx-card h-100 p-4 border-0 bg-alt-spx">
+                        <div class="bg-danger bg-opacity-10 text-danger rounded p-3 d-inline-flex mb-4">
+                            <i class="fa-solid fa-shop fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold">Built-in eCommerce</h5>
+                        <p class="text-muted-spx small">Sell club merchandise, uniforms, and equipment directly through your branded member portal.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="spx-card h-100 p-4 border-0 bg-alt-spx">
+                        <div class="bg-info bg-opacity-10 text-info rounded p-3 d-inline-flex mb-4">
+                            <i class="fa-solid fa-mobile-screen fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold">Parent & Player App</h5>
+                        <p class="text-muted-spx small">Keep everyone connected with our native iOS and Android apps. Group chats, schedules, and RSVPs in their pocket.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Tables -->
+    <section class="py-5 bg-alt-spx border-top border-bottom border-secondary border-opacity-10">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-3">Simple, transparent pricing</h2>
+                <p class="text-muted-spx">No hidden fees. Scale your plan as your club grows.</p>
+            </div>
+            
+            <div class="row g-4 align-items-center justify-content-center">
+                <!-- Basic -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-right">
+                    <div class="spx-card p-5 pricing-card bg-surface-spx h-100">
+                        <h5 class="fw-bold mb-2">Starter</h5>
+                        <p class="text-muted-spx small mb-4">For new and emerging clubs.</p>
+                        <div class="mb-4">
+                            <span class="display-5 fw-bold">$29</span><span class="text-muted-spx">/mo</span>
+                        </div>
+                        <ul class="list-unstyled mb-5">
+                            <li class="mb-3 text-muted-spx small"><i class="fa-solid fa-check text-primary-spx me-2"></i> Up to 50 active members</li>
+                            <li class="mb-3 text-muted-spx small"><i class="fa-solid fa-check text-primary-spx me-2"></i> Basic Roster Management</li>
+                            <li class="mb-3 text-muted-spx small"><i class="fa-solid fa-check text-primary-spx me-2"></i> Email Support</li>
+                            <li class="mb-3 text-muted-spx small opacity-50"><i class="fa-solid fa-xmark me-2"></i> Automated Billing</li>
+                        </ul>
+                        <button class="btn btn-outline-spx w-100">Start Free Trial</button>
+                    </div>
+                </div>
+                <!-- Pro (Popular) -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="spx-card p-5 pricing-card pricing-popular bg-surface-spx shadow-lg position-relative h-100 z-3">
+                        <div class="position-absolute top-0 start-50 translate-middle badge bg-primary-spx rounded-pill px-3 py-2 text-uppercase tracking-wide">Most Popular</div>
+                        <h5 class="fw-bold mb-2 text-primary-spx">Professional</h5>
+                        <p class="text-muted-spx small mb-4">For established, growing academies.</p>
+                        <div class="mb-4">
+                            <span class="display-5 fw-bold text-main-spx">$99</span><span class="text-muted-spx">/mo</span>
+                        </div>
+                        <ul class="list-unstyled mb-5">
+                            <li class="mb-3 text-muted-spx small"><i class="fa-solid fa-check text-primary-spx me-2"></i> Up to 500 active members</li>
+                            <li class="mb-3 text-muted-spx small"><i class="fa-solid fa-check text-primary-spx me-2"></i> Automated Subscription Billing</li>
+                            <li class="mb-3 text-muted-spx small"><i class="fa-solid fa-check text-primary-spx me-2"></i> Mobile App Access</li>
+                            <li class="mb-3 text-muted-spx small"><i class="fa-solid fa-check text-primary-spx me-2"></i> 24/7 Priority Support</li>
+                        </ul>
+                        <button class="btn btn-primary-spx w-100">Start Free Trial</button>
+                    </div>
+                </div>
+                <!-- Elite -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-left">
+                    <div class="spx-card p-5 pricing-card bg-surface-spx h-100">
+                        <h5 class="fw-bold mb-2">Enterprise</h5>
+                        <p class="text-muted-spx small mb-4">For leagues and multi-location franchises.</p>
+                        <div class="mb-4">
+                            <span class="display-5 fw-bold">$299</span><span class="text-muted-spx">/mo</span>
+                        </div>
+                        <ul class="list-unstyled mb-5">
+                            <li class="mb-3 text-muted-spx small"><i class="fa-solid fa-check text-primary-spx me-2"></i> Unlimited members</li>
+                            <li class="mb-3 text-muted-spx small"><i class="fa-solid fa-check text-primary-spx me-2"></i> Custom API Integrations</li>
+                            <li class="mb-3 text-muted-spx small"><i class="fa-solid fa-check text-primary-spx me-2"></i> Dedicated Account Manager</li>
+                            <li class="mb-3 text-muted-spx small"><i class="fa-solid fa-check text-primary-spx me-2"></i> White-label Member Portal</li>
+                        </ul>
+                        <button class="btn btn-outline-spx w-100">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-5 my-5">
+        <div class="container text-center">
+            <div class="spx-card p-5 border-0 bg-primary-spx bg-opacity-10">
+                <h2 class="fw-bold mb-3 text-white">Ready to transform your sports club?</h2>
+                <p class="text-muted-spx mb-5 mx-auto" style="max-width: 500px;">Join thousands of academies saving 10+ hours a week on administration.</p>
+                <button class="btn btn-primary-spx btn-lg px-5 py-3 rounded-pill">Create Your Free Account <i class="fa-solid fa-arrow-right ms-2"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <div id="spx-footer-container"></div>
+
+    <!-- Bootstrap & Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Init AOS
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({ once: true, offset: 50 });
+        });
+    </script>
+</body>
+</html>
+

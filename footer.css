@@ -1,0 +1,14 @@
+[data-theme="dark"] footer a,
+[data-theme="dark"] footer p,
+[data-theme="dark"] footer h1,
+[data-theme="dark"] footer h3,
+[data-theme="dark"] footer i,
+[data-theme="dark"] footer span,
+[data-theme="dark"] footer li {
+  color: white;
+}
+
+[data-theme="dark"] footer {
+  background-color: #29292a !important;
+  border-color: #333333 !important;
+}

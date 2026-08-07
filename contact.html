@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - SportsPro X</title>
+  <link rel="icon" href="assets/images/cricket_bat_premium_1786007732561.jpg">
+  <script src="tailwind.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <style>
+    /* RTL */
+    .rtl {
+      direction: rtl;
+    }
+
+    [dir="rtl"] .title {
+      margin-right: 20px !important;
+    }
+
+    /* THEME TOGGLE */
+    :root {
+      --home-bg: #ffffff;
+      --text-color: #111111;
+    }
+
+    [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
+    }
+
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .bg-white,
+    [data-theme="dark"] .bg-\[\#FDFBF9\],
+    [data-theme="dark"] .bg-\[\#EFEBE9\],
+    [data-theme="dark"] .bg-\[\#F9F7F5\] {
+      background-color: #000000 !important;
+      border-color: #333333 !important;
+    }
+
+    [data-theme="dark"] .btn,
+    [data-theme="dark"] .btn1:hover {
+      color: #000000 !important;
+    }
+
+    [data-theme="dark"] body,
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] table,
+    [data-theme="dark"] th,
+    [data-theme="dark"] td,
+    [data-theme="dark"] div,
+    [data-theme="dark"] small,
+    [data-theme="dark"] button,
+    [data-theme="dark"] strong {
+      color: #ffffff !important;
+    }
+
+    [data-theme="dark"] thead {
+      background-color: #064E3B !important;
+    }
+
+    [data-theme="dark"] .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+    }
+
+    [data-theme="dark"] .tag-btn {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      border-color: #ffffff !important;
+    }
+  
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .animate-bounce-slow {
+    animation: bounce-slow 4s ease-in-out infinite;
+  }
+  </style>
+</head>
+
+<body class="font-sans">
+  <!-- navbar -->
+  <div id="navbar"></div>
+
+  <!-- HERO BANNER -->
+   <section class="relative h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center mt-16" 
+         style="background-image: url('assets/images/basketball_premium_1786007791000.jpg');">
+    
+    <!-- Dark Overlay to keep text readable -->
+    <div class="absolute inset-0 bg-[#2D1B18]/80"></div>
+
+    <!-- Main Content -->
+    <div class="text-center px-6 max-w-3xl z-10">
+        <h1 class="text-4xl md:text-7xl font-semibold mb-6 leading-tight uppercase tracking-tighter text-white">
+            Let's Outfit <br class="hidden md:block">
+            Your Next Season
+        </h1>
+
+        <p class="text-lg md:text-xl text-[#D7CCC8] mb-8 font-light">
+            Questions about custom sublimation printing, sports watch bulk purchases, or professional hardware models? 
+            Reach out and let's get you set up.
+        </p>
+    </div>
+</section>
+
+    <!-- SECTION 1: FORM & INFO -->
+    <section id="contact-form" class="py-24 bg-[#FDFBF9]">
+
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+
+            <!-- LEFT: Design Inquiry Form -->
+            <div class="card bg-white p-12 rounded-[3rem] shadow-2xl border border-[#EFEBE9]">
+
+                <h2 class="text-4xl font-semibold text-[#3E2723] mb-2">
+                    Team Inquiry
+                </h2>
+                <p class="text-[#8D6E63] font-bold uppercase tracking-widest text-xs mb-8">Tell us about your squad</p>
+
+                <form class="space-y-6" onsubmit="event.preventDefault(); if(window.showToast) window.showToast('Enquiry sent successfully!', 'success');">
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-widest text-[#3E2723] mb-2">Full Name</label>
+                            <input type="text" required class="w-full border border-[#EFEBE9] bg-[#FDFBF9] rounded-xl px-4 py-3 
+                                focus:ring-2 focus:ring-[#8D6E63] focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-widest text-[#3E2723] mb-2">Email Address</label>
+                            <input type="email" required class="w-full border border-[#EFEBE9] bg-[#FDFBF9] rounded-xl px-4 py-3 
+                                focus:ring-2 focus:ring-[#8D6E63] focus:outline-none transition">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-widest text-[#3E2723] mb-2">Club Name</label>
+                            <input type="text" class="w-full border border-[#EFEBE9] bg-[#FDFBF9] rounded-xl px-4 py-3 
+                                focus:ring-2 focus:ring-[#8D6E63] focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-widest text-[#3E2723] mb-2">Interest Type</label>
+                            <select class="w-full border border-[#EFEBE9] bg-[#FDFBF9] rounded-xl px-4 py-3 
+                                focus:ring-2 focus:ring-[#8D6E63] focus:outline-none transition text-sm">
+                                <option>Custom Sublimation Kits</option>
+                                <option>Bulk Equipment Sourcing</option>
+                                <option>Pro Gear Calibration</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-widest text-[#3E2723] mb-2">Message</label>
+                        <textarea rows="5" required class="w-full border border-[#EFEBE9] bg-[#FDFBF9] rounded-xl px-4 py-3 
+                            focus:ring-2 focus:ring-[#8D6E63] focus:outline-none transition"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-[#3E2723] hover:bg-[#5D4037] text-white font-bold rounded-xl transition-all shadow-lg">
+                        Submit Inquiry
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- RIGHT: Contact Info & Map Card -->
+            <div class="space-y-10">
+
+                <div class="space-y-4">
+                    <h2 class="text-4xl font-semibold text-[#3E2723]">
+                        Design Office
+                    </h2>
+                    <p class="text-[#5D4037] leading-relaxed max-w-md">
+                        Our centralized design studio and testing facility is located in Chennai. Stop by or book a customization review.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-fr">
+
+                    <div class="card h-full min-h-[12.25rem] bg-white p-8 rounded-[2rem] border border-[#EFEBE9] shadow-sm flex flex-col items-center text-center">
+                        <div class="w-10 h-10 shrink-0 bg-[#FDFBF9] text-[#8D6E63] rounded-xl flex items-center justify-center mb-10">
+                            <i class="bi bi-geo-alt-fill text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-[#3E2723] mb-1">Our Location</h4>
+                            <p class="text-xs text-[#5D4037] leading-relaxed">Chennai, Tamil Nadu, India</p>
+                        </div>
+                    </div>
+
+                    <div class="card h-full min-h-[12.25rem] bg-white p-8 rounded-[2rem] border border-[#EFEBE9] shadow-sm flex flex-col items-center text-center">
+                        <div class="w-10 h-10 shrink-0 bg-[#FDFBF9] text-[#8D6E63] rounded-xl flex items-center justify-center mb-10">
+                            <i class="bi bi-telephone-fill text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-[#3E2723] mb-1">Direct Contact</h4>
+                            <p class="text-xs text-[#5D4037] leading-relaxed">+91 98765 43210 <br> hello@sportspro.design</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Interactive Google Maps iframe -->
+                <div class="rounded-[3rem] overflow-hidden shadow-xl border-4 border-white aspect-video relative group bg-[#EFEBE9]">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539092!2d80.17770815!3d13.04753065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="absolute inset-0">
+                    </iframe>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+</body>
+
+</html>
