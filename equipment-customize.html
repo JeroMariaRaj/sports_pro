@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipment Customization - SportsPro </title>
+  <link rel="icon" href="assets/images/site-icon.jpeg">
+  <script src="tailwind.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: 'Poppins', sans-serif;
+      --surface: rgba(255, 255, 255, 0.94);
+      --surface-strong: rgba(255, 255, 255, 0.98);
+      --border: rgba(237, 227, 217, 0.92);
+      --text: #1f2937;
+      --accent: #8d6e63;
+      --accent-dark: #3e2723;
+      --muted: #5d4037;
+      --shadow: 0 35px 80px rgba(62, 39, 35, 0.12);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #f7f2ed 0%, #fffaf7 58%);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    .page-hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1f2937 0%, #3e2723 100%);
+      color: white;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.12), transparent 42%);
+      pointer-events: none;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      right: -10%;
+      top: 15%;
+      width: 520px;
+      height: 520px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+      filter: blur(40px);
+      pointer-events: none;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 35px 90px rgba(0, 0, 0, 0.22);
+    }
+
+    .hero-card img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 420px;
+    }
+
+    .glass-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: 2.5rem;
+      backdrop-filter: blur(16px);
+    }
+
+    .control-button,
+    .control-pill {
+      transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .control-button:hover,
+    .control-pill:hover {
+      transform: translateY(-2px);
+    }
+
+    .control-button {
+      background: var(--accent-dark);
+      color: white;
+    }
+
+    .control-pill {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+    }
+
+    .control-card {
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 0.9rem 1rem;
+      background: var(--surface);
+      cursor: pointer;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      font-size: 0.92rem;
+      line-height: 1.3;
+      min-height: 64px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.25rem;
+      white-space: normal;
+      overflow-wrap: break-word;
+    }
+
+    .control-card strong {
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .control-card p {
+      margin: 0;
+      font-size: 0.88rem;
+      line-height: 1.4;
+      color: var(--muted);
+    }
+
+    .option-card {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      min-height: 46px;
+      padding: 0.65rem 0.9rem;
+      background: var(--surface);
+      font-size: 0.85rem;
+      line-height: 1.25;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+
+    .option-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 14px 25px rgba(62, 39, 35, 0.08);
+    }
+
+    .style-card {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      min-height: 88px;
+      padding: 1rem;
+    }
+
+    .style-thumb {
+      width: 84px;
+      height: 84px;
+      border-radius: 20px;
+      background-size: cover;
+      background-position: center;
+      flex-shrink: 0;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    input,
+    button {
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--accent-dark);
+    }
+
+    input[type='text'] {
+      width: 100%;
+      padding: 1rem 1.15rem;
+      border-radius: 1.5rem;
+      border: 1px solid var(--border);
+      background: white;
+      outline: none;
+      color: var(--text);
+      font-size: 1rem;
+      box-shadow: inset 0 1px 3px rgba(31, 41, 55, 0.08);
+    }
+
+    input[type='checkbox'] {
+      accent-color: var(--accent-dark);
+    }
+
+    .preview-frame {
+      border-radius: 2.25rem;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .preview-display {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: transparent;
+      border-radius: 1.5rem;
+    }
+
+    .preview-display img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 1;
+      transform: none;
+    }
+
+    .preview-overlay {
+      display: none;
+    }
+
+    .preview-text {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+      color: white;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+      pointer-events: none;
+    }
+
+    .preview-text h3 {
+      margin: 0;
+      font-size: clamp(1.4rem, 2vw, 1.95rem);
+      letter-spacing: 0.08em;
+      line-height: 1.15;
+    }
+
+    .preview-text p {
+      margin: 0.65rem auto 0;
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      letter-spacing: 0.1em;
+      font-weight: 800;
+      line-height: 1.05;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid var(--border);
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .section-title {
+      color: var(--accent-dark);
+      font-size: clamp(1.6rem, 2vw, 2.2rem);
+      margin-bottom: 1.25rem;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .toggle-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      border-radius: 1.5rem;
+      border: 1px solid var(--border);
+      background: white;
+      box-shadow: inset 0 1px 2px rgba(31, 41, 55, 0.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="page-hero pt-28 pb-16">
+    <div class="max-w-7xl mx-auto px-6 hero-inner">
+      <div class="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-12 items-center">
+        <div class="space-y-6 lg:max-w-xl">
+          <span class="text-sm uppercase tracking-[0.35em] text-[#d7ccc8]">Equipment Studio</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">Design Premium Equipment<br><span class="text-[#f7e8d9]">with Live Preview</span></h1>
+          <p class="text-lg md:text-xl leading-relaxed text-[#ddd0c3]">Personalize your bat with custom weights, grip colors, and profile selection. Preview every detail instantly before sending your order.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="customize.html" class="control-button inline-flex items-center justify-center rounded-full px-8 py-3 font-semibold">Back to Customization</a>
+            <a href="contact.html" class="control-pill inline-flex items-center justify-center rounded-full px-8 py-3 font-semibold">Contact Design Team</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src="assets/images/cricket_bat_premium_1786007732561.jpg" alt="Equipment Customization">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6 grid gap-10 xl:grid-cols-[1.25fr_0.9fr] items-start">
+      <div class="glass-panel p-10">
+        <div class="section-title">Live Equipment Builder</div>
+        <p class="text-base text-[#5d4037] max-w-2xl leading-relaxed mb-10">Customize your cricket bat, choose professional finish details, and immediately preview how your initials look on the equipment.</p>
+
+        <div class="grid gap-8 lg:grid-cols-2">
+          <div class="space-y-8">
+            <div>
+              <label>Grip Color</label>
+              <div class="grid grid-cols-3 gap-4 mt-4">
+                <button class="option-card" style="background-color: #3e2723; border: 2px solid transparent;" onclick="applyColor('#3e2723')" aria-label="Espresso"></button>
+                <button class="option-card" style="background-color: #8d6e63; border: 2px solid transparent;" onclick="applyColor('#8d6e63')" aria-label="Bronze"></button>
+                <button class="option-card" style="background-color: #1f2937; border: 2px solid transparent;" onclick="applyColor('#1f2937')" aria-label="Night"></button>
+              </div>
+            </div>
+
+            <div>
+              <label>Handle Profile</label>
+              <div class="flex flex-wrap gap-3 mt-4">
+                <button class="option-card" onclick="applyPrint('Short Handle')">Short Handle</button>
+                <button class="option-card" onclick="applyPrint('Long Handle')">Long Handle</button>
+                <button class="option-card" onclick="applyPrint('Oval Handle')">Oval Handle</button>
+              </div>
+            </div>
+
+            <div><label>Sticker Placement</label>
+              <div class="grid grid-cols-2 gap-4 mt-4">
+                <button class="option-card" onclick="setPlacement('upside')">Upside</button>
+                <button class="option-card" onclick="setPlacement('downside')">Downside</button>
+              </div>
+            </div>
+
+            <div>
+              <label for="playerName">Custom Initials</label>
+              <input id="playerName" type="text" value="A. Smith" oninput="updateText()">
+            </div>
+
+            <div>
+              <label for="playerNumber">Bat Weight (lbs)</label>
+              <input id="playerNumber" type="text" value="23" oninput="updateText()">
+            </div>
+          </div>
+
+          <div class="space-y-8">
+            <div>
+              <label>Bat Model</label>
+              <div class="grid gap-4 mt-4">
+                <button class="control-card style-card text-left" onclick="setStyle('modern')">
+                  <div class="style-thumb" style="background-image:url('assets/images/prd-0001.jpg');"></div>
+                  <div>
+                    <strong>Power Hitter</strong>
+                    <p>Thick edges and a massive sweet spot for aggressive players.</p>
+                  </div>
+                </button>
+                <button class="control-card style-card text-left" onclick="setStyle('raglan')">
+                  <div class="style-thumb" style="background-image:url('assets/images/prd-0002.jpg');"></div>
+                  <div>
+                    <strong>Classic Touch</strong>
+                    <p>Traditional profile for perfect balance and timing.</p>
+                  </div>
+                </button>
+                <button class="control-card style-card text-left" onclick="setStyle('retro')">
+                  <div class="style-thumb" style="background-image:url('assets/images/prd-0003.jpg');"></div>
+                  <div>
+                    <strong>T20 Specialist</strong>
+                    <p>Light pickup and explosive power for shorter formats.</p>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-8">
+        <div class="preview-frame p-8">
+          <div class="flex items-center justify-between mb-8 gap-4">
+            <div>
+              <p class="text-sm uppercase tracking-[0.35em] text-[#8d6e63]">Live Preview</p>
+              <h2 class="text-2xl font-semibold text-[#3e2723]">Equipment Mockup</h2>
+            </div>
+            <span id="printMethodLabel" class="chip">Short Handle</span>
+          </div>
+          <div class="preview-display" id="previewCard">
+            <img id="jerseyImage" src="assets/images/prd-0001.jpg" alt="Equipment Preview">
+            <div id="colorOverlay" style="position: absolute; inset: 0; mix-blend-mode: multiply; opacity: 0; transition: background-color 0.3s, opacity 0.3s; pointer-events: none;"></div>
+            <div class="preview-overlay"></div>
+            <div class="preview-text" id="previewTextContainer" style="transition: top 0.3s, transform 0.3s;">
+              <h3 id="previewName">A. Smith</h3>
+              <p id="previewNumber">23</p>
+            </div>
+          </div>
+          <div class="action-row">
+            <button class="control-button inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold" onclick="saveDesign()"><i class="bi bi-save2"></i> Save Design</button>
+            <button class="control-pill inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold" onclick="window.location='contact.html'">Request Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <!-- Custom Save Modal -->
+  <div id="saveModal" class="fixed inset-0 z-50 flex items-center justify-center hidden" style="background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);">
+    <div class="bg-white rounded-3xl p-8 max-w-sm w-full mx-4 shadow-2xl transform scale-95 transition-transform" id="saveModalContent" style="transition: transform 0.2s ease-out;">
+      <div class="text-center">
+        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="bi bi-check-lg text-3xl text-green-600"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-2">Design Saved!</h3>
+        <p class="text-gray-600 mb-6">Your awesome equipment design has been saved successfully. Contact our team to confirm production.</p>
+        <button class="w-full bg-[#3e2723] text-white py-3 rounded-full font-semibold hover:bg-[#2d1b18] transition-colors" onclick="closeModal()">Awesome</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+  <script>
+    const previewImage = document.getElementById('jerseyImage');
+    const previewName = document.getElementById('previewName');
+    const previewNumber = document.getElementById('previewNumber');
+    const printMethodLabel = document.getElementById('printMethodLabel');
+
+    function applyColor(color) {
+      const overlay = document.getElementById('colorOverlay');
+      overlay.style.backgroundColor = color;
+      overlay.style.opacity = '0.75';
+    }
+
+    function setPlacement(side) {
+      const textContainer = document.getElementById('previewTextContainer');
+      if (side === 'downside') {
+        textContainer.style.top = '60%';
+        textContainer.style.transform = 'translate(-50%, -50%) scale(0.9)';
+      } else {
+        textContainer.style.top = '30%';
+        textContainer.style.transform = 'translate(-50%, -50%) scale(1)';
+      }
+    }
+
+    function applyPrint(method) {
+      printMethodLabel.textContent = method;
+    }
+
+    function updateText() {
+      const name = document.getElementById('playerName').value;
+      const number = document.getElementById('playerNumber').value;
+      previewName.textContent = name || 'PLAYER';
+      previewNumber.textContent = number || '00';
+    }
+
+    let currentStyle = 'modern';
+    let currentView = 'front';
+
+    function setView(view) {
+      currentView = view;
+      updateJerseyImage();
+    }
+
+    function setStyle(style) {
+      currentStyle = style;
+      updateJerseyImage();
+    }
+
+    function updateJerseyImage() {
+      const backdrops = {
+        modern: 'assets/images/prd-0001.jpg',
+        raglan: 'assets/images/prd-0002.jpg',
+        retro: 'assets/images/prd-0003.jpg'
+      };
+      previewImage.src = backdrops[currentStyle];
+      previewImage.style.objectFit = 'contain';
+    }
+
+    function toggleAddon(addon) {
+      const element = addon === 'logo' ? previewName : previewNumber;
+      element.style.opacity = element.style.opacity === '0.4' ? '1' : '0.85';
+    }
+
+    function saveDesign() {
+      const modal = document.getElementById('saveModal');
+      const content = document.getElementById('saveModalContent');
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        content.style.transform = 'scale(1)';
+      }, 10);
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('saveModal');
+      const content = document.getElementById('saveModalContent');
+      content.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 200);
+    }
+  </script>
+</body>
+
+</html>
+
+
+

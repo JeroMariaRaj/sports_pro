@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customize Your Kit - SportsPro </title>
+  <link rel="icon" href="assets/images/site-icon.jpeg">
+  <script src="tailwind.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-body: #fdfbf9;
+      --bg-surface: #ffffff;
+      --bg-hero: #3E2723;
+      --bg-card: rgba(255, 255, 255, 0.92);
+      --bg-pill: #EFEBE9;
+      --btn-primary: #3E2723;
+      --btn-primary-hover: #5D4037;
+      --btn-secondary: #FDFBF9;
+      --btn-secondary-hover: #EFEBE9;
+      --btn-secondary-text: #3E2723;
+      --btn-accent: #8D6E63;
+      --btn-accent-hover: #3E2723;
+      --text-main: #3E2723;
+      --text-muted: #5D4037;
+      --text-accent: #8D6E63;
+      --text-hero-main: #ffffff;
+      --text-hero-muted: #D7CCC8;
+      --border-color: #efebe9;
+      --shadow-color: rgba(62, 39, 35, 0.08);
+    }
+
+    html[data-theme="dark"] {
+      --bg-body: #050505;
+      --bg-surface: #111111;
+      --bg-hero: #0a0a0a;
+      --bg-card: #141414;
+      --bg-pill: #262626;
+      --btn-primary: #f5f5f5;
+      --btn-primary-hover: #d4d4d4;
+      --btn-secondary: #262626;
+      --btn-secondary-hover: #404040;
+      --btn-secondary-text: #f5f5f5;
+      --btn-accent: #333333;
+      --btn-accent-hover: #404040;
+      --text-main: #f5f5f5;
+      --text-muted: #a3a3a3;
+      --text-accent: #b0a49e;
+      --text-hero-main: #f5f5f5;
+      --text-hero-muted: #a3a3a3;
+      --border-color: #262626;
+      --shadow-color: rgba(0, 0, 0, 0.6);
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 30px 60px var(--shadow-color);
+      transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+    .btn-primary { background-color: var(--btn-primary); color: var(--bg-surface); transition: all 0.3s ease; }
+    .btn-primary:hover { background-color: var(--btn-primary-hover); }
+    html[data-theme="dark"] .btn-primary { color: #000; }
+    
+    .btn-secondary { background-color: var(--btn-secondary); color: var(--btn-secondary-text); transition: all 0.3s ease; }
+    .btn-secondary:hover { background-color: var(--btn-secondary-hover); }
+    
+    .btn-accent { background-color: var(--btn-accent); color: #fff; transition: all 0.3s ease; }
+    .btn-accent:hover { background-color: var(--btn-accent-hover); }
+  </style>
+</head>
+
+<body class="font-sans">
+  <div id="navbar"></div>
+
+  <section class="relative pt-28 pb-20 overflow-hidden" style="background-color: var(--bg-hero);">
+    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle at top,left,rgba(255,255,255,0.16),transparent_35%)]"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="space-y-6 text-white">
+          <span class="text-xs md:text-sm uppercase tracking-[0.3em]" style="color: var(--text-hero-muted);">Design Studio</span>
+          <h1 class="text-3xl sm:text-4xl lg:text-6xl font-semibold leading-tight" style="color: var(--text-hero-main);">Customize Your Team Kit<br><span style="color: var(--text-accent);">with Precision</span></h1>
+          <p class="max-w-2xl text-base md:text-lg leading-relaxed" style="color: var(--text-hero-muted);">Choose one of our two personalization paths: high-performance jerseys with printing and embroidery, or equipment setup with bat weighting, grips, and pro services.</p>
+          <a href="services.html" class="inline-block btn-secondary px-8 py-3 rounded-xl font-bold">View Service Options</a>
+        </div>
+        <div class="rounded-2xl md:rounded-[3rem] overflow-hidden border-4 md:border-8 border-white shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
+          <img src="assets/images/custom_team_kit.jpg" alt="Customize Your Kit" class="w-full h-full object-cover min-h-[300px] md:min-h-[420px]">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24" style="background-color: var(--bg-surface);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+        <h2 class="font-semibold tracking-widest text-xs uppercase mb-4" style="color: var(--text-accent);">Personalization Paths</h2>
+        <h3 class="text-3xl md:text-5xl font-semibold" style="color: var(--text-main);">Choose your customization category</h3>
+        <p class="mt-4 md:mt-6 leading-relaxed text-sm md:text-base" style="color: var(--text-muted);">Two tailored workflows designed to deliver custom apparel and equipment that matches your team's identity and performance needs.</p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-10 justify-center">
+
+        <article class="feature-card rounded-2xl md:rounded-[3rem] p-8 md:p-12 mx-auto max-w-3xl w-full">
+          <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-6 md:mb-8 gap-4">
+            <span class="inline-flex items-center gap-3 px-4 py-2 rounded-full font-semibold uppercase tracking-[0.2em] text-xs" style="background-color: var(--bg-pill); color: var(--text-main);">Jersey & Sportswear</span>
+            <span class="text-xs md:text-sm font-bold" style="color: var(--text-accent);">Premium Apparel</span>
+          </div>
+          <h4 class="text-2xl md:text-3xl font-semibold mb-6" style="color: var(--text-main);">Jersey & Sportswear Personalization</h4>
+          <ul class="space-y-4 leading-relaxed text-sm md:text-base" style="color: var(--text-muted);">
+            <li class="flex gap-3 items-start"><i class="bi bi-check-circle-fill mt-1" style="color: var(--text-accent);"></i> Custom player names, numbers, and team logos</li>
+            <li class="flex gap-3 items-start"><i class="bi bi-check-circle-fill mt-1" style="color: var(--text-accent);"></i> Sponsor graphics and branding placement</li>
+            <li class="flex gap-3 items-start"><i class="bi bi-check-circle-fill mt-1" style="color: var(--text-accent);"></i> Printing options: sublimation, screen printing, embroidery</li>
+            <li class="flex gap-3 items-start"><i class="bi bi-check-circle-fill mt-1" style="color: var(--text-accent);"></i> Fabric performance selection for matches, training, and travel</li>
+          </ul>
+          <div class="mt-8 md:mt-10">
+            <a href="apparel-customize.html" class="inline-flex items-center justify-center w-full md:w-auto gap-3 btn-primary px-8 py-3 rounded-full font-bold">Explore Apparel Options <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="mt-16 md:mt-20 text-center">
+        <p class="mb-4 text-sm md:text-base" style="color: var(--text-muted);">Need help selecting the right path?</p>
+        <a href="contact.html" class="inline-block btn-accent px-8 md:px-10 py-3 rounded-full font-bold w-full md:w-auto">Contact Our Customization Team</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+</body>
+
+</html>
+

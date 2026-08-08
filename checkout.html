@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout - SportsPro X</title>
-  <link rel="icon" href="assets/images/cricket_bat_premium_1786007732561.jpg">
+  <title>Checkout - SportsPro </title>
+  <link rel="icon" href="assets/images/site-icon.jpeg">
   <script src="tailwind.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="navbar.css">
@@ -133,30 +133,47 @@
             <h3 class="text-xl font-bold text-[#3E2723] mb-6">Payment Method</h3>
             <div class="space-y-4 mb-6">
               <label class="flex items-center gap-3 p-4 border border-[#8D6E63] rounded-xl bg-white cursor-pointer">
-                <input type="radio" name="payment" class="w-4 h-4 text-[#3E2723] focus:ring-[#8D6E63] border-[#EFEBE9]" checked>
+                <input type="radio" name="payment" value="credit" class="w-4 h-4 text-[#3E2723] focus:ring-[#8D6E63] border-[#EFEBE9]" checked>
                 <span class="font-semibold text-[#3E2723]">Credit Card</span>
                 <i class="bi bi-credit-card ml-auto text-xl text-[#8D6E63]"></i>
               </label>
               <label class="flex items-center gap-3 p-4 border border-[#EFEBE9] rounded-xl bg-white cursor-pointer hover:border-[#8D6E63] transition-colors">
-                <input type="radio" name="payment" class="w-4 h-4 text-[#3E2723] focus:ring-[#8D6E63] border-[#EFEBE9]">
-                <span class="font-semibold text-[#3E2723]">PayPal</span>
-                <i class="bi bi-paypal ml-auto text-xl text-[#8D6E63]"></i>
+                <input type="radio" name="payment" value="googlepay" class="w-4 h-4 text-[#3E2723] focus:ring-[#8D6E63] border-[#EFEBE9]">
+                <span class="font-semibold text-[#3E2723]">Google Pay</span>
+                <i class="bi bi-currency-exchange ml-auto text-xl text-[#8D6E63]"></i>
+              </label>
+              <label class="flex items-center gap-3 p-4 border border-[#EFEBE9] rounded-xl bg-white cursor-pointer hover:border-[#8D6E63] transition-colors">
+                <input type="radio" name="payment" value="phonepe" class="w-4 h-4 text-[#3E2723] focus:ring-[#8D6E63] border-[#EFEBE9]">
+                <span class="font-semibold text-[#3E2723]">PhonePe</span>
+                <i class="bi bi-phone ml-auto text-xl text-[#8D6E63]"></i>
+              </label>
+             
+                
+              </label>
+              <label class="flex items-center gap-3 p-4 border border-[#EFEBE9] rounded-xl bg-white cursor-pointer hover:border-[#8D6E63] transition-colors">
+                <input type="radio" name="payment" value="cod" class="w-4 h-4 text-[#3E2723] focus:ring-[#8D6E63] border-[#EFEBE9]">
+                <span class="font-semibold text-[#3E2723]">Cash on Delivery</span>
+                <i class="bi bi-cash-stack ml-auto text-xl text-[#8D6E63]"></i>
               </label>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div id="card-details" class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div class="md:col-span-2">
                 <label class="form-label">Card Number</label>
-                <input type="text" class="form-input" placeholder="0000 0000 0000 0000" required>
+                <input id="card-number" type="text" class="form-input" placeholder="0000 0000 0000 0000" required>
               </div>
               <div>
                 <label class="form-label">Expiration Date (MM/YY)</label>
-                <input type="text" class="form-input" placeholder="MM/YY" required>
+                <input id="card-expiration" type="text" class="form-input" placeholder="MM/YY" required>
               </div>
               <div>
                 <label class="form-label">CVC</label>
-                <input type="text" class="form-input" placeholder="123" required>
+                <input id="card-cvc" type="text" class="form-input" placeholder="123" required>
               </div>
+            </div>
+            <div id="phone-details" class="hidden">
+              <label class="form-label">UPI Phone Number</label>
+              <input id="upi-phone" type="tel" class="form-input" placeholder="+91 98765 43210" disabled>
             </div>
           </div>
 
@@ -210,8 +227,35 @@
   <script src="footer.js"></script>
 
   <script>
+    function updateCheckoutPaymentFields() {
+      const paymentMethod = document.querySelector('input[name="payment"]:checked')?.value;
+      const cardDetails = document.getElementById('card-details');
+      const phoneDetails = document.getElementById('phone-details');
+      const upiPhone = document.getElementById('upi-phone');
+      const cardInputs = cardDetails.querySelectorAll('input');
+      const showCardFields = paymentMethod === 'credit';
+      const showPhoneField = ['googlepay', 'phonepe', 'paytm'].includes(paymentMethod);
+
+      cardDetails.style.display = showCardFields ? 'grid' : 'none';
+      phoneDetails.style.display = showPhoneField ? 'block' : 'none';
+
+      cardInputs.forEach(input => {
+        input.disabled = !showCardFields;
+        input.required = showCardFields;
+      });
+      upiPhone.disabled = !showPhoneField;
+      upiPhone.required = showPhoneField;
+      if (!showPhoneField) {
+        upiPhone.value = '';
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       renderCheckoutSummary();
+      document.querySelectorAll('input[name="payment"]').forEach(radio => {
+        radio.addEventListener('change', updateCheckoutPaymentFields);
+      });
+      updateCheckoutPaymentFields();
     });
 
     function renderCheckoutSummary() {
@@ -271,3 +315,4 @@
   </script>
 </body>
 </html>
+

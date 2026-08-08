@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div>
        <h1 class="text-2xl font-bold text-[#3E2723]">
   <a href="index.html" class="flex items-center gap-2 transition">
-    <i class="bi bi-trophy text-[#8D6E63]"></i>
+    <img src="assets/images/site-icon.jpeg" alt="Logo" class="w-8 h-8 rounded-full object-cover">
     <span class="tracking-tight">SPORTS</span>
     <span class="font-normal">PRO</span>
   </a>
@@ -34,10 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
           Services
         </h3>
         <ul class="space-y-2 text-[#5D4037] text-sm">
-          <li><a href="services.html" class="hover:text-[#8D6E63] transition">Custom Printing</a></li>
-          <li><a href="services.html" class="hover:text-[#8D6E63] transition">Apparel Design</a></li>
-          <li><a href="services.html" class="hover:text-[#8D6E63] transition">Batch Printing</a></li>
-          <li><a href="services.html" class="hover:text-[#8D6E63] transition">Gear Tuning</a></li>
+          <li><a href="services.html#sublimation" class="hover:text-[#8D6E63] transition">Custom Team Sublimation</a></li>
+          <li><a href="services.html#calibration" class="hover:text-[#8D6E63] transition">Bat Calibration</a></li>
+          <li><a href="services.html#procurement" class="hover:text-[#8D6E63] transition">Facility Procurement</a></li>
         </ul>
       </div>
 
@@ -77,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   </div>
 
-  <div class="border-t border-[#EFEBE9] py-8 text-center text-[#8D6E63] text-xs px-4 bg-[#F9F7F5]">
+  <div class="footer-bottom border-t border-[#EFEBE9] py-8 text-center text-[#8D6E63] text-xs px-4">
     <p class="tracking-widest uppercase">
       © ${new Date().getFullYear()} Sports Pro Design Studio. All Rights Reserved.
     </p>

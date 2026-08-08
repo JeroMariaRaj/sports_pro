@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    <h1 class="text-2xl font-bold text-[#3E2723]">
   <a href="index.html" class="flex items-center gap-2 ">
-    <i class="bi bi-trophy text-[#8D6E63]"></i>
+    <img src="assets/images/site-icon.jpeg" alt="Logo" class="w-8 h-8 rounded-full object-cover">
     <span class="tracking-tight">SPORTS</span>
     <span class="font-normal">PRO</span>
   </a>
@@ -41,22 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <li><a href="shop.html" class="transition hover:text-[#8D6E63]">Products</a></li>
         <li><a href="blog.html" class="transition hover:text-[#8D6E63]">Blog</a></li>
         <li><a href="contact.html" class="transition hover:text-[#8D6E63]">Contact</a></li>
-
-        <li class="relative">
-          <button id="dashboardDropdownBtn"
-            class="flex items-center gap-1 transition hover:text-[#8D6E63]">
-            Dashboard <i class="bi bi-chevron-down text-xs"></i>
-          </button>
-
-          <ul id="dashboardDropdownMenu"
-            class="absolute left-0 mt-3 w-40 bg-white text-[#3E2723] rounded-xl shadow-xl hidden z-50 border border-[#EFEBE9]">
-            <li>
-              <a href="profile.html" class="block px-4 py-2 hover:bg-[#F5F5F5] rounded-t-xl transition">User</a>
-            </li>
-            <li>
-              <a href="admin-dashboard.html" class="block px-4 py-2 hover:bg-[#F5F5F5] rounded-b-xl transition">Admin</a>
-            </li>
-          </ul>
         </li>
       </ul>
     </div>

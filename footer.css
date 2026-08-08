@@ -9,6 +9,10 @@
 }
 
 [data-theme="dark"] footer {
-  background-color: #29292a !important;
+  background-color: #111111 !important;
   border-color: #333333 !important;
+}
+
+[data-theme="dark"] .footer-bottom {
+  border-top-color: #333333 !important;
 }

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - SportsPro X</title>
-    <link rel="icon" href="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&q=80&w=2000">
+    <title>Our Services - SportsPro</title>
+    <link rel="icon" href="assets/images/site-icon.jpeg">
     <script src="tailwind.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="navbar.css">
@@ -108,6 +108,17 @@
         .vertical-text {
             writing-mode: vertical-rl;
         }
+        /* Target highlight effect */
+        :target {
+            scroll-margin-top: 100px;
+            animation: highlight 2s ease-out;
+            border-color: #8D6E63 !important;
+        }
+
+        @keyframes highlight {
+            0% { box-shadow: 0 0 20px rgba(141, 110, 99, 0.5); }
+            100% { box-shadow: 0 0 0px transparent; }
+        }
     </style>
 </head>
 
@@ -137,7 +148,7 @@
                         </p>
 
                         <div class="flex flex-col sm:flex-row gap-5 pt-4">
-                            <a href="contact.html"
+                            <a href="customize.html"
                                 class="px-10 py-3 bg-[#3E2723] text-white rounded-xl font-bold text-center hover:bg-[#8D6E63] transition-all shadow-xl hover:shadow-[#8D6E63]/30">
                                 Start Customizing
                             </a>
@@ -184,7 +195,7 @@
             <div class="space-y-16">
 
                 <!-- Service 1 -->
-                <div class="bg-[#FDFBF9] rounded-[3rem] p-8 md:p-16 border border-[#EFEBE9] hover:shadow-xl transition-all duration-500">
+                <div id="sublimation" class="bg-[#FDFBF9] rounded-[3rem] p-8 md:p-16 border border-[#EFEBE9] hover:shadow-xl transition-all duration-500">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div class="lg:col-span-5 space-y-6">
                             <span class="text-[#8D6E63] font-bold uppercase tracking-widest text-[10px]">Apparel Printing</span>
@@ -203,7 +214,7 @@
                 </div>
 
                 <!-- Service 2 -->
-                <div class="bg-[#FDFBF9] rounded-[3rem] p-8 md:p-16 border border-[#EFEBE9] hover:shadow-xl transition-all duration-500">
+                <div id="calibration" class="bg-[#FDFBF9] rounded-[3rem] p-8 md:p-16 border border-[#EFEBE9] hover:shadow-xl transition-all duration-500">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div class="lg:col-span-5 space-y-6 lg:order-2">
                             <span class="text-[#8D6E63] font-bold uppercase tracking-widest text-[10px]">Hardware Tuning</span>
@@ -216,13 +227,13 @@
                             </a>
                         </div>
                         <div class="lg:col-span-7 lg:order-1 rounded-[2rem] overflow-hidden shadow-lg border border-[#EFEBE9] aspect-video flex items-center justify-center bg-[#F8F6F5]">
-                            <img src="https://images.unsplash.com/photo-1593341646782-e0b495cff86d?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-700">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiXbHm6XG7gx37OReKhihBs4bKw4NqluWQXLy8DqG_ctx4GIT08Ap7unM&s=10" class="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-700">
                         </div>
                     </div>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="bg-[#FDFBF9] rounded-[3rem] p-8 md:p-16 border border-[#EFEBE9] hover:shadow-xl transition-all duration-500">
+                <div id="procurement" class="bg-[#FDFBF9] rounded-[3rem] p-8 md:p-16 border border-[#EFEBE9] hover:shadow-xl transition-all duration-500">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div class="lg:col-span-5 space-y-6">
                             <span class="text-[#8D6E63] font-bold uppercase tracking-widest text-[10px]">Facility outfitting</span>
@@ -252,4 +263,5 @@
 </body>
 
 </html>
+
 
