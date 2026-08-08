@@ -22,10 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
         </p>
 
         <div class="flex gap-4 mt-6 text-xl">
-          <a href="#" class="hover:text-[#8D6E63] transition"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="hover:text-[#8D6E63] transition"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="hover:text-[#8D6E63] transition"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="hover:text-[#8D6E63] transition"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com" class="hover:text-[#8D6E63] transition"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com" class="hover:text-[#8D6E63] transition"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.x.com" class="hover:text-[#8D6E63] transition"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://www.linkedin.com" class="hover:text-[#8D6E63] transition"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
 
