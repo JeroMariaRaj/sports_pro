@@ -41,10 +41,6 @@ body {
   display: none;
 }
 
-#dashboardDropdownMenu li a.nav-active::after {
-  display: none;
-}
-
 #profileMenu li a.nav-active::after {
   display: none;
 }
@@ -56,12 +52,7 @@ body {
 [data-theme="dark"] #homeDropdownMenu a:hover {
   color: #000000 !important;
 }
-[data-theme="dark"] #dashboardDropdownMenu {
-  background-color: #000000 !important;
-}
-[data-theme="dark"] #dashboardDropdownMenu a:hover {
-  color: #000000 !important;
-}
+
 [data-theme="dark"] #profileMenu a:hover {
   color: #000000 !important;
 }
@@ -190,7 +181,6 @@ body {
 
 
 [data-theme="dark"] #homeDropdownMenu a,
-[data-theme="dark"] #dashboardDropdownMenu a,
 [data-theme="dark"] #profileMenu a {
   color: white;
 }

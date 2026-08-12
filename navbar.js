@@ -118,17 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <li><a href="blog.html" class="block py-2 hover:text-[#D7CCC8] transition">Blog</a></li>
       <li><a href="cart.html" class="block py-2 hover:text-[#D7CCC8] transition">Cart <span class="cart-count ml-1 inline-flex min-w-5 h-5 px-1 items-center justify-center rounded-full bg-[#8D6E63] text-white text-[10px] font-bold">0</span></a></li>      <li><a href="contact.html" class="block py-2 hover:text-[#D7CCC8] transition">Contact</a></li>
 
-      <li>
-        <button id="mobileDashboardBtn"
-          class="w-full flex items-center justify-between py-2 hover:text-[#D7CCC8] transition">
-          <span>Dashboard</span>
-          <i id="mobileDashboardChevron" class="bi bi-chevron-down transition-transform duration-300"></i>
-        </button>
-        <ul id="mobileDashboardMenu" class="hidden mt-2 ml-4 space-y-2">
-          <li><a href="profile.html" class="block py-1 hover:text-[#D7CCC8]">User</a></li>
-          <li><a href="admin-dashboard.html" class="block py-1 hover:text-[#D7CCC8]">Admin</a></li>
-        </ul>
-      </li>
+
 
       <li class="pt-4 space-y-3">
          <a href="login.html" class="block w-full text-center py-2 border border-[#EFEBE9] rounded-lg">Login</a>
@@ -187,13 +177,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const mobileDashboardBtn = document.getElementById("mobileDashboardBtn");
-  const mobileDashboardMenu = document.getElementById("mobileDashboardMenu");
-
-  mobileDashboardBtn?.addEventListener("click", (e) => {
-    e.stopPropagation();
-    mobileDashboardMenu.classList.toggle("hidden");
-  });
 
   const homeDropdownBtn = document.getElementById('homeDropdownBtn');
   const homeDropdownMenu = document.getElementById('homeDropdownMenu');
@@ -303,20 +286,6 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   updateCartCount();
   window.addEventListener('cartUpdated', updateCartCount);
-  const dashboardBtn = document.getElementById("dashboardDropdownBtn");
-  const dashboardMenu = document.getElementById("dashboardDropdownMenu");
-
-  if (dashboardBtn) {
-    dashboardBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      dashboardMenu.classList.toggle("hidden");
-    });
-    document.addEventListener("click", (e) => {
-      if (!dashboardBtn.contains(e.target) && !dashboardMenu.contains(e.target)) {
-        dashboardMenu.classList.add('hidden');
-      }
-    });
-  }
 
   const mobileThemeToggle = document.getElementById("mobile-theme-toggle");
   mobileThemeToggle?.addEventListener("click", () => {
