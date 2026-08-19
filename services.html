@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - SportsPro</title>
+    <title>Customization & Sourcing Categories - SportsPro</title>
     <link rel="icon" href="assets/images/site-icon.jpeg">
     <script src="tailwind.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -30,66 +30,109 @@
             --text-color: #111111;
         }
 
-        [data-theme="dark"] {
-            --home-bg: #000000;
-            --text-color: #ffffff;
-        }
+            [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
+    }
 
-        body {
-            background-color: var(--home-bg) !important;
-            color: var(--text-color);
-            transition: background-color 0.4s ease, color 0.4s ease;
-        }
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
 
-        [data-theme="dark"] section,
-        [data-theme="dark"] .card,
-        [data-theme="dark"] .bg-white,
-        [data-theme="dark"] .bg-\[\#FDFBF9\],
-        [data-theme="dark"] .bg-\[\#EFEBE9\],
-        [data-theme="dark"] .bg-\[\#F9F7F5\] {
-            background-color: #000000 !important;
-            border-color: #333333 !important;
-        }
+    [data-theme="dark"] section,
+    [data-theme="dark"] .bg-white,
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .group {
+      background-color: #000000 !important;
+      border-color: #333333 !important;
+    }
 
-        [data-theme="dark"] .btn,
-        [data-theme="dark"] .btn1:hover {
-            color: #000000 !important;
-        }
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
+    }
 
-        [data-theme="dark"] body,
-        [data-theme="dark"] p,
-        [data-theme="dark"] h1,
-        [data-theme="dark"] h2,
-        [data-theme="dark"] h3,
-        [data-theme="dark"] h4,
-        [data-theme="dark"] h5,
-        [data-theme="dark"] h6,
-        [data-theme="dark"] span,
-        [data-theme="dark"] li,
-        [data-theme="dark"] a,
-        [data-theme="dark"] i,
-        [data-theme="dark"] label,
-        [data-theme="dark"] table,
-        [data-theme="dark"] th,
-        [data-theme="dark"] td,
-        [data-theme="dark"] div,
-        [data-theme="dark"] small,
-        [data-theme="dark"] strong {
-            color: #ffffff !important;
-        }
+    [data-theme="dark"] body,
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] div,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
+    [data-theme="dark"] strong {
+      color: #ffffff !important;
+    }
 
-        [data-theme="dark"] thead {
-            background-color: #064E3B !important;
-        }
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
+    }
 
-        [data-theme="dark"] .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7) !important;
-        }
+    [data-theme="dark"] a.hover-text-white:hover {
+      color: #ffffff !important;
+    }
 
-        [data-theme="dark"] .tag-btn {
-            background-color: rgba(255, 255, 255, 0.1) !important;
-            border-color: #ffffff !important;
-        }
+            [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
+    }
+
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .bg-white,
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .group {
+      background-color: #000000 !important;
+      border-color: #333333 !important;
+    }
+
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
+    }
+
+    [data-theme="dark"] body,
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] div,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
+    [data-theme="dark"] strong {
+      color: #ffffff !important;
+    }
+
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
+    }
 
         @keyframes float {
             0%,
@@ -149,7 +192,7 @@
 
                         <div class="flex flex-col sm:flex-row gap-5 pt-4">
                             <a href="customize.html"
-                                class="px-10 py-3 bg-[#3E2723] text-white rounded-xl font-bold text-center hover:bg-[#8D6E63] transition-all shadow-xl hover:shadow-[#8D6E63]/30">
+                                class="hover-text-white px-10 py-3 bg-[#3E2723] text-white rounded-xl font-bold text-center hover:bg-[#8D6E63] transition-all shadow-xl hover:shadow-[#8D6E63]/30">
                                 Start Customizing
                             </a>
                         </div>
@@ -165,13 +208,13 @@
                     </div>
 
                     <div
-                        class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4 max-w-xs animate-float border border-[#EFEBE9]">
-                        <div class="bg-[#EFEBE9] p-3 rounded-lg flex-shrink-0">
-                            <i class="bi bi-activity text-[#3E2723] text-2xl"></i>
+                        class="absolute bottom-4 left-4 sm:-bottom-6 sm:-left-6 bg-white p-4 sm:p-5 rounded-2xl shadow-xl flex items-center gap-3 sm:gap-4 max-w-[240px] sm:max-w-xs border border-[#EFEBE9] animate-float z-20">
+                        <div class="bg-[#EFEBE9] p-2.5 sm:p-3 rounded-lg flex-shrink-0 flex items-center justify-center">
+                            <i class="bi bi-activity text-[#3E2723] text-xl sm:text-2xl"></i>
                         </div>
                         <div>
-                            <p class="text-[10px] text-[#8D6E63] font-bold uppercase tracking-wider">Calibration</p>
-                            <p class="text-sm font-semibold text-[#3E2723]">Smart Weight Active</p>
+                            <p class="text-[10px] sm:text-xs text-[#8D6E63] font-bold uppercase tracking-wider">Calibration</p>
+                            <p class="text-xs sm:text-sm font-semibold text-[#3E2723] mt-0.5">Smart Weight Active</p>
                         </div>
                     </div>
                 </div>
@@ -198,12 +241,26 @@
                 <div id="sublimation" class="bg-[#FDFBF9] rounded-[3rem] p-8 md:p-16 border border-[#EFEBE9] hover:shadow-xl transition-all duration-500">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div class="lg:col-span-5 space-y-6">
-                            <span class="text-[#8D6E63] font-bold uppercase tracking-widest text-[10px]">Apparel Printing</span>
+                            <span class="text-[#8D6E63] font-bold uppercase tracking-widest text-[10px]">Apparel Printing & Design</span>
                             <h4 class="text-3xl font-semibold text-[#3E2723]">Custom Team Sublimation</h4>
                             <p class="text-[#5D4037] leading-relaxed text-sm md:text-base">
-                                Design full-jersey prints, player names, and sponsor graphics. Our premium inks bond directly to micro-mesh performance fabrics for lightweight, zero-fade uniform outfitting.
+                                Design full-jersey prints, player names, and sponsor graphics. Our premium dye-sublimation inks bond at a molecular level directly to micro-mesh performance fabrics. This ensures lightweight, zero-fade uniform outfitting that handles intense sweat, high washing temperatures, and rugged matches without peeling or cracking. Includes dynamic player numbering options and custom raglan or retro collar styles.
                             </p>
-                            <a href="contact.html" class="inline-flex items-center gap-2 text-[#3E2723] font-bold hover:text-[#8D6E63] transition-all">
+                            <ul class="space-y-2.5 text-sm text-[#5D4037] pt-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="bi bi-patch-check text-[#8D6E63] mt-1 shrink-0"></i>
+                                    <span><strong>Pantone Matching</strong>: Exact squad colors and crisp vector logo resolution.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="bi bi-patch-check text-[#8D6E63] mt-1 shrink-0"></i>
+                                    <span><strong>Flatlock Seams</strong>: Anti-chafing stitches optimized for high-impact movements.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="bi bi-patch-check text-[#8D6E63] mt-1 shrink-0"></i>
+                                    <span><strong>Moisture Management</strong>: Hydrophobic fabrics drying 3x faster than cotton.</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center gap-2 text-[#3E2723] font-bold hover:text-[#8D6E63] transition-all pt-2">
                                 Request Custom Kit <i class="bi bi-arrow-right"></i>
                             </a>
                         </div>
@@ -217,12 +274,26 @@
                 <div id="calibration" class="bg-[#FDFBF9] rounded-[3rem] p-8 md:p-16 border border-[#EFEBE9] hover:shadow-xl transition-all duration-500">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div class="lg:col-span-5 space-y-6 lg:order-2">
-                            <span class="text-[#8D6E63] font-bold uppercase tracking-widest text-[10px]">Hardware Tuning</span>
+                            <span class="text-[#8D6E63] font-bold uppercase tracking-widest text-[10px]">Hardware Tuning & Calibration</span>
                             <h4 class="text-3xl font-semibold text-[#3E2723]">Bat Knocking & Balance Calibration</h4>
                             <p class="text-[#5D4037] leading-relaxed text-sm md:text-base">
-                                Knock in your English Willow bats using precise mechanical pounding, modify racket string tensions to custom tensions, and configure balance-weighting setups to match player profiles.
+                                Knock in your English Willow bats using precise mechanical pounding (over 15,000 strikes) to compress wood fibers and maximize sweet-spot springiness. We also adjust racket string tensions using professional electronic stringing systems, configure precise balance-weighting setups to match your grip style, and oil/wax willow bats to prevent moisture damage and split edges.
                             </p>
-                            <a href="contact.html" class="inline-flex items-center gap-2 text-[#3E2723] font-bold hover:text-[#8D6E63] transition-all">
+                            <ul class="space-y-2.5 text-sm text-[#5D4037] pt-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="bi bi-patch-check text-[#8D6E63] mt-1 shrink-0"></i>
+                                    <span><strong>Mechanical Knocking</strong>: Automated striking to compress wood grains evenly.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="bi bi-patch-check text-[#8D6E63] mt-1 shrink-0"></i>
+                                    <span><strong>Dynamic Balancing</strong>: Personalized weight profiling matching your stance.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="bi bi-patch-check text-[#8D6E63] mt-1 shrink-0"></i>
+                                    <span><strong>Electronic Stringing</strong>: Constant-pull tension accuracy down to 0.1 lbs.</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center gap-2 text-[#3E2723] font-bold hover:text-[#8D6E63] transition-all pt-2">
                                 Schedule Gear Tuning <i class="bi bi-arrow-right"></i>
                             </a>
                         </div>
@@ -236,12 +307,26 @@
                 <div id="procurement" class="bg-[#FDFBF9] rounded-[3rem] p-8 md:p-16 border border-[#EFEBE9] hover:shadow-xl transition-all duration-500">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div class="lg:col-span-5 space-y-6">
-                            <span class="text-[#8D6E63] font-bold uppercase tracking-widest text-[10px]">Facility outfitting</span>
+                            <span class="text-[#8D6E63] font-bold uppercase tracking-widest text-[10px]">Facility Outfitting & Sourcing</span>
                             <h4 class="text-3xl font-semibold text-[#3E2723]">Commercial Facility Procurement</h4>
                             <p class="text-[#5D4037] leading-relaxed text-sm md:text-base">
-                                Outfitting corporate gyms, school complexes, and league clubs with premium treadmills, court systems, resistance modules, and maintenance warranties.
+                                Outfit your corporate gyms, school complexes, fitness centers, and professional league clubs with premium treadmills, modular court systems, heavy-duty rubberized weights, and multi-station resistance modules. Our procurement packages include site dimensions mapping, professional shipping/assembly, and comprehensive 5-year maintenance warranties to ensure safety and uninterrupted workouts.
                             </p>
-                            <a href="contact.html" class="inline-flex items-center gap-2 text-[#3E2723] font-bold hover:text-[#8D6E63] transition-all">
+                            <ul class="space-y-2.5 text-sm text-[#5D4037] pt-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="bi bi-patch-check text-[#8D6E63] mt-1 shrink-0"></i>
+                                    <span><strong>3D Space Mapping</strong>: CAD layouts matching equipment footprint to room sizes.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="bi bi-patch-check text-[#8D6E63] mt-1 shrink-0"></i>
+                                    <span><strong>Commercial Hardware</strong>: High-durability equipment from top global brands.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="bi bi-patch-check text-[#8D6E63] mt-1 shrink-0"></i>
+                                    <span><strong>Yearly Audits</strong>: Dedicated scheduled checkups for hardware safety.</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center gap-2 text-[#3E2723] font-bold hover:text-[#8D6E63] transition-all pt-2">
                                 Request Commercial Sourcing <i class="bi bi-arrow-right"></i>
                             </a>
                         </div>

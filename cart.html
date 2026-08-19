@@ -21,7 +21,7 @@
       --text-color: #111111;
     }
 
-    [data-theme="dark"] {
+        [data-theme="dark"] {
       --home-bg: #000000;
       --text-color: #ffffff;
     }
@@ -34,13 +34,20 @@
 
     [data-theme="dark"] section,
     [data-theme="dark"] .bg-white,
-    [data-theme="dark"] .bg-\[\#FDFBF9\],
-    [data-theme="dark"] .bg-\[\#F9F7F5\],
-    [data-theme="dark"] .bg-\[\#EFEBE9\] {
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .group {
       background-color: #000000 !important;
       border-color: #333333 !important;
     }
 
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
+    }
+
+    [data-theme="dark"] body,
     [data-theme="dark"] p,
     [data-theme="dark"] h1,
     [data-theme="dark"] h2,
@@ -48,8 +55,20 @@
     [data-theme="dark"] h4,
     [data-theme="dark"] h5,
     [data-theme="dark"] h6,
-    [data-theme="dark"] span {
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] div,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
+    [data-theme="dark"] strong {
       color: #ffffff !important;
+    }
+
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
     }
   </style>
 </head>
@@ -130,7 +149,7 @@
                 <h4 class="text-lg font-semibold text-[#3E2723] mt-1 pr-8">
                   <a href="product-details.html?id=${product.id}" class="hover:text-[#8D6E63] transition-colors">${product.name}</a>
                 </h4>
-                <p class="text-[#5D4037] font-bold mt-2">$${price}</p>
+                <p class="text-black font-bold mt-2">$${price}</p>
               </div>
               <div class="flex items-center justify-between mt-4">
                 <div class="flex items-center border border-[#EFEBE9] rounded-lg bg-white overflow-hidden">
@@ -138,7 +157,7 @@
                   <span class="w-10 text-center font-bold text-[#3E2723] text-sm">${item.quantity}</span>
                   <button onclick="window.store.updateCartQuantity('${product.id}', ${item.quantity + 1})" class="px-3 py-1.5 text-[#3E2723] hover:bg-[#EFEBE9] font-bold"><i class="bi bi-plus"></i></button>
                 </div>
-                <div class="text-[#3E2723] font-bold text-lg">
+                <div class="text-black font-bold text-lg">
                   $${total}
                 </div>
               </div>

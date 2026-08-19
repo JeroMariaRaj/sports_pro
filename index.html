@@ -29,7 +29,7 @@
       --text-color: #111111;
     }
 
-    [data-theme="dark"] {
+        [data-theme="dark"] {
       --home-bg: #000000;
       --text-color: #ffffff;
     }
@@ -41,18 +41,31 @@
     }
 
     [data-theme="dark"] section,
-    [data-theme="dark"] .card,
     [data-theme="dark"] .bg-white,
-    [data-theme="dark"] .bg-\[\#FDFBF9\],
-    [data-theme="dark"] .bg-\[\#EFEBE9\],
-    [data-theme="dark"] .bg-\[\#F9F7F5\] {
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .group {
       background-color: #000000 !important;
       border-color: #333333 !important;
     }
 
-    [data-theme="dark"] .btn,
-    [data-theme="dark"] .btn1:hover {
-      color: #000000 !important;
+    /* CUSTOM BALANCED DARK-GRAY PALETTE FOR EXPERIENCE & WHO WE SERVE SECTIONS (ISSUE 6) */
+    [data-theme="dark"] #how-it-works,
+    [data-theme="dark"] #who-we-serve {
+      background-color: #121212 !important;
+      border-color: #2D2D30 !important;
+    }
+
+    [data-theme="dark"] #how-it-works [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] #who-we-serve .bg-white {
+      background-color: #1E1E1E !important;
+      border-color: #2D2D30 !important;
+    }
+
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
     }
 
     [data-theme="dark"] body,
@@ -68,26 +81,65 @@
     [data-theme="dark"] a,
     [data-theme="dark"] i,
     [data-theme="dark"] label,
-    [data-theme="dark"] table,
-    [data-theme="dark"] th,
-    [data-theme="dark"] td,
     [data-theme="dark"] div,
-    [data-theme="dark"] small,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
     [data-theme="dark"] strong {
       color: #ffffff !important;
     }
 
-    [data-theme="dark"] thead {
-      background-color: #064E3B !important;
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
     }
 
-    [data-theme="dark"] .hero-overlay {
-      background-color: rgba(0, 0, 0, 0.7) !important;
+        [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
     }
 
-    [data-theme="dark"] .tag-btn {
-      background-color: rgba(255, 255, 255, 0.1) !important;
-      border-color: #ffffff !important;
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .bg-white,
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .group {
+      background-color: #000000 !important;
+      border-color: #333333 !important;
+    }
+
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
+    }
+
+    [data-theme="dark"] body,
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] div,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
+    [data-theme="dark"] strong {
+      color: #ffffff !important;
+    }
+
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
     }
 
     /* Keep typed form values legible in both themes. */
@@ -95,8 +147,54 @@
       color: #111111 !important;
     }
 
-    [data-theme="dark"] .bulk-quote-input {
+        [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
+    }
+
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .bg-white,
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .group {
+      background-color: #000000 !important;
+      border-color: #333333 !important;
+    }
+
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
+    }
+
+    [data-theme="dark"] body,
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] div,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
+    [data-theme="dark"] strong {
       color: #ffffff !important;
+    }
+
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
     }
   
   @keyframes bounce-slow {
@@ -125,7 +223,7 @@
         <h2 class="text-[#8D6E63] font-semibold tracking-[0.3em] text-sm uppercase">
           Premium Sports Equipment
         </h2>
-        <h1 class="text-5xl md:text-7xl font-semibold text-[#3E2723] leading-tight">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#3E2723] leading-tight">
           Unleash Your <br> 
           <span class="text-[#8D6E63]">True Potential</span> <br>
           Today.
@@ -150,13 +248,13 @@
         <img src="assets/images/cricket_bat_premium_1786007732561.jpg" alt="Premium Cricket Equipment" class="w-full h-[500px] object-cover">
       </div>
 
-      <div class="card absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4 max-w-xs animate-bounce-slow">
-        <div class="card bg-[#EFEBE9] p-3 rounded-lg">
-          <i class="bi bi-fire text-[#3E2723] text-2xl"></i>
+      <div class="absolute bottom-4 left-4 sm:-bottom-6 sm:-left-6 bg-white p-4 sm:p-5 rounded-2xl shadow-xl flex items-center gap-3 sm:gap-4 max-w-[240px] sm:max-w-xs border border-[#EFEBE9] animate-bounce-slow z-20">
+        <div class="bg-[#EFEBE9] p-2.5 sm:p-3 rounded-lg flex-shrink-0 flex items-center justify-center">
+          <i class="bi bi-fire text-[#3E2723] text-xl sm:text-2xl"></i>
         </div>
         <div>
-          <p class="text-xs text-[#8D6E63] font-bold uppercase">Trending Now</p>
-          <p class="text-sm font-semibold text-[#3E2723]">Kookaburra Pro Bat</p>
+          <p class="text-[10px] sm:text-xs text-[#8D6E63] font-bold uppercase tracking-wider">Trending Now</p>
+          <p class="text-xs sm:text-sm font-semibold text-[#3E2723] mt-0.5">Kookaburra Pro Bat</p>
         </div>
       </div>
     </div>
@@ -215,7 +313,7 @@
 </section>
 
 <!-- SECTION1 -->
- <section class="py-24 bg-white">
+ <section class="py-24 bg-white" id="how-it-works">
   <div class="max-w-7xl mx-auto px-6">
     
     <div class="text-center max-w-2xl mx-auto mb-20">
@@ -271,7 +369,7 @@
 </section>
 
 <!-- TARGET AUDIENCE SECTION -->
-<section class="py-24 bg-[#FDFBF9]">
+<section class="py-24 bg-[#FDFBF9]" id="who-we-serve">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center max-w-2xl mx-auto mb-20">
       <h2 class="text-[#8D6E63] font-semibold tracking-[0.2em] text-sm uppercase mb-4">Who We Serve</h2>
@@ -345,11 +443,9 @@
 <section class="py-16 md:py-24 bg-[#FDFBF9]">
   <div class="max-w-7xl mx-auto px-6">
     
-    <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-6">
-      <div class="max-w-xl">
-        <h2 class="text-3xl md:text-4xl font-semibold text-[#3E2723]">Explore Our <br class="hidden sm:block"> Sports Collections</h2>
-      </div>
-      <a href="shop.html" class="text-[#3E2723] font-bold border-b-2 border-[#3E2723] pb-1 hover:text-[#8D6E63] hover:border-[#8D6E63] transition-all whitespace-nowrap">
+    <div class="flex flex-col items-center justify-center text-center mb-12 gap-4">
+      <h2 class="text-3xl md:text-4xl font-semibold text-[#3E2723]">Explore Our Sports Collections</h2>
+      <a href="shop.html" class="text-[#3E2723] font-bold border-b-2 border-[#3E2723] pb-1 hover:text-[#8D6E63] hover:border-[#8D6E63] transition-all whitespace-nowrap mt-2">
         View All Collections →
       </a>
     </div>
@@ -458,12 +554,10 @@
  <section class="py-24 bg-[#FDFBF9]">
   <div class="max-w-7xl mx-auto px-6">
     
-    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-      <div>
-        <h2 class="text-[#8D6E63] font-semibold tracking-[0.2em] text-sm uppercase mb-4">Trending Gear</h2>
-        <h3 class="text-4xl font-semibold text-[#3E2723]">Curated for Every <br> Athlete.</h3>
-      </div>
-      <p class="max-w-xs text-[#5D4037] text-sm leading-relaxed">
+    <div class="flex flex-col items-center text-center mb-16 gap-4">
+      <h2 class="text-[#8D6E63] font-semibold tracking-[0.2em] text-sm uppercase mb-2">Trending Gear</h2>
+      <h3 class="text-4xl font-semibold text-[#3E2723]">Curated for Every Athlete</h3>
+      <p class="max-w-md text-[#5D4037] text-sm leading-relaxed mt-2">
         Browse our top-voted professional hardware, tested by seasoned league players.
       </p>
     </div>
@@ -675,33 +769,33 @@
         
         trending.forEach((prod) => {
             const priceHtml = prod.discountPrice 
-                ? `<span class="text-muted-spx text-decoration-line-through me-2 text-xs">$${prod.price}</span><span class="text-[#8D6E63] font-bold text-sm">$${prod.discountPrice}</span>`
-                : `<span class="text-[#3E2723] font-bold text-sm">$${prod.price}</span>`;
+                ? `<span class="text-black font-bold text-sm">$${prod.discountPrice}</span>`
+                : `<span class="text-black font-bold text-sm">$${prod.price}</span>`;
             
             prodContainer.innerHTML += `
-              <div class="group flex flex-col h-full">
-                <div class="aspect-square bg-white rounded-3xl mb-4 border border-[#EFEBE9] flex items-center justify-center relative overflow-hidden transition-all duration-500 hover:border-[#8D6E63] hover:shadow-lg">
+              <div class="group flex flex-col h-full bg-white border border-[#EFEBE9] rounded-3xl p-4 transition-all duration-500 hover:border-[#8D6E63] hover:shadow-lg relative overflow-hidden">
+                <div class="aspect-square bg-white rounded-2xl mb-4 border border-[#EFEBE9] flex items-center justify-center relative overflow-hidden">
                   ${prod.discountPrice ? `<span class="absolute top-2 left-2 badge bg-red-600 text-white text-[10px] px-2.5 py-1 rounded-full font-bold z-10 shadow-sm">SALE</span>` : ''}
                   ${prod.isNew ? `<span class="absolute top-2 left-2 ${prod.discountPrice ? 'mt-7' : ''} badge bg-emerald-600 text-white text-[10px] px-2.5 py-1 rounded-full font-bold z-10 shadow-sm">NEW</span>` : ''}
                   <a href="product-details.html?id=${prod.id}" class="w-full h-full flex items-center justify-center">
                     <img src="${prod.image}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${prod.name}">
                   </a>
-                  <button onclick="window.store.addToCart('${prod.id}'); if(window.showToast) window.showToast('Added to cart');" class="absolute bottom-4 right-4 w-10 h-10 bg-[#3E2723] text-white rounded-xl opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex items-center justify-center hover:bg-[#8D6E63] shadow-md z-20">
-                    <i class="bi bi-plus-lg text-lg"></i>
-                  </button>
                 </div>
-                <div class="px-2 mt-auto">
-                  <h4 class="font-semibold text-[#3E2723] mb-1">
+                <div class="px-2 flex flex-col flex-grow">
+                  <span class="text-[10px] text-[#8D6E63] uppercase tracking-widest font-bold block">${prod.category}</span>
+                  <h4 class="font-semibold text-[#3E2723] text-sm mb-1 mt-0.5 truncate">
                     <a href="product-details.html?id=${prod.id}" class="hover:text-[#8D6E63] transition-colors">${prod.name}</a>
                   </h4>
-                  <p class="text-xs text-[#8D6E63] uppercase tracking-widest font-bold">${prod.category}</p>
-                  <div class="flex items-center justify-between mt-2 pt-1 border-t border-[#EFEBE9]">
+                  <div class="flex items-center justify-between mt-2 pt-1 border-t border-[#EFEBE9] mb-4">
                     <div class="flex items-center gap-1 text-amber-500 text-xs">
                       <i class="bi bi-star-fill"></i>
                       <span class="text-[#5D4037] font-semibold">${prod.rating}</span>
                     </div>
                     <div>${priceHtml}</div>
                   </div>
+                  <button onclick="window.store.addToCart('${prod.id}'); if(window.showToast) window.showToast('Added to cart');" class="w-full bg-[#5D4037] text-white py-2.5 rounded-xl text-xs font-semibold hover:bg-[#3E2723] transition-colors mt-auto shadow-sm">
+                    Add to Cart
+                  </button>
                 </div>
               </div>
             `;

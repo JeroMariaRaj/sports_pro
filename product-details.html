@@ -21,7 +21,7 @@
       --text-color: #111111;
     }
 
-    [data-theme="dark"] {
+        [data-theme="dark"] {
       --home-bg: #000000;
       --text-color: #ffffff;
     }
@@ -33,15 +33,21 @@
     }
 
     [data-theme="dark"] section,
-    [data-theme="dark"] .card,
     [data-theme="dark"] .bg-white,
-    [data-theme="dark"] .bg-\[\#FDFBF9\],
-    [data-theme="dark"] .bg-\[\#F9F7F5\],
-    [data-theme="dark"] .bg-\[\#EFEBE9\] {
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .group {
       background-color: #000000 !important;
       border-color: #333333 !important;
     }
 
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
+    }
+
+    [data-theme="dark"] body,
     [data-theme="dark"] p,
     [data-theme="dark"] h1,
     [data-theme="dark"] h2,
@@ -49,30 +55,70 @@
     [data-theme="dark"] h4,
     [data-theme="dark"] h5,
     [data-theme="dark"] h6,
-    [data-theme="dark"] span {
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] div,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
+    [data-theme="dark"] strong {
       color: #ffffff !important;
     }
 
-    /* Keep the quantity picker legible and interactive in dark mode. */
-    [data-theme="dark"] #quantityControl,
-    html.dark #quantityControl {
-      background: #1c1513 !important;
-      border-color: #6d5148 !important;
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
     }
 
-    [data-theme="dark"] #quantityControl .quantity-button,
-    html.dark #quantityControl .quantity-button {
-      min-width: 48px;
-      color: #ffffff !important;
-      background: #251714 !important;
-      border: 0;
-      cursor: pointer;
+        [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
     }
 
-    [data-theme="dark"] #quantityControl .quantity-button:hover,
-    html.dark #quantityControl .quantity-button:hover {
-      background: #8d6e63 !important;
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .bg-white,
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .group {
+      background-color: #000000 !important;
+      border-color: #333333 !important;
+    }
+
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
+    }
+
+    [data-theme="dark"] body,
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] div,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
+    [data-theme="dark"] strong {
       color: #ffffff !important;
+    }
+
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
     }
 
     [data-theme="dark"] #quantityControl .quantity-button:active,
@@ -120,6 +166,28 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Register Mutation Observer first so theme sync works even if product details loading returns early
+      const syncQuantityTheme = () => {
+        const isDark = document.documentElement.dataset.theme === 'dark' || document.documentElement.classList.contains('dark');
+        const control = document.getElementById('quantityControl');
+        const input = document.getElementById('qty');
+        const buttons = control?.querySelectorAll('.quantity-button') || [];
+        if (!control || !input) return;
+        control.style.backgroundColor = isDark ? '#1E1E1E' : '';
+        control.style.borderColor = isDark ? '#2D2D30' : '';
+        input.style.backgroundColor = isDark ? '#121212' : '';
+        input.style.color = isDark ? '#ffffff' : '';
+        input.style.borderColor = isDark ? '#2D2D30' : '';
+        buttons.forEach(button => {
+          button.style.backgroundColor = isDark ? '#1E1E1E' : '';
+          button.style.color = isDark ? '#ffffff' : '';
+          button.onmouseenter = () => { if (isDark) button.style.backgroundColor = '#8D6E63'; };
+          button.onmouseleave = () => { if (isDark) button.style.backgroundColor = '#1E1E1E'; };
+        });
+      };
+      syncQuantityTheme();
+      new MutationObserver(syncQuantityTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['class', 'data-theme'] });
+
       const urlParams = new URLSearchParams(window.location.search);
       const productId = urlParams.get('id');
       const container = document.getElementById('product-container');
@@ -136,8 +204,8 @@
       }
 
       const priceHtml = product.discountPrice 
-        ? `<span class="line-through text-[#8D6E63] text-lg mr-3">$${product.price}</span><span class="text-[#3E2723] font-bold text-3xl">$${product.discountPrice}</span>`
-        : `<span class="text-[#3E2723] font-bold text-3xl">$${product.price}</span>`;
+        ? `<span class="text-black font-bold text-3xl">$${product.discountPrice}</span>`
+        : `<span class="text-black font-bold text-3xl">$${product.price}</span>`;
 
       container.innerHTML = `
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -200,28 +268,7 @@
         </div>
       `;
 
-      // The navigation supports both data-theme and the Tailwind dark class.
-      // Apply explicit quantity-picker colors for either mode, including after a theme switch.
-      const syncQuantityTheme = () => {
-        const isDark = document.documentElement.dataset.theme === 'dark' || document.documentElement.classList.contains('dark');
-        const control = document.getElementById('quantityControl');
-        const input = document.getElementById('qty');
-        const buttons = control?.querySelectorAll('.quantity-button') || [];
-        if (!control || !input) return;
-        control.style.backgroundColor = isDark ? '#1c1513' : '';
-        control.style.borderColor = isDark ? '#6d5148' : '';
-        input.style.backgroundColor = isDark ? '#2a1d19' : '';
-        input.style.color = isDark ? '#ffffff' : '';
-        input.style.borderColor = isDark ? '#6d5148' : '';
-        buttons.forEach(button => {
-          button.style.backgroundColor = isDark ? '#251714' : '';
-          button.style.color = isDark ? '#ffffff' : '';
-          button.onmouseenter = () => { if (isDark) button.style.backgroundColor = '#8d6e63'; };
-          button.onmouseleave = () => { if (isDark) button.style.backgroundColor = '#251714'; };
-        });
-      };
-      syncQuantityTheme();
-      new MutationObserver(syncQuantityTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['class', 'data-theme'] });
+      // Theme syncing registered at top of DOMContentLoaded
     });
   </script>
 </body>

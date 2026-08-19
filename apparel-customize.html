@@ -35,17 +35,17 @@
     html[data-theme="dark"] {
       color-scheme: dark;
       /* Dark Mode Colors */
-      --bg-primary: #050505;
-      --bg-secondary: #0a0a0a;
-      --hero-bg-start: #111111;
-      --hero-bg-end: #050505;
-      --surface: rgba(23, 23, 23, 0.95);
-      --surface-card: #141414;
-      --border: #262626;
-      --text-main: #f5f5f5;
-      --text-muted: #a3a3a3;
+      --bg-primary: #000000;
+      --bg-secondary: #000000;
+      --hero-bg-start: #1c0f0d;
+      --hero-bg-end: #0c0605;
+      --surface: #000000;
+      --surface-card: #000000;
+      --border: #333333;
+      --text-main: #ffffff;
+      --text-muted: #cccccc;
       --accent: #b0a49e;
-      --accent-dark: #f5f5f5;
+      --accent-dark: #ffffff;
       --shadow: 0 35px 80px rgba(0, 0, 0, 0.6);
     }
 
@@ -319,6 +319,27 @@
       font-weight: 700;
     }
 
+    .option-card.active,
+    .control-card.active {
+      background-color: #3e2723 !important;
+      border-color: #3e2723 !important;
+      color: #ffffff !important;
+    }
+
+    html[data-theme="dark"] .option-card.active,
+    html[data-theme="dark"] .control-card.active {
+      background-color: #3e2723 !important;
+      border-color: #8d6e63 !important;
+      color: #ffffff !important;
+    }
+
+    .control-card.active strong,
+    .control-card.active p,
+    html[data-theme="dark"] .control-card.active strong,
+    html[data-theme="dark"] .control-card.active p {
+      color: #ffffff !important;
+    }
+
     .action-row {
       display: flex;
       flex-wrap: wrap;
@@ -470,8 +491,8 @@
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">Design Premium Team Apparel<br><span class="text-[#f7e8d9]">with Live Preview</span></h1>
           <p class="text-lg md:text-xl leading-relaxed text-[#ddd0c3]">Personalize uniforms with bold colors, premium printing methods, and custom names. Preview every detail instantly before sending your order.</p>
           <div class="flex flex-wrap gap-4">
-            <a href="customize.html" class="control-button inline-flex items-center justify-center rounded-full px-8 py-3 font-semibold">Back to Customization</a>
-            <a href="contact.html" class="control-pill inline-flex items-center justify-center rounded-full px-8 py-3 font-semibold">Contact Design Team</a>
+            <a href="customize.html" class="inline-flex items-center justify-center rounded-full px-8 py-3 font-semibold bg-[#3e2723] text-white hover:bg-[#5d4037] transition duration-300">Back to Customization</a>
+            <a href="contact.html" class="inline-flex items-center justify-center rounded-full px-8 py-3 font-semibold bg-white text-[#3e2723] border border-white hover:bg-transparent hover:text-white transition duration-300">Contact Design Team</a>
           </div>
         </div>
 
@@ -493,34 +514,34 @@
             <div>
               <label>Team Color</label>
               <div class="grid grid-cols-3 gap-4 mt-4">
-                <button class="option-card" style="background-color: #3e2723; border: 2px solid transparent;" onclick="applyColor('#3e2723')" aria-label="Espresso"></button>
-                <button class="option-card" style="background-color: #8d6e63; border: 2px solid transparent;" onclick="applyColor('#8d6e63')" aria-label="Bronze"></button>
-                <button class="option-card" style="background-color: #1f2937; border: 2px solid transparent;" onclick="applyColor('#1f2937')" aria-label="Night"></button>
+                <button class="option-card" style="background-color: #3e2723; border: 2px solid transparent;" onclick="applyColor('#3e2723', this)" aria-label="Espresso"></button>
+                <button class="option-card" style="background-color: #8d6e63; border: 2px solid transparent;" onclick="applyColor('#8d6e63', this)" aria-label="Bronze"></button>
+                <button class="option-card" style="background-color: #1f2937; border: 2px solid transparent;" onclick="applyColor('#1f2937', this)" aria-label="Night"></button>
               </div>
             </div>
 
             <div>
               <label>Print Method</label>
               <div class="flex flex-wrap gap-3 mt-4">
-                <button class="option-card" onclick="applyPrint('Sublimation')">Sublimation</button>
-                <button class="option-card" onclick="applyPrint('Screen Printing')">Screen</button>
-                <button class="option-card" onclick="applyPrint('Embroidery')">Embroidery</button>
+                <button class="option-card font-medium transition duration-300" onclick="applyPrint('Sublimation', this)">Sublimation</button>
+                <button class="option-card font-medium transition duration-300" onclick="applyPrint('Screen Printing', this)">Screen</button>
+                <button class="option-card font-medium transition duration-300" onclick="applyPrint('Embroidery', this)">Embroidery</button>
               </div>
             </div>
 
             <div>
               <label>Jersey View</label>
               <div class="grid grid-cols-2 gap-4 mt-4">
-                <button class="option-card" onclick="setView('front')">Front Side</button>
-                <button class="option-card" onclick="setView('back')">Back Side</button>
+                <button class="option-card font-medium transition duration-300" onclick="setView('front', this)">Front Side</button>
+                <button class="option-card font-medium transition duration-300" onclick="setView('back', this)">Back Side</button>
               </div>
             </div>
 
             <div>
               <label>Print Placement</label>
               <div class="grid grid-cols-2 gap-4 mt-4">
-                <button class="option-card" onclick="setPlacement('upside')">Upside</button>
-                <button class="option-card" onclick="setPlacement('downside')">Downside</button>
+                <button class="option-card font-medium transition duration-300" onclick="setPlacement('upside', this)">Upside</button>
+                <button class="option-card font-medium transition duration-300" onclick="setPlacement('downside', this)">Downside</button>
               </div>
             </div>
 
@@ -539,21 +560,21 @@
             <div>
               <label>Jersey Style</label>
               <div class="grid gap-4 mt-4">
-                <button class="control-card style-card text-left" onclick="setStyle('modern')">
+                <button class="control-card style-card text-left transition duration-300" onclick="setStyle('modern', this)">
                   <div class="style-thumb" style="background-image:url('assets/images/jersey_modern.jpg');"></div>
                   <div>
                     <strong>Modern V-Neck</strong>
                     <p>A bold silhouette with clean front panel graphics.</p>
                   </div>
                 </button>
-                <button class="control-card style-card text-left" onclick="setStyle('raglan')">
+                <button class="control-card style-card text-left transition duration-300" onclick="setStyle('raglan', this)">
                   <div class="style-thumb" style="background-image:url('assets/images/jersey_raglan.jpg');"></div>
                   <div>
                     <strong>Raglan Sleeves</strong>
                     <p>Sporty contrast sleeves with dynamic motion lines.</p>
                   </div>
                 </button>
-                <button class="control-card style-card text-left" onclick="setStyle('retro')">
+                <button class="control-card style-card text-left transition duration-300" onclick="setStyle('retro', this)">
                   <div class="style-thumb" style="background-image:url('assets/images/jersey_retro.jpg');"></div>
                   <div>
                     <strong>Retro Collar</strong>
@@ -584,8 +605,8 @@
             </div>
           </div>
           <div class="action-row flex-col sm:flex-row">
-            <button class="control-button inline-flex justify-center items-center gap-2 px-6 py-3 rounded-full font-semibold w-full sm:w-auto" onclick="saveDesign()"><i class="bi bi-save2"></i> Save Design</button>
-            <button class="control-pill inline-flex justify-center items-center gap-2 px-6 py-3 rounded-full font-semibold w-full sm:w-auto" onclick="window.location='contact.html'">Request Quote</button>
+            <button class="inline-flex justify-center items-center gap-2 px-6 py-3 rounded-full font-semibold w-full sm:w-auto bg-[#3e2723] text-white hover:bg-[#5d4037] transition duration-300 shadow-lg" onclick="saveDesign()"><i class="bi bi-save2"></i> Save Design</button>
+            <button class="inline-flex justify-center items-center gap-2 px-6 py-3 rounded-full font-semibold w-full sm:w-auto border border-[#3e2723] text-[#3e2723] bg-white hover:bg-[#3e2723] hover:text-white dark:border-white dark:text-white dark:bg-transparent dark:hover:bg-white dark:hover:text-black transition duration-300" onclick="window.location='contact.html'">Request Quote</button>
           </div>
         </div>
       </div>
@@ -617,13 +638,19 @@
     const previewNumber = document.getElementById('playerNumber');
     const printMethodLabel = document.getElementById('printMethodLabel');
 
-    function applyColor(color) {
+    function applyColor(color, btn) {
       const overlay = document.getElementById('colorOverlay');
       overlay.style.backgroundColor = color;
       overlay.style.opacity = '0.75';
+      
+      if (btn) {
+        const colorBtns = btn.parentNode.querySelectorAll('button');
+        colorBtns.forEach(b => b.style.borderColor = 'transparent');
+        btn.style.borderColor = '#8d6e63';
+      }
     }
 
-    function setPlacement(side) {
+    function setPlacement(side, btn) {
       const textContainer = document.getElementById('previewTextContainer');
       if (side === 'downside') {
         textContainer.style.top = '60%';
@@ -632,10 +659,22 @@
         textContainer.style.top = '30%';
         textContainer.style.transform = 'translate(-50%, -50%) scale(1)';
       }
+      
+      if (btn) {
+        const btns = btn.parentNode.querySelectorAll('button');
+        btns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
     }
 
-    function applyPrint(method) {
+    function applyPrint(method, btn) {
       printMethodLabel.textContent = method;
+      
+      if (btn) {
+        const btns = btn.parentNode.querySelectorAll('button');
+        btns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
     }
 
     function updateText() {
@@ -648,14 +687,26 @@
     let currentStyle = 'modern';
     let currentView = 'front';
 
-    function setView(view) {
+    function setView(view, btn) {
       currentView = view;
       updateJerseyImage();
+      
+      if (btn) {
+        const btns = btn.parentNode.querySelectorAll('button');
+        btns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
     }
 
-    function setStyle(style) {
+    function setStyle(style, btn) {
       currentStyle = style;
       updateJerseyImage();
+      
+      if (btn) {
+        const cards = btn.parentNode.querySelectorAll('.style-card');
+        cards.forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+      }
     }
 
     function updateJerseyImage() {
@@ -685,6 +736,24 @@
         modal.classList.add('hidden');
       }, 200);
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize active selections on page load to match screenshots
+      const colorBtn = document.querySelector('.grid-cols-3 button');
+      if (colorBtn) colorBtn.style.borderColor = '#8d6e63';
+      
+      const printBtn = document.querySelector('.flex.flex-wrap button');
+      if (printBtn) printBtn.classList.add('active');
+      
+      const viewBtn = document.querySelectorAll('.grid-cols-2')[0]?.querySelector('button');
+      if (viewBtn) viewBtn.classList.add('active');
+      
+      const placementBtn = document.querySelectorAll('.grid-cols-2')[1]?.querySelector('button');
+      if (placementBtn) placementBtn.classList.add('active');
+      
+      const styleCard = document.querySelector('.style-card');
+      if (styleCard) styleCard.classList.add('active');
+    });
   </script>
 </body>
 

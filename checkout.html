@@ -21,7 +21,7 @@
       --text-color: #111111;
     }
 
-    [data-theme="dark"] {
+        [data-theme="dark"] {
       --home-bg: #000000;
       --text-color: #ffffff;
     }
@@ -34,13 +34,20 @@
 
     [data-theme="dark"] section,
     [data-theme="dark"] .bg-white,
-    [data-theme="dark"] .bg-\[\#FDFBF9\],
-    [data-theme="dark"] .bg-\[\#F9F7F5\],
-    [data-theme="dark"] .bg-\[\#EFEBE9\] {
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .group {
       background-color: #000000 !important;
       border-color: #333333 !important;
     }
 
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
+    }
+
+    [data-theme="dark"] body,
     [data-theme="dark"] p,
     [data-theme="dark"] h1,
     [data-theme="dark"] h2,
@@ -48,8 +55,21 @@
     [data-theme="dark"] h4,
     [data-theme="dark"] h5,
     [data-theme="dark"] h6,
-    [data-theme="dark"] span {
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] div,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
+    [data-theme="dark"] strong {
       color: #ffffff !important;
+    }
+
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
+    }
   </style>
   <style type="text/tailwindcss">
     .form-input {
@@ -286,9 +306,9 @@
             </div>
             <div class="flex-1 overflow-hidden">
               <h5 class="text-sm font-semibold text-[#3E2723] truncate">${product.name}</h5>
-              <p class="text-xs text-[#8D6E63] font-bold">$${price}</p>
+              <p class="text-xs text-black font-bold">$${price}</p>
             </div>
-            <div class="font-bold text-[#3E2723] text-sm">
+            <div class="font-bold text-black text-sm">
               $${(price * item.quantity)}
             </div>
           </div>

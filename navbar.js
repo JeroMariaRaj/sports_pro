@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </li>
 
         <li><a href="about.html" class="transition hover:text-[#8D6E63]">About</a></li>
-        <li><a href="services.html" class="transition hover:text-[#8D6E63]">Services</a></li>
+        <li><a href="services.html" class="transition hover:text-[#8D6E63]">Categories</a></li>
         <li><a href="shop.html" class="transition hover:text-[#8D6E63]">Products</a></li>
         <li><a href="blog.html" class="transition hover:text-[#8D6E63]">Blog</a></li>
         <li><a href="contact.html" class="transition hover:text-[#8D6E63]">Contact</a></li>
@@ -61,16 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
         <span class="cart-count absolute -top-2 -right-3 min-w-5 h-5 px-1 rounded-full bg-[#8D6E63] text-white text-[10px] font-bold flex items-center justify-center">0</span>
       </a>
 
-      <div class="flex items-center gap-3 ml-2">
-        <a href="login.html" 
-           class="px-5 py-2 rounded-lg border border-[#5D4037] font-semibold text-sm transition hover:bg-[#5D4037] hover:text-white">
-           Login
-        </a>
-        <a href="register.html" 
-           class="px-5 py-2 rounded-lg bg-[#5D4037] text-white font-semibold text-sm transition hover:bg-[#3E2723] shadow-md">
-           Sign Up
-        </a>
-      </div>
+      <a href="contact.html" 
+         class="px-5 py-2 rounded-lg bg-[#5D4037] text-white font-semibold text-sm transition hover:bg-[#3E2723] shadow-md ml-2 whitespace-nowrap">
+         Book Service
+      </a>
       
       <button id="profileBtn" class="hidden"></button>
       <ul id="profileMenu" class="hidden"></ul>
@@ -113,16 +107,15 @@ document.addEventListener("DOMContentLoaded", () => {
       </li>
 
       <li><a href="about.html" class="block py-2 hover:text-[#D7CCC8] transition">About</a></li>
-      <li><a href="services.html" class="block py-2 hover:text-[#D7CCC8] transition">Services</a></li>
+      <li><a href="services.html" class="block py-2 hover:text-[#D7CCC8] transition">Categories</a></li>
       <li><a href="shop.html" class="block py-2 hover:text-[#D7CCC8] transition">Products</a></li>
       <li><a href="blog.html" class="block py-2 hover:text-[#D7CCC8] transition">Blog</a></li>
       <li><a href="cart.html" class="block py-2 hover:text-[#D7CCC8] transition">Cart <span class="cart-count ml-1 inline-flex min-w-5 h-5 px-1 items-center justify-center rounded-full bg-[#8D6E63] text-white text-[10px] font-bold">0</span></a></li>      <li><a href="contact.html" class="block py-2 hover:text-[#D7CCC8] transition">Contact</a></li>
 
 
 
-      <li class="pt-4 space-y-3">
-         <a href="login.html" class="block w-full text-center py-2 border border-[#EFEBE9] rounded-lg">Login</a>
-         <a href="register.html" class="block w-full text-center py-2 bg-[#EFEBE9] text-[#3E2723] rounded-lg font-bold">Sign Up</a>
+      <li class="pt-4">
+         <a href="contact.html" class="block w-full text-center py-2 bg-[#EFEBE9] text-[#3E2723] rounded-lg font-bold">Book Service</a>
       </li>
 
       <li class="pt-6 border-t border-[#5D4037] flex justify-around">

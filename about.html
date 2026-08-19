@@ -30,7 +30,7 @@
       --text-color: #111111;
     }
 
-    [data-theme="dark"] {
+        [data-theme="dark"] {
       --home-bg: #000000;
       --text-color: #ffffff;
     }
@@ -42,21 +42,46 @@
     }
 
     [data-theme="dark"] section,
-    [data-theme="dark"] .card,
     [data-theme="dark"] .bg-white,
-    [data-theme="dark"] .bg-white\/90,
-    [data-theme="dark"] .bg-white\/80,
-    [data-theme="dark"] .bg-white\/10,
-    [data-theme="dark"] .bg-\[\#FDFBF9\],
-    [data-theme="dark"] .bg-\[\#EFEBE9\]:not(.w-0\.5),
-    [data-theme="dark"] .bg-\[\#F9F7F5\] {
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card {
       background-color: #000000 !important;
       border-color: #333333 !important;
     }
 
-    [data-theme="dark"] .btn,
-    [data-theme="dark"] .btn1:hover {
-      color: #000000 !important;
+    /* CUSTOM BALANCED DARK-GRAY PALETTE FOR TIMELINE SECTION (ISSUE 6) */
+    [data-theme="dark"] #timeline-section {
+      background-color: #000000 !important;
+    }
+
+    [data-theme="dark"] #timeline-section .bg-white {
+      background-color: #000000 !important;
+      border-color: #ffffff !important;
+    }
+
+    [data-theme="dark"] #mission-section .mission-card-1,
+    [data-theme="dark"] #mission-section .mission-card-2 {
+      border: 1px solid #ffffff !important;
+    }
+
+    [data-theme="dark"] #timeline-section .bg-white:hover {
+      background-color: #000000 !important;
+      box-shadow: none !important;
+    }
+
+    [data-theme="dark"] #timeline-section .timeline-line {
+      background-color: #ffffff !important;
+    }
+
+    [data-theme="dark"] #timeline-section .timeline-dot {
+      background-color: #000000 !important;
+      border-color: #ffffff !important;
+    }
+
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
     }
 
     [data-theme="dark"] body,
@@ -72,28 +97,16 @@
     [data-theme="dark"] a,
     [data-theme="dark"] i,
     [data-theme="dark"] label,
-    [data-theme="dark"] table,
-    [data-theme="dark"] th,
-    [data-theme="dark"] td,
     [data-theme="dark"] div,
-    [data-theme="dark"] small,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
     [data-theme="dark"] strong {
       color: #ffffff !important;
     }
 
-    [data-theme="dark"] thead {
-      background-color: #064E3B !important;
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
     }
-
-    [data-theme="dark"] .hero-overlay {
-      background-color: rgba(0, 0, 0, 0.7) !important;
-    }
-
-    [data-theme="dark"] .tag-btn {
-      background-color: rgba(255, 255, 255, 0.1) !important;
-      border-color: #ffffff !important;
-    }
-  
   </style>
 </head>
 
@@ -132,7 +145,7 @@
 </section>
 
 <!-- SECTION1: TIMELINE -->
- <section class="py-24 bg-[#FDFBF9]">
+ <section class="py-24 bg-[#FDFBF9]" id="timeline-section">
     <div class="max-w-5xl mx-auto px-6">
         <div class="text-center mb-20">
             <h2 class="text-[#8D6E63] font-semibold tracking-widest text-sm uppercase mb-4">Our Journey</h2>
@@ -140,7 +153,7 @@
         </div>
 
         <div class="relative space-y-12">
-            <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#EFEBE9] -translate-x-1/2 hidden md:block"></div>
+            <div class="timeline-line absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#EFEBE9] -translate-x-1/2 hidden md:block"></div>
 
             <div class="relative flex flex-col md:flex-row items-center justify-between group">
                 <div class="md:w-[45%] bg-white p-8 rounded-[2.5rem] border border-[#EFEBE9] shadow-sm hover:shadow-xl transition-all duration-500">
@@ -148,13 +161,13 @@
                     <h4 class="text-xl font-semibold text-[#3E2723] mt-2 mb-4">Neural Inception</h4>
                     <p class="text-[#5D4037] leading-relaxed">The agency was founded in Chennai by a team of sports technologists and textile engineers with a singular goal: to revolutionize customized team kits.</p>
                 </div>
-                <div class="w-4 h-4 bg-[#3E2723] rounded-full border-4 border-white shadow-md relative z-10 hidden md:block"></div>
+                <div class="timeline-dot w-4 h-4 bg-[#3E2723] rounded-full border-4 border-white shadow-md relative z-10 hidden md:block"></div>
                 <div class="md:w-[45%] hidden md:block"></div>
             </div>
 
             <div class="relative flex flex-col md:flex-row items-center justify-between group">
                 <div class="md:w-[45%] hidden md:block"></div>
-                <div class="w-4 h-4 bg-[#3E2723] rounded-full border-4 border-white shadow-md relative z-10 hidden md:block"></div>
+                <div class="timeline-dot w-4 h-4 bg-[#3E2723] rounded-full border-4 border-white shadow-md relative z-10 hidden md:block"></div>
                 <div class="md:w-[45%] bg-white p-8 rounded-[2.5rem] border border-[#EFEBE9] shadow-sm hover:shadow-xl transition-all duration-500">
                     <span class="text-[#8D6E63] font-black text-2xl">2025</span>
                     <h4 class="text-xl font-semibold text-[#3E2723] mt-2 mb-4">Hardware Expansion</h4>
@@ -168,7 +181,7 @@
                     <h4 class="text-xl font-semibold text-[#3E2723] mt-2 mb-4">Digital Customizer</h4>
                     <p class="text-[#5D4037] leading-relaxed">Launched the online 3D customizer panel, allowing team managers to design, test scaling options, and place bulk orders with real-time tracking.</p>
                 </div>
-                <div class="w-4 h-4 bg-[#3E2723] rounded-full border-4 border-white shadow-md relative z-10 hidden md:block"></div>
+                <div class="timeline-dot w-4 h-4 bg-[#3E2723] rounded-full border-4 border-white shadow-md relative z-10 hidden md:block"></div>
                 <div class="md:w-[45%] hidden md:block"></div>
             </div>
 
@@ -234,7 +247,7 @@
 </section>
 
 <!-- SECTION3: VISION -->
-<section class="py-24 bg-[#FDFBF9] overflow-hidden">
+<section class="py-24 bg-[#FDFBF9] overflow-hidden" id="mission-section">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             
@@ -256,25 +269,18 @@
             </div>
 
             <div class="lg:col-span-7 relative">
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="space-y-6">
-                        <div class="rounded-[2rem] overflow-hidden shadow-xl aspect-square border-4 border-white">
-                            <img src="assets/images/football_boot_premium_1786007742592.jpg" class="w-full h-full object-cover">
-                        </div>
-                        <div class="bg-[#EFEBE9] p-8 rounded-[2rem]">
-                            <h4 class="text-[#3E2723] font-semibold text-lg">Eco-Materials</h4>
-                            <p class="text-[#8D6E63] text-xs font-bold uppercase mt-1">100% Recycled Fibers</p>
-                        </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Card 1 -->
+                    <div class="mission-card-1 bg-[#3E2723] p-8 rounded-[2rem] text-white flex flex-col justify-center min-h-[220px]">
+                        <i class="bi bi-globe text-3xl text-[#D7CCC8] mb-4 block"></i>
+                        <h4 class="font-semibold text-lg">Global Delivery</h4>
+                        <p class="text-[#D7CCC8] text-xs font-bold uppercase mt-1">MLS & UEFA Approved</p>
                     </div>
-                    <div class="space-y-6 transform translate-y-8">
-                        <div class="bg-[#3E2723] p-8 rounded-[2rem] text-white">
-                            <i class="bi bi-globe text-3xl text-[#D7CCC8] mb-4 block"></i>
-                            <h4 class="font-semibold text-lg">Global Delivery</h4>
-                            <p class="text-[#D7CCC8] text-xs font-bold uppercase mt-1">MLS & UEFA Approved</p>
-                        </div>
-                        <div class="rounded-[2rem] overflow-hidden shadow-xl aspect-[4/5] border-4 border-white">
-                            <img src="assets/images/badminton_racket_premium_1786012599855.jpg" class="w-full h-full object-cover">
-                        </div>
+                    <!-- Card 2 -->
+                    <div class="mission-card-2 bg-[#EFEBE9] p-8 rounded-[2rem] flex flex-col justify-center min-h-[220px]">
+                        <i class="bi bi-recycle text-3xl text-[#8D6E63] mb-4 block"></i>
+                        <h4 class="text-[#3E2723] font-semibold text-lg">Eco-Materials</h4>
+                        <p class="text-[#8D6E63] text-xs font-bold uppercase mt-1">100% Recycled Fibers</p>
                     </div>
                 </div>
             </div>

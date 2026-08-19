@@ -21,7 +21,13 @@
       --text-color: #111111;
     }
 
-    [data-theme="dark"] {
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+        [data-theme="dark"] {
       --home-bg: #000000;
       --text-color: #ffffff;
     }
@@ -33,15 +39,21 @@
     }
 
     [data-theme="dark"] section,
-    [data-theme="dark"] .card,
     [data-theme="dark"] .bg-white,
-    [data-theme="dark"] .bg-\[\#FDFBF9\],
-    [data-theme="dark"] .bg-\[\#F9F7F5\],
-    [data-theme="dark"] .bg-\[\#EFEBE9\] {
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .group {
       background-color: #000000 !important;
       border-color: #333333 !important;
     }
 
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
+    }
+
+    [data-theme="dark"] body,
     [data-theme="dark"] p,
     [data-theme="dark"] h1,
     [data-theme="dark"] h2,
@@ -49,7 +61,23 @@
     [data-theme="dark"] h4,
     [data-theme="dark"] h5,
     [data-theme="dark"] h6,
-    [data-theme="dark"] span {
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] div,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
+    [data-theme="dark"] strong {
+      color: #ffffff !important;
+    }
+
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
+    }
+
+    [data-theme="dark"] a.hover-text-white:hover {
       color: #ffffff !important;
     }
 
@@ -91,7 +119,7 @@
           </p>
 
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-            <a href="#collections-catalog" class="w-full sm:w-auto px-10 py-3 bg-[#3E2723] text-white rounded-xl font-bold text-center hover:bg-[#8D6E63] transition-all shadow-lg">
+            <a href="#collections-catalog" class="hover-text-white w-full sm:w-auto px-10 py-3 bg-[#3E2723] text-white rounded-xl font-bold text-center hover:bg-[#8D6E63] transition-all shadow-lg">
               Browse Catalog
             </a>
             <div class="flex items-center gap-4 px-2 py-4">
@@ -309,8 +337,8 @@
       // Display products using reference card style
       filtered.forEach(prod => {
         const priceHtml = prod.discountPrice 
-            ? `<span class="text-muted-spx text-decoration-line-through me-2 text-xs">$${prod.price}</span><span class="text-[#8D6E63] font-bold text-sm">$${prod.discountPrice}</span>`
-            : `<span class="text-[#3E2723] font-bold text-sm">$${prod.price}</span>`;
+            ? `<span class="text-black font-bold text-sm">$${prod.discountPrice}</span>`
+            : `<span class="text-black font-bold text-sm">$${prod.price}</span>`;
         
         container.innerHTML += `
           <div class="group flex flex-col h-full bg-white border border-[#EFEBE9] rounded-3xl p-4 transition-all duration-500 hover:border-[#8D6E63] hover:shadow-lg relative overflow-hidden">
@@ -320,22 +348,22 @@
               <a href="product-details.html?id=${prod.id}" class="w-full h-full flex items-center justify-center">
                 <img src="${prod.image}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${prod.name}">
               </a>
-              <button onclick="window.store.addToCart('${prod.id}'); if(window.showToast) window.showToast('Added to cart');" class="absolute bottom-4 right-4 w-10 h-10 bg-[#3E2723] text-white rounded-xl opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex items-center justify-center hover:bg-[#8D6E63] shadow-md z-20">
-                <i class="bi bi-plus-lg text-lg"></i>
-              </button>
             </div>
-            <div class="px-2 mt-auto">
+            <div class="px-2 flex flex-col flex-grow">
               <span class="text-[10px] text-[#8D6E63] uppercase tracking-widest font-bold block">${prod.category}</span>
               <h4 class="font-semibold text-[#3E2723] text-sm mb-1 mt-0.5 truncate">
                 <a href="product-details.html?id=${prod.id}" class="hover:text-[#8D6E63] transition-colors">${prod.name}</a>
               </h4>
-              <div class="flex items-center justify-between mt-2 pt-1 border-t border-[#EFEBE9]">
+              <div class="flex items-center justify-between mt-2 pt-1 border-t border-[#EFEBE9] mb-4">
                 <div class="flex items-center gap-1 text-amber-500 text-xs">
                   <i class="bi bi-star-fill"></i>
                   <span class="text-[#5D4037] font-semibold">${prod.rating}</span>
                 </div>
                 <div>${priceHtml}</div>
               </div>
+              <button onclick="window.store.addToCart('${prod.id}'); if(window.showToast) window.showToast('Added to cart');" class="w-full bg-[#5D4037] text-white py-2.5 rounded-xl text-xs font-semibold hover:bg-[#3E2723] transition-colors mt-auto shadow-sm">
+                Add to Cart
+              </button>
             </div>
           </div>
         `;

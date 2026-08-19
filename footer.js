@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <div>
         <h3 class="text-lg font-bold mb-4 text-[#3E2723] uppercase tracking-wider">
-          Services
+          Categories
         </h3>
         <ul class="space-y-2 text-[#5D4037] text-sm">
           <li><a href="services.html#sublimation" class="hover:text-[#8D6E63] transition">Custom Team Sublimation</a></li>
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
           Quick Links
         </h3>
         <ul class="space-y-2 text-[#5D4037] text-sm">
-          <li><a href="services.html" class="hover:text-[#8D6E63] transition">Services</a></li>
+          <li><a href="services.html" class="hover:text-[#8D6E63] transition">Categories</a></li>
           <li><a href="about.html" class="hover:text-[#8D6E63] transition">About Us</a></li>
           <li><a href="contact.html" class="hover:text-[#8D6E63] transition">Contact</a></li>
         </ul>
@@ -58,8 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <ul class="space-y-3 text-[#5D4037] text-sm">
           <li class="flex items-start gap-2">
-            <i class="bi bi-geo-alt-fill text-[#8D6E63]"></i>
-            <span>Chennai, Tamil Nadu, India</span>
+            <i class="bi bi-geo-alt-fill text-[#8D6E63] mt-0.5"></i>
+            <span>No. 15, Sports Pro Tower, Gandhi Nagar, Adyar, Chennai - 600020, Tamil Nadu, India</span>
           </li>
           <li class="flex items-center gap-2">
             <i class="bi bi-telephone-fill text-[#8D6E63]"></i>

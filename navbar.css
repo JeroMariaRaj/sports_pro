@@ -73,28 +73,6 @@ body {
   }
 }
 
-@media (max-width: 820px) {
-  #centerLinksWrapper {
-    display: none !important;
-  }
-
-  #rightButtons .text-xl,
-  #rightButtons .text-2xl {
-    font-size: 1.25rem;
-  }
-
-}
-
-@media (min-width: 821px) {
-  #hamburgerBtn {
-    display: none !important;
-  }
-
-  #mobileMenuOverlay,
-  #mobileMenu {
-    display: none !important;
-  }
-}
 
 .mobile-menu-open {
   overflow: hidden;
@@ -195,7 +173,7 @@ body {
 
 [data-theme="dark"] #mainNavbar,
 [data-theme="dark"] #mobileMenu {
-  background-color: #29292a !important;
+  background-color: #000000 !important;
 }
 
 /* Responsive safeguards shared by all storefront pages.  The header uses
@@ -216,7 +194,18 @@ input, select, textarea, button { max-width: 100%; }
 #mainNavbar h1, #mainNavbar h1 a, #rightButtons, #hamburgerBtn { flex-shrink: 0; }
 #centerLinksWrapper { min-width: 0; }
 #navLinks { gap: clamp(1rem, 2vw, 2.5rem); white-space: nowrap; }
-#rightButtons { gap: clamp(.75rem, 1.25vw, 1.25rem); }
+#rightButtons {
+  display: flex !important;
+  align-items: center !important;
+  gap: clamp(.75rem, 1.25vw, 1.25rem);
+}
+#rightButtons > button,
+#rightButtons > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 44px;
+}
 #rightButtons a, #rightButtons button, #hamburgerBtn, #closeMenuBtn,
 #mobileMenu a, #mobileMenu button { min-height: 44px; }
 

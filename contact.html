@@ -30,7 +30,7 @@
       --text-color: #111111;
     }
 
-    [data-theme="dark"] {
+        [data-theme="dark"] {
       --home-bg: #000000;
       --text-color: #ffffff;
     }
@@ -42,18 +42,18 @@
     }
 
     [data-theme="dark"] section,
-    [data-theme="dark"] .card,
     [data-theme="dark"] .bg-white,
-    [data-theme="dark"] .bg-\[\#FDFBF9\],
-    [data-theme="dark"] .bg-\[\#EFEBE9\],
-    [data-theme="dark"] .bg-\[\#F9F7F5\] {
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .group {
       background-color: #000000 !important;
       border-color: #333333 !important;
     }
 
-    [data-theme="dark"] .btn,
-    [data-theme="dark"] .btn1:hover {
-      color: #000000 !important;
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
     }
 
     [data-theme="dark"] body,
@@ -69,27 +69,65 @@
     [data-theme="dark"] a,
     [data-theme="dark"] i,
     [data-theme="dark"] label,
-    [data-theme="dark"] table,
-    [data-theme="dark"] th,
-    [data-theme="dark"] td,
     [data-theme="dark"] div,
-    [data-theme="dark"] small,
-    [data-theme="dark"] button,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
     [data-theme="dark"] strong {
       color: #ffffff !important;
     }
 
-    [data-theme="dark"] thead {
-      background-color: #064E3B !important;
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
     }
 
-    [data-theme="dark"] .hero-overlay {
-      background-color: rgba(0, 0, 0, 0.7) !important;
+        [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
     }
 
-    [data-theme="dark"] .tag-btn {
-      background-color: rgba(255, 255, 255, 0.1) !important;
-      border-color: #ffffff !important;
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .bg-white,
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .group {
+      background-color: #000000 !important;
+      border-color: #333333 !important;
+    }
+
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
+    }
+
+    [data-theme="dark"] body,
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] div,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
+    [data-theme="dark"] strong {
+      color: #ffffff !important;
+    }
+
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
     }
   
   @keyframes bounce-slow {
@@ -107,8 +145,8 @@
   <div id="navbar"></div>
 
   <!-- HERO BANNER -->
-   <section class="relative h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center mt-16" 
-         style="background-image: url('assets/images/basketball_premium_1786007791000.jpg');">
+    <section class="relative h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center mt-16" 
+          style="background-image: url('assets/images/custom_team_kit.jpg');">
     
     <!-- Dark Overlay to keep text readable -->
     <div class="absolute inset-0 bg-[#2D1B18]/80"></div>
@@ -199,25 +237,35 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-fr">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr">
 
-                    <div class="card h-full min-h-[12.25rem] bg-white p-8 rounded-[2rem] border border-[#EFEBE9] shadow-sm flex flex-col items-center text-center">
-                        <div class="w-10 h-10 shrink-0 bg-[#FDFBF9] text-[#8D6E63] rounded-xl flex items-center justify-center mb-10">
-                            <i class="bi bi-geo-alt-fill text-lg"></i>
+                    <div class="card h-full bg-white p-6 rounded-[2rem] border border-[#EFEBE9] shadow-sm flex flex-col items-center justify-center text-center">
+                        <div class="w-12 h-12 shrink-0 bg-[#FDFBF9] text-[#8D6E63] rounded-2xl flex items-center justify-center mb-3">
+                            <i class="bi bi-geo-alt-fill text-xl"></i>
                         </div>
                         <div>
                             <h4 class="font-semibold text-[#3E2723] mb-1">Our Location</h4>
-                            <p class="text-xs text-[#5D4037] leading-relaxed">Chennai, Tamil Nadu, India</p>
+                            <p class="text-xs text-[#5D4037] leading-relaxed">No. 15, Sports Pro Tower, Gandhi Nagar, Adyar, Chennai - 600020</p>
                         </div>
                     </div>
 
-                    <div class="card h-full min-h-[12.25rem] bg-white p-8 rounded-[2rem] border border-[#EFEBE9] shadow-sm flex flex-col items-center text-center">
-                        <div class="w-10 h-10 shrink-0 bg-[#FDFBF9] text-[#8D6E63] rounded-xl flex items-center justify-center mb-10">
-                            <i class="bi bi-telephone-fill text-lg"></i>
+                    <div class="card h-full bg-white p-6 rounded-[2rem] border border-[#EFEBE9] shadow-sm flex flex-col items-center justify-center text-center">
+                        <div class="w-12 h-12 shrink-0 bg-[#FDFBF9] text-[#8D6E63] rounded-2xl flex items-center justify-center mb-3">
+                            <i class="bi bi-telephone-fill text-xl"></i>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-[#3E2723] mb-1">Direct Contact</h4>
-                            <p class="text-xs text-[#5D4037] leading-relaxed">+91 98765 43210 <br> hello@sportspro.design</p>
+                            <h4 class="font-semibold text-[#3E2723] mb-1">Direct Call</h4>
+                            <p class="text-xs text-[#5D4037] leading-relaxed">+91 98765 43210</p>
+                        </div>
+                    </div>
+
+                    <div class="card h-full bg-white p-6 rounded-[2rem] border border-[#EFEBE9] shadow-sm flex flex-col items-center justify-center text-center">
+                        <div class="w-12 h-12 shrink-0 bg-[#FDFBF9] text-[#8D6E63] rounded-2xl flex items-center justify-center mb-3">
+                            <i class="bi bi-envelope-fill text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-[#3E2723] mb-1">Direct Mail</h4>
+                            <p class="text-xs text-[#5D4037] leading-relaxed">hello@sportspro.design</p>
                         </div>
                     </div>
 
@@ -241,6 +289,63 @@
 
         </div>
 
+    </section>
+
+    <!-- SECTION 2: FAQ -->
+    <section class="py-24 bg-white border-t border-[#EFEBE9]" id="faq">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-[#8D6E63] font-semibold tracking-widest text-xs uppercase mb-4">Common Queries</h2>
+                <h3 class="text-3xl md:text-5xl font-semibold text-[#3E2723]">Frequently Asked Questions</h3>
+                <p class="text-[#5D4037] mt-4 text-sm md:text-base">Find quick answers to common questions about our custom team wear and pro hardware services.</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="card bg-[#FDFBF9] border border-[#EFEBE9] rounded-2xl p-6 transition-all duration-300 hover:shadow-md">
+                    <h4 class="font-semibold text-lg text-[#3E2723] mb-2 flex items-center gap-3">
+                        <i class="bi bi-question-circle-fill text-[#8D6E63]"></i>
+                        What is the minimum order quantity for custom team kits?
+                    </h4>
+                    <p class="text-sm text-[#5D4037] leading-relaxed pl-7">
+                        Our minimum order quantity (MOQ) for custom sublimation jerseys is 10 units. We offer tiered bulk discounts for orders exceeding 50 and 200 units.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="card bg-[#FDFBF9] border border-[#EFEBE9] rounded-2xl p-6 transition-all duration-300 hover:shadow-md">
+                    <h4 class="font-semibold text-lg text-[#3E2723] mb-2 flex items-center gap-3">
+                        <i class="bi bi-question-circle-fill text-[#8D6E63]"></i>
+                        How long does the customization or gear tuning process take?
+                    </h4>
+                    <p class="text-sm text-[#5D4037] leading-relaxed pl-7">
+                        Standard sublimation printing and apparel orders are delivered in 5 to 7 business days. Racket stringing and bat knocking calibrations are completed in 48 to 72 hours.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="card bg-[#FDFBF9] border border-[#EFEBE9] rounded-2xl p-6 transition-all duration-300 hover:shadow-md">
+                    <h4 class="font-semibold text-lg text-[#3E2723] mb-2 flex items-center gap-3">
+                        <i class="bi bi-question-circle-fill text-[#8D6E63]"></i>
+                        Can I inspect a sample or digital mockup before printing?
+                    </h4>
+                    <p class="text-sm text-[#5D4037] leading-relaxed pl-7">
+                        Absolutely! We create high-resolution 3D digital mockups for your approval before scheduling the final printing and production.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="card bg-[#FDFBF9] border border-[#EFEBE9] rounded-2xl p-6 transition-all duration-300 hover:shadow-md">
+                    <h4 class="font-semibold text-lg text-[#3E2723] mb-2 flex items-center gap-3">
+                        <i class="bi bi-question-circle-fill text-[#8D6E63]"></i>
+                        Do you ship orders internationally?
+                    </h4>
+                    <p class="text-sm text-[#5D4037] leading-relaxed pl-7">
+                        Yes, we ship globally. Shipping costs and estimated delivery schedules depend on destination region and are included in your wholesale bulk quote.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
   <!-- FOOTER -->

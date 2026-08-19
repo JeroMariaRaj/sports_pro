@@ -21,7 +21,7 @@
       --text-color: #111111;
     }
 
-    [data-theme="dark"] {
+        [data-theme="dark"] {
       --home-bg: #000000;
       --text-color: #ffffff;
     }
@@ -33,18 +33,18 @@
     }
 
     [data-theme="dark"] section,
-    [data-theme="dark"] .card,
     [data-theme="dark"] .bg-white,
-    [data-theme="dark"] .bg-\[\#FDFBF9\],
-    [data-theme="dark"] .bg-\[\#EFEBE9\],
-    [data-theme="dark"] .bg-\[\#F9F7F5\] {
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .group {
       background-color: #000000 !important;
       border-color: #333333 !important;
     }
 
-    [data-theme="dark"] .btn,
-    [data-theme="dark"] .btn1:hover {
-      color: #000000 !important;
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
     }
 
     [data-theme="dark"] body,
@@ -60,13 +60,65 @@
     [data-theme="dark"] a,
     [data-theme="dark"] i,
     [data-theme="dark"] label,
-    [data-theme="dark"] table,
-    [data-theme="dark"] th,
-    [data-theme="dark"] td,
     [data-theme="dark"] div,
-    [data-theme="dark"] small,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
     [data-theme="dark"] strong {
       color: #ffffff !important;
+    }
+
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
+    }
+
+        [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
+    }
+
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .bg-white,
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .group {
+      background-color: #000000 !important;
+      border-color: #333333 !important;
+    }
+
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
+    }
+
+    [data-theme="dark"] body,
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] div,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
+    [data-theme="dark"] strong {
+      color: #ffffff !important;
+    }
+
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
     }
 
     [data-theme="dark"] thead {
@@ -225,7 +277,7 @@
       <p class="text-[#D7CCC8] mb-8">Subscribe to the SportsPro Journal for weekly insights and exclusive gear drops.</p>
       <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto" onsubmit="event.preventDefault(); window.showToast('You’re subscribed!'); this.reset();">
         <input type="email" placeholder="Your email address" class="flex-1 px-6 py-4 rounded-xl outline-none focus:ring-2 focus:ring-[#8D6E63] text-[#3E2723]" required>
-        <button type="submit" class="bg-[#8D6E63] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#EFEBE9] hover:text-[#3E2723] transition-colors shadow-lg">Subscribe</button>
+        <button type="submit" class="bg-black text-white border border-white px-8 py-4 rounded-xl font-bold hover:bg-[#3E2723] hover:text-white transition-colors duration-300 shadow-lg">Subscribe</button>
       </form>
     </div>
   </section>

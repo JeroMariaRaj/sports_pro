@@ -30,69 +30,55 @@
             --text-color: #111111;
         }
 
-        [data-theme="dark"] {
-            --home-bg: #000000;
-            --text-color: #ffffff;
-        }
+            [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
+    }
 
-        body {
-            background-color: var(--home-bg) !important;
-            color: var(--text-color);
-            transition: background-color 0.4s ease, color 0.4s ease;
-        }
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
 
-        [data-theme="dark"] .card,
-        [data-theme="dark"] .bg-white,
-        [data-theme="dark"] .bg-white\/90,
-        [data-theme="dark"] .bg-white\/80,
-        [data-theme="dark"] .bg-white\/10,
-        [data-theme="dark"] .bg-\[\#FDFBF9\],
-        [data-theme="dark"] .bg-\[\#EFEBE9\],
-        [data-theme="dark"] .bg-\[\#F9F7F5\] {
-            background-color: #000000 !important;
-            border-color: #333333 !important;
-        }
+    [data-theme="dark"] section,
+    [data-theme="dark"] .bg-white,
+    [data-theme="dark"] [class*="bg-[#F9F7F5]"],
+    [data-theme="dark"] [class*="bg-[#EFEBE9]"],
+    [data-theme="dark"] [class*="bg-[#FDFBF9]"],
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .group {
+      background-color: #000000 !important;
+      border-color: #333333 !important;
+    }
 
-        [data-theme="dark"] .btn,
-        [data-theme="dark"] .btn1:hover {
-            color: #000000 !important;
-        }
+    [data-theme="dark"] .group:hover {
+      background-color: transparent !important;
+    }
 
-        [data-theme="dark"] body,
-        [data-theme="dark"] p,
-        [data-theme="dark"] h1,
-        [data-theme="dark"] h2,
-        [data-theme="dark"] h3,
-        [data-theme="dark"] h4,
-        [data-theme="dark"] h5,
-        [data-theme="dark"] h6,
-        [data-theme="dark"] span,
-        [data-theme="dark"] li,
-        [data-theme="dark"] a,
-        [data-theme="dark"] i,
-        [data-theme="dark"] label,
-        [data-theme="dark"] table,
-        [data-theme="dark"] th,
-        [data-theme="dark"] td,
-        [data-theme="dark"] div,
-        [data-theme="dark"] small,
-        [data-theme="dark"] strong {
-            color: #ffffff !important;
-        }
+    [data-theme="dark"] body,
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] div,
+    [data-theme="dark"] input,
+    [data-theme="dark"] select,
+    [data-theme="dark"] strong {
+      color: #ffffff !important;
+    }
 
-        [data-theme="dark"] thead {
-            background-color: #064E3B !important;
-        }
-
-        [data-theme="dark"] .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7) !important;
-        }
-
-        [data-theme="dark"] .tag-btn {
-            background-color: rgba(255, 255, 255, 0.1) !important;
-            border-color: #ffffff !important;
-        }
-
+    [data-theme="dark"] a:hover {
+      color: #8D6E63 !important;
+    }
         .vertical-text {
             writing-mode: vertical-rl;
             text-orientation: mixed;
@@ -114,7 +100,7 @@
         </div>
 
         <div class="relative z-30 max-w-4xl mx-auto px-4 sm:px-6 mt-10">
-            <div class="bg-white/90 md:bg-white/80 backdrop-blur-xl p-6 sm:p-10 md:p-16 rounded-[2rem] md:rounded-[3rem] shadow-[0_30px_100px_rgba(62,39,35,0.3)] border border-white/50 text-center space-y-6 md:space-y-8 transform transition-transform hover:scale-[1.01] duration-700">
+            <div class="card bg-white/90 md:bg-white/80 backdrop-blur-xl p-6 sm:p-10 md:p-16 rounded-[2rem] md:rounded-[3rem] shadow-[0_30px_100px_rgba(62,39,35,0.3)] border border-white/50 text-center space-y-6 md:space-y-8 transform transition-transform hover:scale-[1.01] duration-700">
 
                 <div class="space-y-3 md:space-y-4">
                     <h2 class="text-[#8D6E63] font-semibold tracking-[0.2em] md:tracking-[0.4em] text-[10px] md:text-xs uppercase">
@@ -176,20 +162,20 @@
         <!-- Style switcher tabs -->
         <div class="flex justify-center gap-4 mb-8 flex-wrap">
             <button class="style-tab-btn px-6 py-2.5 rounded-full border bg-[#8D6E63] border-[#8D6E63] text-white font-medium text-xs md:text-sm transition duration-300 shadow-lg"
-                    data-before="assets/images/football_boot_premium_1786007742592.jpg" data-after="assets/images/football_boot_premium_1786007742592.jpg" data-style="Football Boot" data-time="&lt; 10 Sec" data-res="4K UHD" data-scale="100%">
-                Football Boots (Elite Custom)
+                    data-before="assets/images/prd-0001.jpg" data-after="assets/images/prd-0001.jpg" data-style="Cricket Bat" data-time="&lt; 5 Sec" data-res="4K UHD" data-scale="100%">
+                Nike Pro Cricket Bat (Sale 20% Off)
             </button>
-            <button class="style-tab-btn px-6 py-2.5 rounded-full border border-white/20 text-white/70 font-medium text-xs md:text-sm hover:bg-white/10 transition duration-300"
-                    data-before="assets/images/cricket_bat_premium_1786007732561.jpg" data-after="assets/images/cricket_bat_premium_1786007732561.jpg" data-style="Cricket Bat" data-time="&lt; 15 Sec" data-res="4K UHD" data-scale="100%">
-                Cricket Bats (Laser Engraved)
+            <button class="style-tab-btn px-6 py-2.5 rounded-full border border-white/20 text-white/70 font-medium text-xs md:text-sm hover:bg-white/10 hover:text-white transition duration-300"
+                    data-before="assets/images/prd-0011.jpg" data-after="assets/images/prd-0011.jpg" data-style="Cricket Helmet" data-time="&lt; 8 Sec" data-res="4K UHD" data-scale="100%">
+                Elite Cricket Helmet (Sale 18% Off)
             </button>
         </div>
 
-        <div class="relative w-full max-w-5xl mx-auto h-[400px] sm:h-[500px] md:h-[600px] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-4 border-white/10 group select-none">
+        <div id="comparison-container" class="relative w-full max-w-5xl mx-auto h-[400px] sm:h-[500px] md:h-[600px] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-4 border-white/10 group select-none">
             
-            <img id="comparison-before-img" src="assets/images/football_boot_premium_1786007742592.jpg" alt="Raw Product Before" class="absolute inset-0 w-full h-full object-cover pointer-events-none grayscale">
+            <img id="comparison-before-img" src="assets/images/prd-0001.jpg" alt="Raw Product Before" class="absolute inset-0 w-full h-full object-cover pointer-events-none">
             
-            <div class="absolute top-6 left-6 z-10 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full pointer-events-none">
+            <div class="absolute top-6 left-6 z-30 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full pointer-events-none">
                 <span class="text-[10px] md:text-xs font-bold text-white uppercase tracking-widest">Raw Equipment</span>
             </div>
             <div class="absolute top-6 right-6 z-30 bg-[#8D6E63]/90 backdrop-blur-md px-4 py-2 rounded-full pointer-events-none">
@@ -197,7 +183,7 @@
             </div>
 
             <div id="comparison-overlay" class="absolute inset-0 w-1/2 h-full overflow-hidden border-r-4 border-white shadow-[5px_0_15px_rgba(0,0,0,0.3)] z-20">
-                <img id="comparison-after-img" src="assets/images/football_boot_premium_1786007742592.jpg" alt="Custom Product After" class="absolute top-0 left-0 w-[100vw] max-w-[64rem] h-full object-cover pointer-events-none" style="width: 100vw; max-width: 1024px;"> </div>
+                <img id="comparison-after-img" src="assets/images/prd-0001.jpg" alt="Custom Product After" class="absolute top-0 left-0 h-full object-cover pointer-events-none grayscale"> </div>
 
             <input type="range" min="0" max="100" value="50" id="comparison-slider" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-40">
 
@@ -205,15 +191,58 @@
                 <i class="bi bi-chevron-bar-expand text-[#3E2723] text-xl md:text-2xl transform rotate-90"></i>
             </div>
 
+            <!-- Customization Callouts (Visible on the right / Custom Print side) -->
+            <div id="custom-callouts-bat" class="absolute inset-0 pointer-events-none z-30 transition-all duration-300">
+                <!-- Callout 1: Custom Grip -->
+                <div class="custom-callout absolute top-[15%] right-[20%] md:right-[30%] flex items-center gap-3 transition-opacity duration-300" data-threshold="65">
+                    <div class="w-3 h-3 bg-[#8D6E63] rounded-full animate-ping absolute"></div>
+                    <div class="w-3 h-3 bg-[#8D6E63] rounded-full relative border border-white"></div>
+                    <div class="bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-[#8D6E63]/30">
+                        <span class="text-[10px] font-bold text-white uppercase tracking-wider block">Custom Leather Grip</span>
+                        <span class="text-[8px] text-white/60 block">Anti-slip premium wrap</span>
+                    </div>
+                </div>
+                <!-- Callout 2: Laser Engraved -->
+                <div class="custom-callout absolute bottom-[25%] right-[20%] md:right-[30%] flex items-center gap-3 transition-opacity duration-300" data-threshold="65">
+                    <div class="w-3 h-3 bg-[#8D6E63] rounded-full animate-ping absolute"></div>
+                    <div class="w-3 h-3 bg-[#8D6E63] rounded-full relative border border-white"></div>
+                    <div class="bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-[#8D6E63]/30">
+                        <span class="text-[10px] font-bold text-white uppercase tracking-wider block">Laser Engraving</span>
+                        <span class="text-[8px] text-white/60 block">Custom name & squad number</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="custom-callouts-helmet" class="absolute inset-0 pointer-events-none z-30 opacity-0 hidden transition-all duration-300">
+                <!-- Callout 1: Shell -->
+                <div class="custom-callout absolute top-[20%] right-[20%] md:right-[30%] flex items-center gap-3 transition-opacity duration-300" data-threshold="65">
+                    <div class="w-3 h-3 bg-[#8D6E63] rounded-full animate-ping absolute"></div>
+                    <div class="w-3 h-3 bg-[#8D6E63] rounded-full relative border border-white"></div>
+                    <div class="bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-[#8D6E63]/30">
+                        <span class="text-[10px] font-bold text-white uppercase tracking-wider block">Carbon Composite Shell</span>
+                        <span class="text-[8px] text-white/60 block">Ultra-light impact absorption</span>
+                    </div>
+                </div>
+                <!-- Callout 2: Grille -->
+                <div class="custom-callout absolute bottom-[20%] right-[20%] md:right-[30%] flex items-center gap-3 transition-opacity duration-300" data-threshold="65">
+                    <div class="w-3 h-3 bg-[#8D6E63] rounded-full animate-ping absolute"></div>
+                    <div class="w-3 h-3 bg-[#8D6E63] rounded-full relative border border-white"></div>
+                    <div class="bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-[#8D6E63]/30">
+                        <span class="text-[10px] font-bold text-white uppercase tracking-wider block">Titanium Grille Coating</span>
+                        <span class="text-[8px] text-white/60 block">Custom matte paint finish</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <div class="max-w-4xl mx-auto mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 text-center border-t border-white/10 pt-8">
             <div>
-                <p id="stat-style" class="text-white font-bold text-lg md:text-xl">Football Boot</p>
+                <p id="stat-style" class="text-white font-bold text-lg md:text-xl">Cricket Bat</p>
                 <p class="text-[#8D6E63] text-[10px] md:text-xs uppercase tracking-widest mt-1">Design Style</p>
             </div>
             <div>
-                <p id="stat-time" class="text-white font-bold text-lg md:text-xl">&lt; 10 Sec</p>
+                <p id="stat-time" class="text-white font-bold text-lg md:text-xl">&lt; 5 Sec</p>
                 <p class="text-[#8D6E63] text-[10px] md:text-xs uppercase tracking-widest mt-1">Render Time</p>
             </div>
             <div>
@@ -474,6 +503,23 @@
         </div>
     </section>
 
+    <!-- DYNAMIC PRODUCTS SECTION -->
+    <section class="py-24 bg-white border-t border-[#EFEBE9]">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col items-center text-center mb-16 gap-4">
+          <h2 class="text-[#8D6E63] font-semibold tracking-[0.2em] text-sm uppercase mb-2">Featured Products</h2>
+          <h3 class="text-4xl font-semibold text-[#3E2723]">Premium Sports Gear & Equipment</h3>
+          <p class="max-w-md text-[#5D4037] text-sm leading-relaxed mt-2">
+            Explore our curated collection of professional-grade cricket bats, football boots, and premium gear with exclusive offers.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="home2-products-container">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </section>
+
     <div id="footer"></div>
 
     <script>
@@ -490,19 +536,39 @@
         const slider = document.getElementById('comparison-slider');
         const overlay = document.getElementById('comparison-overlay');
         const handle = document.getElementById('slider-handle');
+        const compContainer = document.getElementById('comparison-container');
+        const afterImg = document.getElementById('comparison-after-img');
+
+        function updateAfterImgWidth() {
+            if (compContainer && afterImg) {
+                afterImg.style.width = compContainer.offsetWidth + 'px';
+            }
+        }
 
         if(slider && overlay && handle) {
             slider.addEventListener('input', function(e) {
                 const sliderValue = e.target.value;
                 overlay.style.width = `${sliderValue}%`;
                 handle.style.left = `${sliderValue}%`;
+                
+                // Hide/show callouts dynamically as the slider passes them
+                const callouts = document.querySelectorAll('.custom-callout');
+                callouts.forEach(c => {
+                    const threshold = parseInt(c.getAttribute('data-threshold'));
+                    if (sliderValue > threshold) {
+                        c.style.opacity = '0';
+                    } else {
+                        c.style.opacity = '1';
+                    }
+                });
             });
+            updateAfterImgWidth();
+            window.addEventListener('resize', updateAfterImgWidth);
         }
 
         // Tab switcher logic
         const tabs = document.querySelectorAll('.style-tab-btn');
         const beforeImg = document.getElementById('comparison-before-img');
-        const afterImg = document.getElementById('comparison-after-img');
         
         const styleStat = document.getElementById('stat-style');
         const timeStat = document.getElementById('stat-time');
@@ -529,12 +595,69 @@
                 resStat.textContent = this.getAttribute('data-res');
                 scaleStat.textContent = this.getAttribute('data-scale');
 
+                // Toggle customization callouts display
+                const isBat = this.getAttribute('data-style') === 'Cricket Bat';
+                const batCallouts = document.getElementById('custom-callouts-bat');
+                const helmetCallouts = document.getElementById('custom-callouts-helmet');
+                if (isBat) {
+                    batCallouts.classList.remove('opacity-0', 'hidden');
+                    helmetCallouts.classList.add('opacity-0', 'hidden');
+                } else {
+                    helmetCallouts.classList.remove('opacity-0', 'hidden');
+                    batCallouts.classList.add('opacity-0', 'hidden');
+                }
+
                 // Reset slider position to 50% on switch
                 slider.value = 50;
                 overlay.style.width = '50%';
                 handle.style.left = '50%';
+
+                // Reset callouts opacity
+                document.querySelectorAll('.custom-callout').forEach(c => c.style.opacity = '1');
+
+                updateAfterImgWidth();
             });
         });
+
+        // Populate Featured Products
+        const home2ProdContainer = document.getElementById('home2-products-container');
+        if(home2ProdContainer && window.db) {
+            const featured = window.db.products.filter(p => p.category === 'Cricket' || p.category === 'Football').slice(0, 4);
+            
+            featured.forEach((prod) => {
+                const priceHtml = prod.discountPrice 
+                    ? `<span class="text-black font-bold text-sm">$${prod.discountPrice}</span>`
+                    : `<span class="text-black font-bold text-sm">$${prod.price}</span>`;
+                
+                home2ProdContainer.innerHTML += `
+                  <div class="group flex flex-col h-full bg-white border border-[#EFEBE9] rounded-3xl p-4 transition-all duration-500 hover:border-[#8D6E63] hover:shadow-lg relative overflow-hidden">
+                    <div class="aspect-square bg-white rounded-2xl mb-4 border border-[#EFEBE9] flex items-center justify-center relative overflow-hidden">
+                      ${prod.discountPrice ? `<span class="absolute top-2 left-2 badge bg-red-600 text-white text-[10px] px-2.5 py-1 rounded-full font-bold z-10 shadow-sm">SALE</span>` : ''}
+                      ${prod.isNew ? `<span class="absolute top-2 left-2 ${prod.discountPrice ? 'mt-7' : ''} badge bg-emerald-600 text-white text-[10px] px-2.5 py-1 rounded-full font-bold z-10 shadow-sm">NEW</span>` : ''}
+                      <a href="product-details.html?id=${prod.id}" class="w-full h-full flex items-center justify-center">
+                        <img src="${prod.image}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${prod.name}">
+                      </a>
+                    </div>
+                    <div class="px-2 flex flex-col flex-grow">
+                      <span class="text-[10px] text-[#8D6E63] uppercase tracking-widest font-bold block">${prod.category}</span>
+                      <h4 class="font-semibold text-[#3E2723] text-sm mb-1 mt-0.5 truncate">
+                        <a href="product-details.html?id=${prod.id}" class="hover:text-[#8D6E63] transition-colors">${prod.name}</a>
+                      </h4>
+                      <div class="flex items-center justify-between mt-2 pt-1 border-t border-[#EFEBE9] mb-4">
+                        <div class="flex items-center gap-1 text-amber-500 text-xs">
+                          <i class="bi bi-star-fill"></i>
+                          <span class="text-[#5D4037] font-semibold">${prod.rating}</span>
+                        </div>
+                        <div>${priceHtml}</div>
+                      </div>
+                      <button onclick="window.store.addToCart('${prod.id}'); if(window.showToast) window.showToast('Added to cart');" class="w-full bg-[#5D4037] text-white py-2.5 rounded-xl text-xs font-semibold hover:bg-[#3E2723] transition-colors mt-auto shadow-sm">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                `;
+            });
+        }
     });
     </script>
     <script src="navbar.js"></script>
